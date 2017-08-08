@@ -9,10 +9,15 @@ toc_footers:
   - <a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a>
 
 includes:
+  - reference_guides
   - cli
+  - submission_guidelines
+  - report
 
 search: true
 ---
+
+FnHub.io is a platform for sharing and consuming serverless functions. We support functions on a number of different serverless platforms, including AWS Lambda, Google Cloud Functions, Microsoft Azure Functions, and more. We also offer plugins to popular serverless development tools, such as AWS CloudFormation, AWS SAM, and Serverless Framework. Review the information below to see our quickstart guides, CLI documentation, reference material, submission guidelines, and more!
 
 # Quick Start
 
