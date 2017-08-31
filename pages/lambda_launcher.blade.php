@@ -196,20 +196,20 @@
   color: #f92672;
 }
     </style>
-    <link href="../stylesheets/screen.css" rel="stylesheet" media="screen" />
-    <link href="../stylesheets/print.css" rel="stylesheet" media="print" />
-      <script src="../javascripts/all_nosearch.js"></script>
+    <link href="/stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="/stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="/javascripts/all_nosearch.js"></script>
   </head>
 
   <body class="pages pages_lambda_launcher" data-languages="[]">
     <a href="#" id="nav-button">
       <span>
         NAV
-        <img src="../images/navbar.png" alt="Navbar" />
+        <img src="/images/navbar.png" alt="Navbar" />
       </span>
     </a>
     <div class="toc-wrapper">
-      <img src="../images/logo.png" class="logo" alt="Logo" />
+      <img src="/images/logo.png" class="logo" alt="Logo" />
       <div id="toc" class="toc-list-h1">
           <li>
             <a href="#the-backand-lambda-launcher" class="toc-h1 toc-link" data-title="The Backand Lambda Launcher">The Backand Lambda Launcher</a>
@@ -386,21 +386,21 @@
 <li>Open the IAM service panel</li>
 <li>In the navigation menu on the left, select <code>Policies</code></li>
 <li>Click the <code>Create Policy</code> button
-<img src="../images/aws_console/aws-IAM-Policy-add.png" alt="image" /></li>
+<img src="/images/aws_console/aws-IAM-Policy-add.png" alt="image" /></li>
 <li>For &quot;Step 1 : Create Policy,&quot; select <code>Create Your Own Policy</code></li>
 <li>Set the policy name to <code>BackandLambdaReadExecuteAccess</code></li>
 <li>Paste the <a href="#iam-policy-json">policy JSON</a> into the area provided for the Policy Document
-<img src="../images/aws_console/aws-IAM-Policy-add-3.png" alt="image" /></li>
+<img src="/images/aws_console/aws-IAM-Policy-add-3.png" alt="image" /></li>
 <li>Once the JSON is ready, click <code>Create Policy</code></li>
 </ol>
 <h4 id='create-the-iam-user'>Create the IAM User</h4>
 <ol>
 <li>On the navigation menu on the left, select <code>Users</code></li>
 <li>Click <code>Add User</code>
-<img src="../images/aws_console/aws-IAM-users-add.png" alt="image" /></li>
+<img src="/images/aws_console/aws-IAM-users-add.png" alt="image" /></li>
 <li>Enter <code>backand_lambda_user</code> as the user name</li>
 <li>Check the <code>Programmatic access</code> option
-<img src="../images/aws_console/aws-IAM-users-add-1.png" alt="image" /></li>
+<img src="/images/aws_console/aws-IAM-users-add-1.png" alt="image" /></li>
 <li>Click on <code>Next: Permissions</code></li>
 <li>Click on <code>Attach existing policies directly</code></li>
 <li>Search for <code>BackandLambdaReadExecuteAccess</code>, and select it from the search results using the provided checkbox</li>
@@ -476,19 +476,19 @@
 <li>name your function &quot;createBackandLambdaUser&quot;</li>
 <li>Select the &quot;Python 3.6&quot; runtime</li>
 <li>paste the <a href="#lambda-python-script">lambda python code</a> into the provided area.
-<img src="../images/aws_lambda/aws-lambda-config-1.png" alt="image" /></li>
+<img src="/images/aws_lambda/aws-lambda-config-1.png" alt="image" /></li>
 <li>in the Role dropdown select &quot;Create Custome Role&quot;</li>
 <li>in the &quot;AWS Lambda requires access to your resources&quot; window, select &quot;Create new Role Policy&quot;</li>
 <li>click &quot;View Policy Document&quot; and click the Edit button on the right
-<img src="../images/aws_lambda/aws-lambda-role.png" alt="image" /></li>
+<img src="/images/aws_lambda/aws-lambda-role.png" alt="image" /></li>
 <li>approve the &quot;Edit Policy&quot; pop-up
-<img src="../images/aws_lambda/aws-lambda-role-1.png" alt="image" /></li>
+<img src="/images/aws_lambda/aws-lambda-role-1.png" alt="image" /></li>
 <li>Paste the <a href="#iam-policy-json">policy JSON</a> into the area provided for the Policy Document and click &quot;Allow&quot;
-<img src="../images/aws_lambda/aws-lambda-role-2.png" alt="image" /></li>
+<img src="/images/aws_lambda/aws-lambda-role-2.png" alt="image" /></li>
 <li>click &quot;Next&quot;</li>
 <li>click &quot;Create  Function&quot;</li>
 <li>after the function was created , click &quot;Test&quot;,
-<img src="../images/aws_lambda/aws-lambda-config-2.png" alt="image" /></li>
+<img src="/images/aws_lambda/aws-lambda-config-2.png" alt="image" /></li>
 <li>Copy the &quot;Access key ID&quot; and &quot;Secret access key&quot; values to use with Backand.</li>
 </ol>
 <h3 id='from-the-aws-cli'>From the AWS CLI</h3>
@@ -552,7 +552,7 @@
 
 <p>When you&#39;ve completed your changes, the screen should look like the following:</p>
 
-<p><img src="../images/images/AWS-CAA-CreatePolicy.png" alt="image" /></p>
+<p><img src="/images/images/AWS-CAA-CreatePolicy.png" alt="image" /></p>
 <h5 id='step-2-create-a-role'>Step 2 - Create a Role</h5>
 <p>The next step is to create an IAM Role.</p>
 
@@ -561,21 +561,21 @@
 <li>Click <strong>Roles</strong></li>
 <li>For <strong>Step 1: Select Role Type</strong>, select and expand the &quot;Role for cross-account access&quot; option.</li>
 <li>Select <strong>Provide access between your AWS account and a third party AWS account</strong>
-​<img src="../images/images/AWS-CAA-roleType.png" alt="image" /></li>
+​<img src="/images/images/AWS-CAA-roleType.png" alt="image" /></li>
 <li>On the next page, set Backand&#39;s account ID and external ID to the following values:
 
 <ul>
 <li><strong>Account ID</strong>: <code>328923390206</code></li>
 <li><strong>External ID</strong>: <code>bknd_{{appsMasterToken}}</code>
 <aside class="notice">You&#39;ll need to replace the value <code>{{appsMasterToken}}</code> in this command with your application&#39;s <a href="#social-amp-keys">master token</a>.</aside>
-<img src="../images/images/AWS-CAA-AccountID.png" alt="image" />
+<img src="/images/images/AWS-CAA-AccountID.png" alt="image" />
 <aside class="success"> Note that for now, you do not need to require users to have Multi-Factor Authentication enabled in order to assume the cross-account role</aside></li>
 </ul></li>
 <li>Click <strong>Next Step</strong></li>
 <li>Attach the policy created above by selecting it from the provided list</li>
 <li>Click <strong>Next Step</strong></li>
 <li>Set the role name to <code>BackandCrossAccountRole</code>
-<img src="../images/images/AWS-CAA-Createe.png" alt="image" /></li>
+<img src="/images/images/AWS-CAA-Createe.png" alt="image" /></li>
 <li>Click <strong>Create Role</strong></li>
 </ol>
 

@@ -196,20 +196,20 @@
   color: #f92672;
 }
     </style>
-    <link href="../stylesheets/screen.css" rel="stylesheet" media="screen" />
-    <link href="../stylesheets/print.css" rel="stylesheet" media="print" />
-      <script src="../javascripts/all_nosearch.js"></script>
+    <link href="/stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="/stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="/javascripts/all_nosearch.js"></script>
   </head>
 
   <body class="pages pages_backand_dashboard" data-languages="[]">
     <a href="#" id="nav-button">
       <span>
         NAV
-        <img src="../images/navbar.png" alt="Navbar" />
+        <img src="/images/navbar.png" alt="Navbar" />
       </span>
     </a>
     <div class="toc-wrapper">
-      <img src="../images/logo.png" class="logo" alt="Logo" />
+      <img src="/images/logo.png" class="logo" alt="Logo" />
       <div id="toc" class="toc-list-h1">
           <li>
             <a href="#backand-dashboard" class="toc-h1 toc-link" data-title="Backand Dashboard">Backand Dashboard</a>
@@ -1075,7 +1075,7 @@ Set-AdfsProperties -EnableKmsi <span class="nv">$True</span> –KmsiLifetimeMins
 
 <p>Here&#39;s a general informational graphic demonstrating how authentication-related actions integrate with the system:</p>
 
-<p><img src="../images/images/security_diagram.png" alt="image" /></p>
+<p><img src="/images/images/security_diagram.png" alt="image" /></p>
 <h3 id='security-templates'>Security Templates</h3>
 <p>Security templates allow you to create a template that is used to set permissions on objects. You can create new templates, update existing templates, and rename security templates as you see fit. Each of the checkboxes corresponds to the REST API action indicated by the column header. When you check &quot;Create&quot; for a user role, for example, and then assign that security template to an object, all users with the specified role will be granted &quot;Create&quot; access to the object.</p>
 <h2 id='hosting'>Hosting</h2>

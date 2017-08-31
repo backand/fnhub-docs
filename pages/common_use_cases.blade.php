@@ -196,20 +196,20 @@
   color: #f92672;
 }
     </style>
-    <link href="../stylesheets/screen.css" rel="stylesheet" media="screen" />
-    <link href="../stylesheets/print.css" rel="stylesheet" media="print" />
-      <script src="../javascripts/all_nosearch.js"></script>
+    <link href="/stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="/stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="/javascripts/all_nosearch.js"></script>
   </head>
 
   <body class="pages pages_common_use_cases" data-languages="[]">
     <a href="#" id="nav-button">
       <span>
         NAV
-        <img src="../images/navbar.png" alt="Navbar" />
+        <img src="/images/navbar.png" alt="Navbar" />
       </span>
     </a>
     <div class="toc-wrapper">
-      <img src="../images/logo.png" class="logo" alt="Logo" />
+      <img src="/images/logo.png" class="logo" alt="Logo" />
       <div id="toc" class="toc-list-h1">
           <li>
             <a href="#common-use-cases" class="toc-h1 toc-link" data-title="Common Use cases">Common Use cases</a>
@@ -1252,7 +1252,7 @@ development and debugging situations, or as a part of a UI with search functiona
 <li>Click the &#39;Export Settings&#39; button, which will download the app configuration zip file to your file system.</li>
 <li>In the QA app, go to <strong>Admin --&gt; App Configuration</strong> and click the &#39;Import Settings&#39; button to upload the configuration zip file you just downloaded from the dev app.</li>
 <li>In <strong>Admin --&gt; General</strong>,x click the &#39;Clear Cache&#39; icon in the upper-right corner (swirly arrow refresh icon near the trashcan icon - see the image below), and approve the popup message.
-<img src="../images/clear_cache_button.png" alt="image" /></li>
+<img src="/images/clear_cache_button.png" alt="image" /></li>
 </ol></li>
 </ol>
 

@@ -196,20 +196,20 @@
   color: #f92672;
 }
     </style>
-    <link href="../stylesheets/screen.css" rel="stylesheet" media="screen" />
-    <link href="../stylesheets/print.css" rel="stylesheet" media="print" />
-      <script src="../javascripts/all_nosearch.js"></script>
+    <link href="/stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="/stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="/javascripts/all_nosearch.js"></script>
   </head>
 
   <body class="pages pages_backand_features" data-languages="[]">
     <a href="#" id="nav-button">
       <span>
         NAV
-        <img src="../images/navbar.png" alt="Navbar" />
+        <img src="/images/navbar.png" alt="Navbar" />
       </span>
     </a>
     <div class="toc-wrapper">
-      <img src="../images/logo.png" class="logo" alt="Logo" />
+      <img src="/images/logo.png" class="logo" alt="Logo" />
       <div id="toc" class="toc-list-h1">
           <li>
             <a href="#backand-features" class="toc-h1 toc-link" data-title="Backand Features">Backand Features</a>
@@ -1138,7 +1138,7 @@ after multiple uses, so we need to create one more task to perform cleanup after
 
 <p>To import an external AWS Lambda function, first navigate to <strong>Functions &amp; Integrations -&gt; Functions -&gt; External Functions</strong>. Enter the requested connection details, and press the &quot;Connect with AWS&quot; button. Once this is complete, you are presented with a list of functions that resembles the following:</p>
 
-<p><img src="../images/images/external-functions.png" alt="image" /></p>
+<p><img src="/images/images/external-functions.png" alt="image" /></p>
 
 <p>All functions not yet imported to your Backand application are located next to an orange &quot;Link&quot; button. Simply press this button, and the external Lambda function is connected to your Backand application. Once this is done, the &quot;Link&quot; button changes into a two button set that allows you to either test the function using our user interface, or unlink the function and prevent it from being called again over our API.</p>
 

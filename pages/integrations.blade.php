@@ -196,20 +196,20 @@
   color: #f92672;
 }
     </style>
-    <link href="../stylesheets/screen.css" rel="stylesheet" media="screen" />
-    <link href="../stylesheets/print.css" rel="stylesheet" media="print" />
-      <script src="../javascripts/all_nosearch.js"></script>
+    <link href="/stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="/stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="/javascripts/all_nosearch.js"></script>
   </head>
 
   <body class="pages pages_integrations" data-languages="[]">
     <a href="#" id="nav-button">
       <span>
         NAV
-        <img src="../images/navbar.png" alt="Navbar" />
+        <img src="/images/navbar.png" alt="Navbar" />
       </span>
     </a>
     <div class="toc-wrapper">
-      <img src="../images/logo.png" class="logo" alt="Logo" />
+      <img src="/images/logo.png" class="logo" alt="Logo" />
       <div id="toc" class="toc-list-h1">
           <li>
             <a href="#integrations" class="toc-h1 toc-link" data-title="Integrations">Integrations</a>
@@ -2287,7 +2287,7 @@ It also requires a '&lt;user key&gt;' for your app - you can find this in the <s
 </code></pre>
 <p>To integrate with Backand, you&#39;ll need three pieces of information. The first is the app name, which can be found in the Backand dashboard. The second is the app&#39;s Master key. This is found in the application dashboard, under <strong>Security --&gt; Social &amp; Keys</strong>. Once you&#39;ve obtained this, you&#39;ll also need the User Key. This is a key that is unique to each registered user in your application. It is used to associate the actions being taken in your app with a user, so that you can apply security templates appropriately. Obtain the User Key from <strong>Security -&gt; Registered Users</strong> - simply click on the &quot;key&quot; icon next to a user record to obtain the key:</p>
 
-<p><img src="../images/images/user_key_icon.png" alt="image" /></p>
+<p><img src="/images/images/user_key_icon.png" alt="image" /></p>
 
 <p>You can store this information in a wrapper class, which you will use to govern all calls to the Backand service. Start by defining the class, along with a constructor that accepts the three authentication values.</p>
 <h3 id='authenticating'>Authenticating</h3>
