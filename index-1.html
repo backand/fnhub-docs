@@ -1,0 +1,291 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>FnHub.io Documentation</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all.js"></script>
+  </head>
+
+  <body class="index-1" data-languages="[&quot;shell&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/logo.png" class="logo" alt="Logo" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="shell">shell</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <div id="toc" class="toc-list-h1">
+          <li>
+            <a href="#quick-start" class="toc-h1 toc-link" data-title="Quick Start">Quick Start</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#for-function-publishers" class="toc-h2 toc-link" data-title="Quick Start">For Function publishers</a>
+                  </li>
+                  <li>
+                    <a href="#for-function-consumers" class="toc-h2 toc-link" data-title="Quick Start">For Function Consumers</a>
+                  </li>
+              </ul>
+          </li>
+      </div>
+        <ul class="toc-footer">
+            <li><a href='#'>Sign Up for a Developer Key</a></li>
+            <li><a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <p>FnHub.io is a platform for sharing and consuming serverless functions. We support functions on a number of different serverless platforms, including AWS Lambda, Google Cloud Functions, Microsoft Azure Functions, and more. We also offer plugins to popular serverless development tools, such as AWS CloudFormation, AWS SAM, and Serverless Framework. Review the information below to see our quickstart guides, CLI documentation, reference material, submission guidelines, and more!</p>
+<h1 id='quick-start'>Quick Start</h1>
+<p>Use the quickstart guides below to get up and running with FnHub.io! We&#39;ve broken the quickstart guides into two categories:</p>
+
+<ul>
+<li><strong>Publishers</strong> - The Publisher&#39;s quickstart focuses on publishing a function to fnhub.io</li>
+<li><strong>Consumers</strong> - The Consumer&#39;s quickstart focuses on consuming functions published to fnhub.io in a serverless application</li>
+</ul>
+<h2 id='for-function-publishers'>For Function publishers</h2>
+<p>Publishing a function on FnHub.io is quick and easy! Just follow these three steps to release your package to the world:</p>
+
+<ol>
+<li><p>Initialize your function package using fnhub init:</p>
+
+<p><code>fnhub init --name myAwesomePackage --author test@example.com</code></p></li>
+<li><p>Add your serverless functions to the module using fnhub add:</p>
+
+<p><code>fnhub add -fn functionName -fnh index.handler -fnr nodejs6.10</code></p></li>
+<li><p>Publish your module to fnhub.io using fnhub publish:</p>
+
+<p><code>fnhub publish</code></p></li>
+</ol>
+
+<p>And that&#39;s it! With these three commands completed, your function is now available on FnHub.io, ready to be distributed to the serverless development community!</p>
+<h2 id='for-function-consumers'>For Function Consumers</h2>
+<p>Looking to accelerate your serverless development with a FnHub.io package? Pulling down and deploying a function is quick and painless! Just follow these easy steps:</p>
+
+<ol>
+<li><p>Initialize your serverless function platform connection using fnhub init:</p>
+
+<p><code>fnhub init --name myAwesomeFunctionPackage --author test@example.com</code></p></li>
+<li><p>Pull down a fnhub function using fnhub include:</p>
+
+<p><code>fnhub include reallyUsefulFunctionPackage</code></p></li>
+<li><p>Make any changes necessary to configuration, environment variables, and other application-specific data.
+Deploy your function to your serverless platform of choice using fnhub deploy:</p>
+
+<p><code>fnhub deploy</code></p></li>
+</ol>
+
+<p>And that&#39;s it! FnHub.io is designed to be easy to use, both for sharing and for pulling down shared code. With these simple steps, you can save time and effort by leveraging the work of others.</p>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="shell">shell</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
