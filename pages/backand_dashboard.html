@@ -1,0 +1,1123 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>API Documentation</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="../stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="../stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="../javascripts/all_nosearch.js"></script>
+  </head>
+
+  <body class="pages pages_backand_dashboard" data-languages="[]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="../images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="../images/logo.png" class="logo" alt="Logo" />
+      <div id="toc" class="toc-list-h1">
+          <li>
+            <a href="#backand-dashboard" class="toc-h1 toc-link" data-title="Backand Dashboard">Backand Dashboard</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#navigation-mapping" class="toc-h2 toc-link" data-title="Backand Dashboard">Navigation mapping</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#functions-amp-integrations" class="toc-h3 toc-link" data-title="Backand Dashboard">Functions &amp; Integrations</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#database" class="toc-h3 toc-link" data-title="Backand Dashboard">Database</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#security" class="toc-h3 toc-link" data-title="Backand Dashboard">Security</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#admin" class="toc-h3 toc-link" data-title="Backand Dashboard">Admin</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                    <a href="#docs-amp-api" class="toc-h2 toc-link" data-title="Backand Dashboard">Docs &amp; API</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#examples" class="toc-h3 toc-link" data-title="Backand Dashboard">Examples</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#kickstart-tutorials" class="toc-h3 toc-link" data-title="Backand Dashboard">Kickstart Tutorials</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#existing-app-tutorials" class="toc-h3 toc-link" data-title="Backand Dashboard">Existing App Tutorials</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#realtime-database" class="toc-h3 toc-link" data-title="Backand Dashboard">Realtime Database</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#documentation" class="toc-h3 toc-link" data-title="Backand Dashboard">Documentation</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#rest-api-playground" class="toc-h3 toc-link" data-title="Backand Dashboard">REST API Playground</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                    <a href="#objects" class="toc-h2 toc-link" data-title="Backand Dashboard">Objects</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#model" class="toc-h3 toc-link" data-title="Backand Dashboard">Model</a>
+                            <!-- Nest 4 levels -->
+                              <ul class="toc-list-h4">
+                                  <li>
+                                    <a href="#model-diagram" class="toc-h4 toc-link" data-title="Backand Dashboard">Model Diagram</a>
+                                    <!-- Nest 5 levels -->
+                                  </li>
+                                  <li>
+                                    <a href="#model-json" class="toc-h4 toc-link" data-title="Backand Dashboard">Model JSON</a>
+                                    <!-- Nest 5 levels -->
+                                  </li>
+                                  <li>
+                                    <a href="#database-pending" class="toc-h4 toc-link" data-title="Backand Dashboard">Database (pending)</a>
+                                    <!-- Nest 5 levels -->
+                                  </li>
+                              </ul>
+                          </li>
+                          <li>
+                            <a href="#object-list" class="toc-h3 toc-link" data-title="Backand Dashboard">Object List</a>
+                            <!-- Nest 4 levels -->
+                              <ul class="toc-list-h4">
+                                  <li>
+                                    <a href="#data-tab" class="toc-h4 toc-link" data-title="Backand Dashboard">Data tab</a>
+                                    <!-- Nest 5 levels -->
+                                  </li>
+                                  <li>
+                                    <a href="#actions-tab" class="toc-h4 toc-link" data-title="Backand Dashboard">Actions tab</a>
+                                    <!-- Nest 5 levels -->
+                                  </li>
+                                  <li>
+                                    <a href="#security-tab" class="toc-h4 toc-link" data-title="Backand Dashboard">Security tab</a>
+                                    <!-- Nest 5 levels -->
+                                  </li>
+                                  <li>
+                                    <a href="#settings-tab" class="toc-h4 toc-link" data-title="Backand Dashboard">Settings tab</a>
+                                    <!-- Nest 5 levels -->
+                                  </li>
+                                  <li>
+                                    <a href="#rest-api-tab" class="toc-h4 toc-link" data-title="Backand Dashboard">REST API tab</a>
+                                    <!-- Nest 5 levels -->
+                                  </li>
+                              </ul>
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                    <a href="#queries" class="toc-h2 toc-link" data-title="Backand Dashboard">Queries</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#query-list" class="toc-h3 toc-link" data-title="Backand Dashboard">Query List</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#create-a-query" class="toc-h3 toc-link" data-title="Backand Dashboard">Create a query</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#update-an-existing-query" class="toc-h3 toc-link" data-title="Backand Dashboard">Update an existing query</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#test-a-query" class="toc-h3 toc-link" data-title="Backand Dashboard">Test a query</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                    <a href="#background-jobs" class="toc-h2 toc-link" data-title="Backand Dashboard">Background Jobs</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#create-a-job" class="toc-h3 toc-link" data-title="Backand Dashboard">Create a job</a>
+                            <!-- Nest 4 levels -->
+                              <ul class="toc-list-h4">
+                                  <li>
+                                    <a href="#advanced-options" class="toc-h4 toc-link" data-title="Backand Dashboard">Advanced Options</a>
+                                    <!-- Nest 5 levels -->
+                                  </li>
+                              </ul>
+                          </li>
+                          <li>
+                            <a href="#update-an-existing-job" class="toc-h3 toc-link" data-title="Backand Dashboard">Update an existing job</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#test-a-job" class="toc-h3 toc-link" data-title="Backand Dashboard">Test a job</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#run-background-job-using-rest-api" class="toc-h3 toc-link" data-title="Backand Dashboard">Run background job using REST API</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#test-background-job" class="toc-h3 toc-link" data-title="Backand Dashboard">Test background job</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                    <a href="#analytics" class="toc-h2 toc-link" data-title="Backand Dashboard">Analytics</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#reports" class="toc-h3 toc-link" data-title="Backand Dashboard">Reports</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                    <a href="#security-amp-auth" class="toc-h2 toc-link" data-title="Backand Dashboard">Security &amp; Auth</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#security-configuration" class="toc-h3 toc-link" data-title="Backand Dashboard">Security configuration</a>
+                            <!-- Nest 4 levels -->
+                              <ul class="toc-list-h4">
+                                  <li>
+                                    <a href="#anonymous-access" class="toc-h4 toc-link" data-title="Backand Dashboard">Anonymous Access</a>
+                                    <!-- Nest 5 levels -->
+                                  </li>
+                                  <li>
+                                    <a href="#public-app" class="toc-h4 toc-link" data-title="Backand Dashboard">Public App</a>
+                                    <!-- Nest 5 levels -->
+                                  </li>
+                                  <li>
+                                    <a href="#custom-pages" class="toc-h4 toc-link" data-title="Backand Dashboard">Custom pages</a>
+                                    <!-- Nest 5 levels -->
+                                  </li>
+                                  <li>
+                                    <a href="#sign-up-email-verification" class="toc-h4 toc-link" data-title="Backand Dashboard">Sign-up Email Verification</a>
+                                    <!-- Nest 5 levels -->
+                                  </li>
+                              </ul>
+                          </li>
+                          <li>
+                            <a href="#social-amp-keys" class="toc-h3 toc-link" data-title="Backand Dashboard">Social &amp; Keys</a>
+                            <!-- Nest 4 levels -->
+                              <ul class="toc-list-h4">
+                                  <li>
+                                    <a href="#master-token" class="toc-h4 toc-link" data-title="Backand Dashboard">Master Token</a>
+                                    <!-- Nest 5 levels -->
+                                  </li>
+                                  <li>
+                                    <a href="#api-signup-token" class="toc-h4 toc-link" data-title="Backand Dashboard">API Signup Token</a>
+                                    <!-- Nest 5 levels -->
+                                  </li>
+                                  <li>
+                                    <a href="#social-configuration" class="toc-h4 toc-link" data-title="Backand Dashboard">Social Configuration</a>
+                                    <!-- Nest 5 levels -->
+                                      <ul class="toc-list-h5">
+                                          <li>
+                                            <a href="#social-redirect-uris" class="toc-h5 toc-link" data-title="Backand Dashboard">Social Redirect URIs</a>
+                                          </li>
+                                          <li>
+                                            <a href="#github-app-configuration" class="toc-h5 toc-link" data-title="Backand Dashboard">GitHub App Configuration</a>
+                                          </li>
+                                          <li>
+                                            <a href="#google-app-configuration" class="toc-h5 toc-link" data-title="Backand Dashboard">Google App Configuration</a>
+                                          </li>
+                                          <li>
+                                            <a href="#facebook-app-configuration" class="toc-h5 toc-link" data-title="Backand Dashboard">Facebook App Configuration</a>
+                                          </li>
+                                          <li>
+                                            <a href="#twitter-app-configuration" class="toc-h5 toc-link" data-title="Backand Dashboard">Twitter App Configuration</a>
+                                          </li>
+                                          <li>
+                                            <a href="#local-adfs-app-configuration" class="toc-h5 toc-link" data-title="Backand Dashboard">Local ADFS App Configuration</a>
+                                          </li>
+                                          <li>
+                                            <a href="#azure-ad-app-configuration" class="toc-h5 toc-link" data-title="Backand Dashboard">Azure AD App Configuration</a>
+                                          </li>
+                                      </ul>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li>
+                            <a href="#registered-users" class="toc-h3 toc-link" data-title="Backand Dashboard">Registered Users</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#team" class="toc-h3 toc-link" data-title="Backand Dashboard">Team</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#security-actions-backand-dashboard" class="toc-h3 toc-link" data-title="Backand Dashboard">Security Actions (Backand Dashboard)</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#security-templates" class="toc-h3 toc-link" data-title="Backand Dashboard">Security Templates</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                    <a href="#hosting" class="toc-h2 toc-link" data-title="Backand Dashboard">Hosting</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#configuration" class="toc-h3 toc-link" data-title="Backand Dashboard">Configuration</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#hosting-files" class="toc-h3 toc-link" data-title="Backand Dashboard">Hosting files</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#storage-files" class="toc-h3 toc-link" data-title="Backand Dashboard">Storage files</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                    <a href="#log" class="toc-h2 toc-link" data-title="Backand Dashboard">Log</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#api-requests" class="toc-h3 toc-link" data-title="Backand Dashboard">API Requests</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#console" class="toc-h3 toc-link" data-title="Backand Dashboard">Console</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#server-side-exceptions" class="toc-h3 toc-link" data-title="Backand Dashboard">Server Side Exceptions</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#configuration-2" class="toc-h3 toc-link" data-title="Backand Dashboard">Configuration</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#data-history" class="toc-h3 toc-link" data-title="Backand Dashboard">Data History</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                    <a href="#settings" class="toc-h2 toc-link" data-title="Backand Dashboard">Settings</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#general" class="toc-h3 toc-link" data-title="Backand Dashboard">General</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#database-2" class="toc-h3 toc-link" data-title="Backand Dashboard">Database</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#configuration-3" class="toc-h3 toc-link" data-title="Backand Dashboard">Configuration</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#billing-portal" class="toc-h3 toc-link" data-title="Backand Dashboard">Billing Portal</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#upgrade-plan" class="toc-h3 toc-link" data-title="Backand Dashboard">Upgrade Plan</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#payment-method" class="toc-h3 toc-link" data-title="Backand Dashboard">Payment Method</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                      </ul>
+                  </li>
+              </ul>
+          </li>
+      </div>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='backand-dashboard'>Backand Dashboard</h1>
+<p>Backand&#39;s REST API allows you to fully access and manipulate the backend data for your system, giving you full access to the underlying database and related functionality from any program that can send an HTTP request. While we start by wrapping your database in a true RESTful API Interface, we also give you a lot of extras that you can use to replace the server in your app:</p>
+
+<ul>
+<li>You can define and execute custom queries that are triggered by a call to a URL</li>
+<li>You can define and execute custom actions that execute whenever you hit a specific endpoint. These can be as simple as sending an email, or as complex as a custom server-side javascript function.</li>
+<li>You can manage user security and access to your application automatically through Backand&#39;s security and authorization system</li>
+<li>You can test every single endpoint in your system using Backand&#39;s API Playground</li>
+<li>You can get immediate and up-to-date looks at your database&#39;s underlying tables and stored data, and even perform real-time manipulations of that data</li>
+<li>You can create, retrieve, update, and delete every object in your system through a simple web call, and return as much - or as little - detail as you need</li>
+</ul>
+
+<p>Let&#39;s take a quick look at each available action in the Backand dashboard, and get started with focusing on the front-end of your application!</p>
+<h2 id='navigation-mapping'>Navigation mapping</h2>
+<p>Below is a list of pages in the Backand dashboard, and links to the specific section of the dashboard documentation that is relevant for each. We recommend using this as your starting point - it is designed to represent the hierarchy of pages as they currently appear in the Backand dashboard</p>
+<h3 id='functions-amp-integrations'>Functions &amp; Integrations</h3>
+<p>The Functions &amp; Integrations section of the Backand dashboard is dedicated to managing serverless functions in your Backand application. You&#39;ll find all object-independent functions here, as well as Cron Job management.</p>
+
+<ul>
+<li>Docs &amp; API
+
+<ul>
+<li><a href="https://www.backand.com/app-examples/">Examples</a> - A set of examples built on top of the Backand platform</li>
+<li><a href="http://docs.backand.com/">Documentation</a> - This documentation</li>
+</ul></li>
+<li>Functions
+
+<ul>
+<li><a href="#external-lambda-functions">External Functions</a> - This tab allows you to connect your AWS account and import external AWS Lambda functions.</li>
+<li><a href="#server-side-node-js-code">Add Lambda Function</a> - This governs adding a new Backand-owned Lambda function. Please note that these are different from external Lambda functions, which are owned by you.</li>
+<li><a href="#custom-actions">Add Javascript Function</a> - This governs adding a new Backand Server-side JavaScript function.</li>
+<li><a href="#custom-actions">Function list</a></li>
+</ul></li>
+<li><a href="#background-jobs">Cron Jobs</a> - This governs the list of scheduled tasks currently being used by your application
+
+<ul>
+<li>New Job - Use this page to create a new <a href="#background-jobs">Cron Job</a></li>
+<li>Cron Job list - This lists all scheduled jobs currently available in your application</li>
+</ul></li>
+<li><a href="#api-requests">API Log</a> - This is a log of your application&#39;s API requests</li>
+<li><a href="#console">Console Log</a> - This is a log of all console output from your application&#39;s functions and actions</li>
+</ul>
+<h3 id='database'>Database</h3>
+<p>The Database section of the Backand dashboard is used to manage your application&#39;s data store and schema. You can update your application&#39;s model, work with your object data, or construct custom queries against your database that can be called on-demand.</p>
+
+<ul>
+<li><a href="http://localhost:4567/#docs-amp-api">Docs &amp; API</a> - Product documentation
+
+<ul>
+<li><a href="#examples">Examples</a> - A set of example programs you can use to boost your development</li>
+<li><a href="#kickstart-tutorials">Kickstart Tutorials</a> - A set of kickstart apps, already connected to a demonstration Backand application</li>
+<li><a href="#existing-app-tutorials">Existing app</a> - A set of tutorials for connecting Backand with a pre-existing app built on any of a number of popular JavaScript frameworks</li>
+<li><a href="#realtime-database">Realtime Database</a> - Documentation on using our real-time database functionality, built on top of Socket.IO</li>
+<li><a href="#documentation">Documentation</a> - A link to this documentation</li>
+<li><a href="#rest-api-playground">REST API Playground</a> - Swagger-generated documentation for your application&#39;s REST API</li>
+</ul></li>
+<li><a href="#model">Model</a> - This provides tools for managing your application&#39;s data model</li>
+<li><a href="#objects">Objects</a> - This is a list of objects available in your application. Each object page contains data management, custom actions, security configuration, and an API playground.
+
+<ul>
+<li>New Object - Use this tab to create a new object in your system. It redirects you to the <a href="#model">Model</a> editor.</li>
+<li><a href="#object-list">Object List</a></li>
+</ul></li>
+<li><a href="#queries">Queries</a> - This section allows you to manage your application&#39;s custom queries.
+
+<ul>
+<li><a href="#create-a-query">New Query</a> - Use this tab to create a new custom query in your application.</li>
+<li><a href="#query-list">Query list</a> - A list of all queries in your system. Each query has a UI for testing.</li>
+</ul></li>
+<li><a href="#log">All logs</a>
+
+<ul>
+<li><a href="#api-requests">API Log</a> - This is a log of your application&#39;s API requests</li>
+<li><a href="#console">Console Log</a> - This is a log of all console output from your application&#39;s functions and actions</li>
+<li><a href="#data-history">Data History log</a> - This is a log of data changes in your application. This is only active if data logging is enabled on an object&#39;s configuration page</li>
+<li><a href="#server-side-exceptions">Server Exceptions</a> - This lists all server-side exceptions that have occurred in your application.</li>
+<li><a href="#configuration-2">Configuration</a> - This is a log of all configuration changes that have been applied to your application</li>
+</ul></li>
+<li><a href="#setting-up-and-configuring-a-database">Database Settings</a> - This contains all settings related to managing your application&#39;s database connection</li>
+</ul>
+<h3 id='security'>Security</h3>
+<p>The Security section of the Backand Dashboard is used to manage user and access restrictions for your application. You also obtain the API keys for your Backand application here.</p>
+
+<ul>
+<li><a href="#security-configuration">Configuration</a> - Use this to configure security-related functionality (like password resets) and obtain your anonymous access token</li>
+<li><a href="#social-amp-keys">Social &amp; Keys</a> - Use this to configure your connection with social media providers, and obtain your application&#39;s master and API signup keys</li>
+<li><a href="#registered-users">Registered Users</a> - This datagrid is used to manage your application&#39;s registered users</li>
+<li><a href="#security-actions-backand-dashboard">Security Actions</a> - This set of custom actions provides you the capability to perform various application updates after each user registration or security action. You can also use these actions to implement <a href="#integrating-third-party-security">third-party security mechanisms</a>.</li>
+<li><a href="#security-templates">Security Templates</a> - Use this section to manage your application&#39;s security templates and user security roles</li>
+</ul>
+<h3 id='admin'>Admin</h3>
+<p>The Admin section contains all the tools you need to administer your Backand account, and manage your application&#39;s hosting and environment variables.</p>
+
+<ul>
+<li><a href="#general">General</a> - This section allows you to manage your application&#39;s global configuration settings</li>
+<li><a href="#team">Team</a> - Use this datagrid to add or remove administrators in your Backand application</li>
+<li><a href="#hosting">Hosting</a> - This section governs Backand-provided hosting and file storage access
+
+<ul>
+<li><a href="#configuration">Configuration</a> - This is used to set up your application&#39;s usage for Backand hosting</li>
+<li><a href="#storage-files">Storage</a> - This provides an interface to manage all files stored in S3 on behalf of your application</li>
+</ul></li>
+<li><a href="#configuration-3">App Configuration</a> - This allows you to create versions of your application&#39;s configuration settings</li>
+<li>Billing
+
+<ul>
+<li><a href="#billing-portal">Billing Portal</a> - This allows you to review billing information that you have provided to Backand</li>
+<li><a href="#upgrade-plan">Upgrade Plan</a> - Use this page to perform an account upgrade</li>
+<li><a href="#payment-method">Payment Method</a> - This page allows you to update and change your application&#39;s payment methods</li>
+</ul></li>
+<li><a href="#analytics">Reports</a> - This section provides access to your application&#39;s analytics</li>
+<li><a href="#log">All logs</a>
+
+<ul>
+<li><a href="#api-requests">API Log</a> - This is a log of your application&#39;s API requests</li>
+<li><a href="#console">Console Log</a> - This is a log of all console output from your application&#39;s functions and actions</li>
+<li><a href="#data-history">Data History log</a> - This is a log of data changes in your application. This is only active if data logging is enabled on an object&#39;s configuration page</li>
+<li><a href="#server-side-exceptions">Server Exceptions</a> - This lists all server-side exceptions that have occurred in your application.</li>
+<li><a href="#configuration-2">Configuration</a> - This is a log of all configuration changes that have been applied to your application</li>
+</ul></li>
+</ul>
+<h2 id='docs-amp-api'>Docs &amp; API</h2>
+<p>The Docs &amp; API tab contains links to kickstart tutorials, tutorials on converting existing applications to use Backand, and other useful documentation. let&#39;s take a look at each menu category below.</p>
+<h3 id='examples'>Examples</h3>
+<p>This links to our <a href="https://www.backand.com/apps/">examples page</a>, which has useful sample applications for many different platforms. These sample applications work to show how best to integrate Backand with an application for each mentioned platform, and can be a good starting point for integrating Backand with an existing (or brand new) application.</p>
+<h3 id='kickstart-tutorials'>Kickstart Tutorials</h3>
+<p>Our kickstart tutorials provide a list of kickstart apps that you can use to build an app for the platform specified. These kickstart apps ship with Backand already built-in and integrated, and provide you with tools to explore the SDK&#39;s functionality. They all work with the default data model, so getting the kickstart app wired up to a new Backand application is a simple matter of changing the appropriate keys in each example.</p>
+
+<aside class='notice'>
+We provide a platform selector, which allows you to only view the kickstarts, existing apps, and code samples throughout the dashboard that are relevant to your needs. Simply choose a different platform, and the dashboard will present all examples in the relevant version of JavaScript that matches your selection.
+</aside>
+<h3 id='existing-app-tutorials'>Existing App Tutorials</h3>
+<p>Our existing app tutorials provide a list of tutorials on connecting Backand into your existing application, with a number of different frameworks supported. These focus on including the Backand SDK, connecting to your app, and working with the data model. If you&#39;d like to see another platform included, please <a href="https://www.backand.com/contact/">contact us</a>!</p>
+
+<aside class='notice'>
+We provide a platform selector, which allows you to only view the kickstarts, existing apps, and code samples throughout the dashboard that are relevant to your needs. Simply choose a different platform, and the dashboard will present all examples in the relevant version of JavaScript that matches your selection.
+</aside>
+<h3 id='realtime-database'>Realtime Database</h3>
+<p>The Realtime Database tab provides documentation on configuring your Backand application to work with our Socket-based real-time communications capabilities. It outlines all of the steps necessary on both the client and server sides to get everything working in your app.</p>
+
+<aside class="notice">Backand's realtime functionality relies upon Socket.io. We choose not to include this library by default as the JavaScript library itself is quite large, and can greatly increase the size of your application's assets. Make sure that when you enable socket functionality, that you have also included the Socket.io javascript in your project. </aside>
+<h3 id='documentation'>Documentation</h3>
+<p>The documentation item has a link to this documentation.</p>
+<h3 id='rest-api-playground'>REST API Playground</h3>
+<p>The REST API playground is a Swagger-based page from which you can exercise all of the SDK functionality. Use this to gain familiarity with the Backand REST API.</p>
+<h2 id='objects'>Objects</h2>
+<p>The &quot;Objects&quot; section of the dashboard allows you to modify the specific objects in your application&#39;s database. A menu entry is created for each table in your database, and allows you to configure your application at the object level. For each object in your system, you are given access to the following areas to modify and work with.</p>
+<h3 id='model'>Model</h3>
+<blockquote>
+<p>This sample model JSON creates two objects - Items and Users</p>
+</blockquote>
+<pre class="highlight json tab-json--persistent"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"items"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"fields"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"text"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"users"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"users"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"fields"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"firstName"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"lastName"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"collection"</span><span class="p">:</span><span class="w"> </span><span class="s2">"items"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"via"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>The Model parent tab allows you to modify your database&#39;s model structure, adding new objects and establishing the relationship between them. This can be done using either our GUI model editor, or the JSON schema editor. We also provide a tab demonstrating how to make - and sync - changes to your database using an external database tool (like MySQL Workbench). Below is a brief overview of how to use this interface.</p>
+
+<aside class="notice">Backand offers support for automated population of created and updated timestamps. Simply add the `createdAt` or `updatedAt` fields to your model, and if they are present Backand will automatically populate them with the timestamp of the most recent POST or PUT request to that object.</aside>
+
+<aside class="warning">In addition to the fields supplied by the user, Backand defines an 'id' field, of type integer, which will be used as a primary key for the table. Backand uses auto-incrementing integers as the default for IDs in your objects, meaning in the default case values provided in the ID field by the SDK or via another API call will be overwritten with the next sequential ID. You'll need to remove this constraint in order to successfully populate the ID field with other data. You can also use an alternative field in the object as the primary key - simply make the designation in SQL, and Backand will update once you sync the database changes.</aside>
+<h4 id='model-diagram'>Model Diagram</h4>
+<p>The Model Diagram tab provides a GUI editor for working with your app&#39;s database schema. It works with the model JSON in the background to orchestrate changes to your database. Using the GUI you can easily add new objects, update existing objects, create relations between objects, and all other related database modification tasks.</p>
+<h4 id='model-json'>Model JSON</h4>
+<p>The Model JSON tab provides a straightforward method of editing your database schema using well-formed JSON. You&#39;re given a pane to perform your edits, and a comparison pane so that you can easily see what has changed from the current schema. Once your changes are finalized, click &quot;Validate &amp; Update&quot; to finalize your changes.</p>
+<h4 id='database-pending'>Database (pending)</h4>
+<p>This tab describes how to make the changes you desire in your model directly in the database. Once you&#39;ve made your changes via whichever RDBMS tool you prefer, you can click the &quot;Sync your database&quot; button to pull the changes into Backand, updating your schema and object list.</p>
+<h3 id='object-list'>Object List</h3>
+<p>For each object in your schema, you are provided a dedicated management area for that object. These are accessed via a list beneath the &quot;New object&quot; entry.</p>
+
+<p>Each object has a set of tabs provided that allow you to modify either the object&#39;s data, or the object itself. These tabs are Data, Actions, Security, Settings, and REST API</p>
+
+<aside class="notice">You can also use the "New object" to quickly create a new object to add to your system.</aside>
+<h4 id='data-tab'>Data tab</h4>
+<p>The data tab provides you with a quick method by which you can add new records, update existing records, or remove records from your database. For every action you take in this pane, we provide the code needed to reproduce the action using the SDK - simply select the appropriate language/JavaScript framework for your project, and copy the code into your application.</p>
+
+<p>We also give you access to the Filter Data functionality, which can be used to quickly construct request filters that can be applied to GET requests. Simply click on the &quot;Filter Data&quot; link to expose a UI for constructing your filter, and the resulting parameter code will appear in the &quot;Request Code&quot; textbox on the right side of the screen.</p>
+<h4 id='actions-tab'>Actions tab</h4>
+<p>The Actions tab allows you to work with custom actions in your object. Custom actions allow you to perform automated tasks in your Backand application. You can create actions that execute at any point during the database transaction context for an object, or create actions that execute whenever a specific URL is hit. See <a href="#custom-actions">our documentation on custom actions</a> for more information.</p>
+<h4 id='security-tab'>Security tab</h4>
+<p>The security tab allows you to create custom filters that apply restrictions to loading data associated with the user session. You can also use this tab to override your app&#39;s global security configuration, allowing custom access to your object based on user role, and also restrict access to specific fields in the object as necessary.</p>
+<h4 id='settings-tab'>Settings tab</h4>
+<p>The Settings tab allows you to modify properties of your object directly, and work with each field in the object. At the object level, you&#39;re given the capability to enable change tracking, or to set a descriptive column. Change tracking keeps a record of all changes to an object as they occur, storing these results in App Dashboard -&gt; Log -&gt; Data History. This can result in performance impacts, so you should use this feature sparingly. A descriptive column represents the object when it is retrieves as a part of a list, providing the user with an easy-to-understand indicator for the current object record they are manipulating.</p>
+
+<p>The field properties provide you with the capability to make a field searchable (available via the &quot;Search&quot; filter when making API calls), mark a field as &quot;required&quot;, or provide a default value for a field. These options are presented for each field in your object, but depending on usage may not be modifiable. If a field represents a link to another object in your system, you are provided with a hyperlink in the settings section that takes you directly to that related object&#39;s datagrid view.</p>
+<h4 id='rest-api-tab'>REST API tab</h4>
+<p>The REST API tab offers you the capability to test all of the standard database actions with a custom Swagger interface. Once you execute the call, the request that was made - and the response received - are both provided, allowing you to quickly adopt the action into your app.</p>
+<h2 id='queries'>Queries</h2>
+<p>The queries tab provides you with the capability to generate custom queries in your system. Simply click &quot;New Query&quot; to start building out a custom query. When building a new query you can provide a name, input parameters, and the query body using either NoSQL or SQL syntax. You can also set the security template of the query, restricting the query access based on the user&#39;s role. On the right side of this screen, you can also perform a quick test of your query by hitting either &quot;Test Query&quot; or &quot;Save &amp; Test&quot;. The test process will present the query&#39;s URL endpoint, the SDK code needed to call the query, and a sample response.</p>
+<h3 id='query-list'>Query List</h3>
+<p>As you create queries, you&#39;re provided with a list of the queries present in your system. Simply click on the name of a query to begin editing or testing the query&#39;s contents.</p>
+<h3 id='create-a-query'>Create a query</h3>
+<p>You can add a new query by clicking on &quot;+New Query&quot; in the menu bar. This allows you to name the query, provide any parameters necessary, and then write the query. It also allows you to set a specific security template for the query to use as it executes, and allows you to override the security template settings when running the query.</p>
+<h3 id='update-an-existing-query'>Update an existing query</h3>
+<p>To update an existing query, select the query from the navigation menu and press the &quot;Edit&quot; button.</p>
+<h3 id='test-a-query'>Test a query</h3>
+<p>You can test both new and existing queries using the Test query parameters panel on the right hand side of the page. This executes the query, returning both the data of the query and the URL used to execute the query.</p>
+<h2 id='background-jobs'>Background Jobs</h2>
+<p>Background jobs (also known as cron jobs) allow you to run an action, query, or external URL request on a schedule that you define. Simply set the time and frequency, and the desired task will be executed automatically by Backand&#39;s servers. With this mechanism, you can run periodic queries for things like reports, recurring actions to control your application&#39;s behavior, or regularly post to external services.</p>
+<h3 id='create-a-job'>Create a job</h3>
+<p>To create a new Background job, click on &quot;+ New Job&quot; in the &quot;Background jobs&quot; section of the navigation bar. Simply add a name, a description, a start time or frequency, and set the type of job (Action, Query, External URL) to execute.</p>
+<h4 id='advanced-options'>Advanced Options</h4>
+<p>In the advanced options, you can configure the job to operate via a POST or GET request. The GET request allows you to configure the query string used in the request, as well as modify the headers sent - allowing you to send additional parameters to the job when it executes. For POST requests, you can modify both the headers and the query string, but you are also given the Request Data field which you can use to send additional parameter formats, such as long text.</p>
+
+<p>This can be very useful in distinguishing between two jobs that run the same action. For each job, you can send a &quot;type&quot; parameter to indicate the specific job being run. You can accomplish this by setting the &quot;Query String&quot; field to the appropriate value: <code>parameters={type:1}</code> for job 1, and <code>parameters={type:2}</code> for job 2.</p>
+<h3 id='update-an-existing-job'>Update an existing job</h3>
+<p>You can update existing job by selecting the background job from the navigation menu and pressing the &quot;Edit&quot; button. This allows you to change all aspects of the job.</p>
+<h3 id='test-a-job'>Test a job</h3>
+<p>You can test both new and existing jobs using the Test buttons on the right hand side of the page. These buttons execute the job on Backand&#39;s servers, displaying the request sent and the response received. In addition to simple verification, testing can be used to verify that advanced parameters function properly, and that the job responds as expected.</p>
+<h3 id='run-background-job-using-rest-api'>Run background job using REST API</h3><pre class="highlight shell tab-shell"><code>  curl https://api.backand.com/1/jobs/run/<span class="o">{</span>id<span class="o">}</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code>   <span class="kd">var</span> <span class="nx">response</span> <span class="o">=</span> <span class="nx">$http</span><span class="p">({</span>
+       <span class="na">method</span><span class="p">:</span> <span class="s2">"GET"</span><span class="p">,</span>
+       <span class="na">url</span><span class="p">:</span> <span class="nx">CONSTS</span><span class="p">.</span><span class="nx">apiUrl</span> <span class="o">+</span> <span class="s2">"/1/jobs/run/"</span> <span class="o">+</span> <span class="nx">cronId</span>
+   <span class="p">});</span>
+</code></pre>
+<p>Background Jobs are useful for long running tasks such as integrating with external sites (where the response time could be slow), or sending out batched push notifications. If you commonly encounter timeout errors while running on-demand actions, then you should consider using a Background Job.</p>
+
+<p>All messages and errors are logged into the console. These messages are available in the dashboard under Log --&gt; Console.</p>
+<h3 id='test-background-job'>Test background job</h3><pre class="highlight shell"><code>curl https://api.backand.com/1/jobs/run/<span class="o">{</span>id<span class="o">}</span>/test
+</code></pre>
+<p>In order to test the job and get a response immediately (either valid results or an error message), use the following REST endpoint.</p>
+
+<aside class="notice">this call runs synchronously, so it may take a long time to finish</aside>
+<h2 id='analytics'>Analytics</h2>
+<p>The Analytics section provides several reports exploring the various facets of you app&#39;s performance. You are able to provide a date range to examine, using preconfigured date ranges our your own custom range. You can use these to gain insight on user activity within your app, as well as on the resources being used by your application.</p>
+<h3 id='reports'>Reports</h3>
+<p>Backand provides the following reports for your app:</p>
+
+<ul>
+<li>Activity-based reports
+
+<ul>
+<li>Devices by Country</li>
+<li>Daily Active Devices</li>
+<li>Weekly Active Devices</li>
+<li>Montly Active Devices</li>
+<li>Registered Users by Country</li>
+<li>Daily Active Registered Users</li>
+<li>Weekly Active Registered Users</li>
+<li>Monthly Active Registered Users</li>
+<li>Top Active Registered Users</li>
+</ul></li>
+<li>Performance-based reports
+
+<ul>
+<li>Requests per Objects</li>
+<li>Slow Requests</li>
+</ul></li>
+<li>Usage-based reports
+
+<ul>
+<li>Backand Compute</li>
+<li>Cache Memory</li>
+<li>Requests per Second</li>
+<li>Data Hosting</li>
+<li>Database Size</li>
+</ul></li>
+</ul>
+<h2 id='security-amp-auth'>Security &amp; Auth</h2>
+<p>The Security &amp; Auth section allows you to modify the security settings for your application, setting both application-level and user-level security policies.</p>
+<h3 id='security-configuration'>Security configuration</h3>
+<p>The Security Configuration section allows you to set application-wide settings for access to your project.</p>
+<h4 id='anonymous-access'>Anonymous Access</h4>
+<p>When enabled, this allows any user with a link to access your application. You can set a role for anonymous users, and obtain an anonymous access token to use in your application&#39;s code.</p>
+<h4 id='public-app'>Public App</h4>
+<p>The Public App settings determines whether users can sign up for your app, or if they must be invited. You can also assign a role to each invited user.</p>
+
+<aside class="warning">Email verification is disabled by default, so verifying users requires an extra setting change for your application.</aside>
+<h4 id='custom-pages'>Custom pages</h4>
+<p>These custom pages are pages within your application code that are used for user registration and login. The Custom Registration Page URL is supplied in the invitation email sent to new users. The Custom Verified Email Page URL is sent to the user after they have verified their email address. The Custom Password Reset URL is used as a part of the password reset process - the user is sent to this page with a reset token, which needs to be provided in order to perform the password reset with the SDK.</p>
+
+<aside class="notice">Note that these are pages on your own servers, and not a part of Backand. These pages are only sent when Sign-up Email Verification is enabled.</aside>
+<h4 id='sign-up-email-verification'>Sign-up Email Verification</h4>
+<p>This enables or disables automated user email verification. When enabled, users are sent a verification email by Backand which they must use to verify their account. When disabled, this action is not performed and users are immediately able to use their account.</p>
+<h3 id='social-amp-keys'>Social &amp; Keys</h3>
+<p>The Social &amp; Keys page consists of two parts - the tokens, and the social media configurations. These settings are used in your app to enable integration with social media providers, allowing your users to sign into your app using their social media accounts.</p>
+<h4 id='master-token'>Master Token</h4>
+<p>The master Token is a token that you can use to access your Backand app without a username or password.
+<aside class="warning">Use this token carefully, as it gives the user full access to your application.. This token mast be sent with the user&#39;s GUID key. The master key is used with <a href="https://en.wikipedia.org/wiki/Basic_access_authentication" target="\_blank">basic authentication</a>, simply enter the master key as the username, and the user&#39;s GUID key as the password.</aside></p>
+<h4 id='api-signup-token'>API Signup Token</h4>
+<p>The API Signup Token is used whenever you contact the Backand API to register a new user with your application.</p>
+<h4 id='social-configuration'>Social Configuration</h4>
+<p>In this section you can configure the social app for each company (GitHub, Google and Facebook). By default you can use Backand as the social app, unless you add your own client and secret ids.</p>
+<h5 id='social-redirect-uris'>Social Redirect URIs</h5>
+<p>Following sign-in with social media, your user will be redirected to a Redirect URI that is then tasked with obtaining the full details of the authentication that occurred. This URI is called automatically by Backand, and is specified as the redirectUrl parameter to the socialMediaSignup call in the API. In order to support this more secure pattern of working with social media authentication, all URLs that can be redirected to must be present in this Social Redirect URI list. If a URL is not present in this list, then the redirect request will not be honored.</p>
+
+<aside class="notice">This field accepts a comma-separated list of URIs, to allow for multiple endpoints in your application. Simply add each new URI by adding a comma to the previous value, then pasting the new URI into the text box.</aside>
+<h5 id='github-app-configuration'>GitHub App Configuration</h5>
+<p>In order to enable signing in with GitHub credentials, follow these steps:</p>
+
+<ol>
+<li>Check the &#39;Use your credentials for signing in with GitHub&#39; toggle</li>
+<li>Register your application on GitHub&#39;s <a href="https://github.com/settings/applications/new" target="\_blank">Developer Applications Tab</a>. Include the following details, which are mandatory for new applications:
+
+<ul>
+<li><code>Application name</code>: A name for your app. Something users will recognize and trust</li>
+<li><code>Homepage URL</code>: Your application&#39;s url (you can use http://localhost for testing purposes)</li>
+<li><code>Authorization callback URL</code>: https://api.backand.com/1/user/github/auth</li>
+</ul></li>
+<li>Record the Client ID and the Client Secret from GitHub</li>
+<li>Finally, on the <code>Social &amp; Keys</code> section of the Backand app management dashboard, copy the Client ID and Client Secret in the correct fields in the GitHub section..</li>
+</ol>
+
+<p>More details on GitHub integrations are available in the <a href="https://developer.github.com/v3/oauth/#redirect-urls/" target="\_blank">developer documentation</a>.</p>
+<h5 id='google-app-configuration'>Google App Configuration</h5>
+<p>In order to add Google app sign-in, follow these steps:</p>
+
+<ol>
+<li>Check the &#39;Use your credentials for signing in with Google&#39; toggle/</li>
+<li>Open the <a href="https://console.developers.google.com/project" target="\_blank">Google Developer&#39;s Console</a>.
+
+<ol>
+<li>In the Google Developer&#39;s Console, Click <strong>Create Project</strong>.</li>
+<li>Enter a name, or accept the defaults, and click <strong>Create</strong>.</li>
+<li>Click <strong>Library</strong> to view the API Library, which lists all available APIs. The APIs are grouped by product family and popularity. Click on <strong>Google+ API</strong> under <strong>Social APIs</strong></li>
+<li>Click <strong>Enable</strong> (You should see this to the right of the Google+ API button).</li>
+<li>In the sidebar on the left, select <strong>Credentials</strong>.</li>
+<li>Click <strong>Create credentials</strong> and select  <strong>OAuth client ID</strong></li>
+<li>Click  <strong>Configure consents screen</strong> tab on the right panel and enter the Product name, Privacy policy URL (https://www.backand.com)</li>
+<li>Click <strong>Save</strong></li>
+<li>Enter the following details:
+    * <strong>Application type</strong>: Web application
+    * <strong>Name</strong> (this can be your Backand app name)
+    * <strong>Authorized JavaScript origins</strong>:  leave this field empty
+    * <strong>Authorized redirect URIs</strong>: Replace the default example URL with &#39;https://api.backand.com/1/user/google/auth&#39;
+
+<ol>
+<li>Click <strong>Create</strong> and <strong>Create</strong> again</li>
+<li>Record the <strong>Client ID</strong> and <strong>Client secret</strong> from the popup window and click <strong>OK</strong></li>
+</ol></li>
+<li>On the left side bar click <strong>Dasboard</strong> make sure Google+ API is listed under the <strong>API</strong> list. On the right side of the list, make sure that the displayed action text is <strong>disable</strong>, indicating that the API is currently enabled.</li>
+</ol></li>
+<li>Finally, on the <strong>Social &amp; Keys</strong> section of the Backand app management dashboard, copy the Client ID and Client Secret you copied down in the last step.</li>
+</ol>
+
+<p>For more details on integrating with Google, review their <a href="https://developers.google.com/console/help/new/" target="\_blank">developer documentation</a>.</p>
+<h5 id='facebook-app-configuration'>Facebook App Configuration</h5>
+<p>In order to add Facebook login integration, follow these steps:</p>
+
+<ol>
+<li>Check the &#39;Use your credentials for signing in with Facebook&#39; toggle.</li>
+<li>Open the <a href="https://developers.facebook.com/" target="\_blank">Facebook Developers console</a>.</li>
+<li>Optional: Click MyApps and register as developer
+
+<ol>
+<li>Under <strong>My Apps</strong>, select <strong>Add a new app</strong></li>
+<li>In the wizard that follows, provide your app&#39;s name and <strong>Category</strong></li>
+<li>Click <strong>Create app ID</strong></li>
+<li>Complete the <strong>Security Check</strong> step</li>
+<li>In the sidebar on the left, select <strong>Settings</strong></li>
+<li>In Basic tab add your <strong>Contact Email</strong></li>
+<li>In the sidebar click <strong>+ Add Product</strong> under Products</li>
+<li>Click Get Started in the <strong>Facebook Login</strong> product</li>
+<li>In <strong>Valid OAuth redirect URIs</strong> enter: &#39;https://api.backand.com/1/user/facebook/auth&#39;</li>
+<li>Click <strong>Save Changes</strong></li>
+<li>To start using your app, you need to make it public, open App Preview from the left menu and change <strong>Make
+<code>{{appName}}</code> public?</strong> to <strong>yes</strong> and confirm the popup window</li>
+<li>In the sidebar on the left, select <strong>Dashboard</strong><br></li>
+<li>Record the <strong>App ID</strong></li>
+<li>Click <strong>Show</strong> (near <strong>App Secret</strong>) and enter your Facebook password.</li>
+<li>Record the <strong>App Secret</strong></li>
+</ol></li>
+<li> Finally, on the <strong>Social &amp; Keys</strong> section of the Backand app management dashboard , copy the App ID and App Secret you recorded into the appropriate fields in the Facebook integration section.</li>
+</ol>
+<h5 id='twitter-app-configuration'>Twitter App Configuration</h5>
+<p>In order to add Twitter login integration, follow these steps:</p>
+
+<ol>
+<li>Un-check the &#39;Use Back&amp; app for signing in with Twitter&#39; toggle.</li>
+<li>If you haven&#39;t added your phone number to Twitter you&#39;ll need to add it before creating Twitter app, please follow <a href="https://support.twitter.com/articles/110250">these instructions</a></li>
+<li>Open the <a href="https://apps.twitter.com/" target="\_blank">Twitter Apps console</a>.</li>
+<li>Click <strong>Create New App</strong> button
+
+<ol>
+<li>Enter the App details - Name, Description, Website</li>
+<li>In the Callback URL enter: <strong>https://api.backand.com/1/user/twitter/auth</strong></li>
+<li>Check <strong>Yes, I agree</strong>  in the developer agreement</li>
+<li>Click <strong>Create your Twitter application</strong> button</li>
+<li>In the <strong>Detail</strong> tab of your newly created app scroll down to the Application Setting area and click the <strong>manage keys and access tokens</strong> link</li>
+<li>Record the <strong>Consumer Key (API Key)</strong> and the <strong>Consumer Secret (API Secret)</strong></li>
+</ol></li>
+<li>In the Backand dashboard, copy the Consumer Key and API Secret you recorded into the appropriate fields in the Twitter integration section.</li>
+</ol>
+<h5 id='local-adfs-app-configuration'>Local ADFS App Configuration</h5>
+<p>In order to add ADFS login integration, follow these steps:</p>
+<pre class="highlight shell"><code><span class="c"># Step 2</span>
+Add-AdfsRelyingPartyTrust -Name <span class="s2">"Backand QA"</span> -Identifier <span class="s2">"https://api.backand.com"</span> -TokenLifetime 10 -IssueOAuthRefreshTokensTo AllDevices -EnableJWT <span class="nv">$True</span> -IssuanceTransformRules <span class="s1">'@RuleTemplate = "PassThroughClaims" @RuleName = "Windows account name" c:[Type=="http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname"] =&gt; issue(claim = c); @RuleTemplate = "PassThroughClaims" @RuleName = "UPN" c:[Type == "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn"] =&gt; issue(claim = c);'</span> -IssuanceAuthorizationRules <span class="s1">'=&gt; issue(Type = "http://schemas.microsoft.com/authorization/claims/permit", Value = "true");'</span>
+
+<span class="c"># Step 3</span>
+<span class="c"># Update the ClientId with any GUID value (Get a &lt;a href="https://www.guidgenerator.com/"&gt;new GUID&lt;/a&gt;)</span>
+Add-ADFSClient -Name <span class="s2">"Backand"</span> -ClientId <span class="s2">"188c552d-bf43-409b-9355-a0fb0eb227e3"</span> -RedirectUri <span class="s2">"https://api.backand.com/1/user/adfs/auth"</span>
+
+<span class="c"># Step 4</span>
+<span class="c"># 43,200 is the number of minutes in 30 days - you may change it to meet your organization requirements</span>
+Set-AdfsProperties -EnableKmsi <span class="nv">$True</span> –KmsiLifetimeMins 43,200
+</code></pre>
+<ol>
+<li>Open windows command shell on the ADFS server with Admin permissions</li>
+<li>Run Add-AdfsRelyingPartyTrust command with the following parameters (you may change the defaults as needed):</li>
+<li>Run Add-ADFSClient to add Backand as a client application to your ADFS:</li>
+<li>Run this command to configure persistent Single Sign-On and show the &quot;keep me signed in&quot; checkbox:</li>
+<li>Finally, on the <strong>Social &amp; Keys</strong> section of the Backand app management dashboard, copy the Client Id and Redirect Uri you entered in the Add-ADFSClient command.</li>
+</ol>
+<h5 id='azure-ad-app-configuration'>Azure AD App Configuration</h5>
+<p>In order to add Azure AD application integration, follow these steps:</p>
+
+<ol>
+<li>Open the <a href="https://portal.azure.com/" target="\_blank">Azure new portal</a>.</li>
+<li>Select <strong>Azure Active Directory</strong></li>
+<li>Select <strong>App Registrations</strong></li>
+<li>Click <strong>+Add</strong> and use these parameters:
+
+<ol>
+<li>Name: <strong>Backand</strong></li>
+<li>Application Type: <strong>Native</strong></li>
+<li>Redirect URI: <strong>https://api.backand.com/1/user/azuread/auth</strong></li>
+</ol></li>
+<li>Click <strong>Create</strong></li>
+<li>Click on the Backand App and copy the Application Id / Client Id (e.g. 7c799275-1102-4aa6-b36a-fac7aa7fee60)</li>
+<li><p>Click on &quot;Endpoints&quot; menu and copy &quot;OAUTH 2.0 AUTHORIZATION ENDPOINT&quot;. In Backand just connect to /oauth2 in the OAUTH 2.0 Endpoint filed(e.g. &quot;https://login.windows.net/a652911c-7a2c-4a9c-d1b2-d149256f461b/oauth2&quot;)</p></li>
+<li><p>Finally, on the <strong>Social &amp; Keys</strong> section of the Backand app management dashboard, copy the Application Id into the Client Id field and OAUTH 2.0 Endpoint you copied down in the last step.</p></li>
+</ol>
+<h3 id='registered-users'>Registered Users</h3>
+<p>The registered users page lists all users currently registered for your app. You can add new user, edit existing user details, delete a user, or invite a new user to your application via email. You can also manually enter - and edit - user passwords from this interface.</p>
+<h3 id='team'>Team</h3>
+<p>The Team section allows you to add new administrative users to your application. Admin users have full access to the application dashboard, and your application&#39;s configuration. You can perform all of the same actions available on the Users page on the Team page as well.</p>
+<h3 id='security-actions-backand-dashboard'>Security Actions (Backand Dashboard)</h3>
+<p>The actions on this page, much like those on the other pages of the application, allow you to define custom actions to occur at each point in the transactional CRUD conversation against an object, or when called by accessing a specific URL. These actions, though, are tied specifically to the internal Backand Users object, which manages your application&#39;&#39;s security. All of the standard custom action options are available for use in this section, and you can easily create new actions, edit existing actions, and test the actions you have created.</p>
+
+<p>The following actions are provided by default for a Backand application. You can edit these actions as you desire, or add new actions that occur during the database transaction that modifies your app&#39;s <code>registered_users</code> table:</p>
+
+<table><thead>
+<tr>
+<th>Action Name</th>
+<th>When it Runs</th>
+<th>What it Does</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>accessFilter</td>
+<td>Automatic, after successful authentication</td>
+<td>See <a href="#integrating-third-party-security">our post on third-party security</a></td>
+</tr>
+<tr>
+<td>backandAuthOverride</td>
+<td>Automatic, prior to user authentication</td>
+<td>See <a href="#integrating-third-party-security">our post on third-party security</a></td>
+</tr>
+<tr>
+<td>beforeSocialSignup</td>
+<td>Automatic, prior to social media registration</td>
+<td>This allows you to run additional code prior to signing up a user through social media-based authentication</td>
+</tr>
+<tr>
+<td>ChangePasswordOverride</td>
+<td>Automatic, during password change</td>
+<td><strong>not currently used</strong></td>
+</tr>
+<tr>
+<td>newUserVerification</td>
+<td>Automatic, during user registration</td>
+<td>This verification message is sent to new users if email address verification is enabled</td>
+</tr>
+<tr>
+<td>requestResetPassword</td>
+<td>Automatic, after a call to <code>requestResetPassword</code></td>
+<td>This email is sent in response to initiating a password reset</td>
+</tr>
+<tr>
+<td>socialAuthOverride</td>
+<td>Automatic, after social media authentication <em>and</em> registration</td>
+<td>See <a href="#integrating-third-party-security">our post on third-party security</a></td>
+</tr>
+<tr>
+<td>userApproval</td>
+<td>Automatic, after user registration</td>
+<td>This email is sent to users to inform them that they have been successfully added to an app</td>
+</tr>
+<tr>
+<td>Admin Invitation Email</td>
+<td>Automatic, during user creation</td>
+<td>This email is used to invite administrators to your application</td>
+</tr>
+<tr>
+<td>Create My App User</td>
+<td>Automatic, during user creation</td>
+<td>This function takes the user input from the sdk <code>signup</code> call, and uses it to populate a custom <code>users</code> object in your application.</td>
+</tr>
+<tr>
+<td>User Invitation Email</td>
+<td>Automatic, during user creation</td>
+<td>This email is used to invite standard users to your application</td>
+</tr>
+<tr>
+<td>Update My App User</td>
+<td>Automatic, during user update</td>
+<td>This action occurs whenever a registered user is modified. It attempts to make the appropriate modifications in your app&#39;s custom <code>users</code> object</td>
+</tr>
+<tr>
+<td>Delete My App User</td>
+<td>Automatic, during user deletion</td>
+<td>This action occurs whenever a registered user is deleted. It attempts to remove the associated <code>users</code> record for the user being deleted.</td>
+</tr>
+</tbody></table>
+
+<aside class="warning">It is important to note that security actions, like <code>requestResetPassword</code>, require that emails provided be in a valid email format, such as recipient@example.com. If the addresses are not in the correct format, then calls to the security action will fail, resulting in the emails not being sent in a timely fashion.</aside>
+
+<p>Here&#39;s a general informational graphic demonstrating how authentication-related actions integrate with the system:</p>
+
+<p><img src="../images/images/security_diagram.png" alt="image" /></p>
+<h3 id='security-templates'>Security Templates</h3>
+<p>Security templates allow you to create a template that is used to set permissions on objects. You can create new templates, update existing templates, and rename security templates as you see fit. Each of the checkboxes corresponds to the REST API action indicated by the column header. When you check &quot;Create&quot; for a user role, for example, and then assign that security template to an object, all users with the specified role will be granted &quot;Create&quot; access to the object.</p>
+<h2 id='hosting'>Hosting</h2>
+<p>The Hosting menu item provides all the tools you need to work with <a href="#backand-hosting">Backand Hosting</a>.</p>
+<h3 id='configuration'>Configuration</h3>
+<p>This page provides dynamic information designed to walk you through the relevant steps for the current stage of your hosting effort. Follow the provided guide to initiate, update, and deploy your project&#39;s hosting.</p>
+<h3 id='hosting-files'>Hosting files</h3>
+<p>The Hosting Files section lists the files hosted by Backand on behalf of your app. It provides a simple UI for listing and downloading the hosted files.</p>
+<h3 id='storage-files'>Storage files</h3>
+<p>The Storage Files section lists the files stored in S3 on behalf of your application. You can view the list of files, upload a new file, download a file, or delete a file from your app&#39;s s3 storage.</p>
+<h2 id='log'>Log</h2>
+<p>The Log menu item provides access to Backand&#39;s built in logging functionality. We provide a number of different logs with different targets, allowing you to easily see all activity in your application in one place.</p>
+<h3 id='api-requests'>API Requests</h3>
+<p>The API Requests log logs all requests made to your application over the web, either via cURL or using our SDK. You can filter the request logs based on any of the provided fields.</p>
+<h3 id='console'>Console</h3>
+<p>The Console log logs all console messages created by your application&#39;s actions. You can use this when troubleshooting server-side actions to ensure that all messages are being received correctly, and you can filter the log messages to match your current debugging scenario.</p>
+<h3 id='server-side-exceptions'>Server Side Exceptions</h3>
+<p>The Server Side Exceptions log provides access to any server-side exceptions generated during your app&#39;s execution. Details on the exception are provided, and you are given the capability to filter the logs based on arbitrary criteria.</p>
+<h3 id='configuration-2'>Configuration</h3>
+<p>The Configuration log tracks all configuration changes made to your application. This includes all actions taken in your application&#39;s Backand dashboard, recording the action taken and the user responsible. You can also filter the log by any of the provided fields.</p>
+<h3 id='data-history'>Data History</h3>
+<p>The Data History log contains entries for all modifications made to objects that have data tracking enabled. This log will remain empty until the data tracking feature is enabled for an object.</p>
+<h2 id='settings'>Settings</h2>
+<p>The Settings configuration section contains the application-level configurations for your Backand app.</p>
+<h3 id='general'>General</h3>
+<p>The General section contains global configuration settings for your application. You can change the app name and title, enable debug mode, adjust the date format, adjust default pagination and object retrieval parameters, and provide global configuration values available throughout your application.</p>
+
+<aside class="warning">You can also delete your Backand application from this screen using the "trash can" icon in the upper-right-hand corner of the page. Be careful - this action is irreversible. </aside>
+<h3 id='database-2'>Database</h3>
+<p>The Database section contains information on your app&#39;s Backand database. If you have not yet entered any data or modified the default model, you are also given the capability to connect to an existing database platform on this tab. You can use the connection data provided to connect any third-party DB management tool to your database, allowing you to modify or migrate your database as you desire.</p>
+<h3 id='configuration-3'>Configuration</h3>
+<p>The Configuration tab allows you to version your app&#39;s configuration. You can export and import settings, or work with previous application configurations.</p>
+<h3 id='billing-portal'>Billing Portal</h3>
+<p>The Billing Portal provides you with a UI that gives you easy access to all the details of your billing agreement with Backand. From this section, you can view your current subscription, your contact information, a list of changes made, and other billing details. You can also add and modify credit card information, add or change your billing address, or review your payment history.</p>
+<h3 id='upgrade-plan'>Upgrade Plan</h3>
+<p>The Upgrade Plan section provides you with the capability to change your plan to something that meets your needs. Simply select the plan you wish to use, ensure your payment method is correct, then confirm the change.</p>
+<h3 id='payment-method'>Payment Method</h3>
+<p>The Payment Method section allows you to add and edit your payment methods. Provide all of the required information for your payment method to update how your account is charged.</p>
+
+      </div>
+      <div class="dark-box">
+      </div>
+    </div>
+  </body>
+</html>

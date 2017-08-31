@@ -1,0 +1,607 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>API Documentation</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="../stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="../stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="../javascripts/all_nosearch.js"></script>
+  </head>
+
+  <body class="pages pages_lambda_launcher" data-languages="[]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="../images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="../images/logo.png" class="logo" alt="Logo" />
+      <div id="toc" class="toc-list-h1">
+          <li>
+            <a href="#the-backand-lambda-launcher" class="toc-h1 toc-link" data-title="The Backand Lambda Launcher">The Backand Lambda Launcher</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#configuration" class="toc-h2 toc-link" data-title="The Backand Lambda Launcher">Configuration</a>
+                  </li>
+                  <li>
+                    <a href="#setting-up-iam-access-for-the-lambda-launcher" class="toc-h2 toc-link" data-title="The Backand Lambda Launcher">Setting up IAM Access for the Lambda Launcher</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#iam-policy-json" class="toc-h3 toc-link" data-title="The Backand Lambda Launcher">IAM Policy JSON</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#from-aws-cloudformation" class="toc-h3 toc-link" data-title="The Backand Lambda Launcher">From AWS CloudFormation</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#from-the-aws-console" class="toc-h3 toc-link" data-title="The Backand Lambda Launcher">From the AWS Console</a>
+                            <!-- Nest 4 levels -->
+                              <ul class="toc-list-h4">
+                                  <li>
+                                    <a href="#create-the-iam-security-policy" class="toc-h4 toc-link" data-title="The Backand Lambda Launcher">Create the IAM Security Policy</a>
+                                    <!-- Nest 5 levels -->
+                                  </li>
+                                  <li>
+                                    <a href="#create-the-iam-user" class="toc-h4 toc-link" data-title="The Backand Lambda Launcher">Create the IAM User</a>
+                                    <!-- Nest 5 levels -->
+                                  </li>
+                              </ul>
+                          </li>
+                          <li>
+                            <a href="#from-the-aws-lambda-service-panel" class="toc-h3 toc-link" data-title="The Backand Lambda Launcher">From the AWS Lambda Service panel</a>
+                            <!-- Nest 4 levels -->
+                              <ul class="toc-list-h4">
+                                  <li>
+                                    <a href="#lambda-python-script" class="toc-h4 toc-link" data-title="The Backand Lambda Launcher">Lambda Python Script</a>
+                                    <!-- Nest 5 levels -->
+                                  </li>
+                                  <li>
+                                    <a href="#create-the-lambda-function" class="toc-h4 toc-link" data-title="The Backand Lambda Launcher">Create the Lambda Function</a>
+                                    <!-- Nest 5 levels -->
+                                  </li>
+                              </ul>
+                          </li>
+                          <li>
+                            <a href="#from-the-aws-cli" class="toc-h3 toc-link" data-title="The Backand Lambda Launcher">From the AWS CLI</a>
+                            <!-- Nest 4 levels -->
+                              <ul class="toc-list-h4">
+                                  <li>
+                                    <a href="#create-the-iam-policy-and-user" class="toc-h4 toc-link" data-title="The Backand Lambda Launcher">Create the IAM Policy and User</a>
+                                    <!-- Nest 5 levels -->
+                                  </li>
+                              </ul>
+                          </li>
+                          <li>
+                            <a href="#creating-cross-account-access-for-aws-lambda" class="toc-h3 toc-link" data-title="The Backand Lambda Launcher">Creating Cross-Account Access for AWS Lambda</a>
+                            <!-- Nest 4 levels -->
+                              <ul class="toc-list-h4">
+                                  <li>
+                                    <a href="#obtaining-the-aws-account-id" class="toc-h4 toc-link" data-title="The Backand Lambda Launcher">Obtaining the AWS Account ID</a>
+                                    <!-- Nest 5 levels -->
+                                  </li>
+                                  <li>
+                                    <a href="#aws-cli" class="toc-h4 toc-link" data-title="The Backand Lambda Launcher">AWS CLI</a>
+                                    <!-- Nest 5 levels -->
+                                  </li>
+                                  <li>
+                                    <a href="#aws-management-console" class="toc-h4 toc-link" data-title="The Backand Lambda Launcher">AWS Management Console</a>
+                                    <!-- Nest 5 levels -->
+                                      <ul class="toc-list-h5">
+                                          <li>
+                                            <a href="#step-1-create-policy" class="toc-h5 toc-link" data-title="The Backand Lambda Launcher">Step 1 - Create Policy</a>
+                                          </li>
+                                          <li>
+                                            <a href="#step-2-create-a-role" class="toc-h5 toc-link" data-title="The Backand Lambda Launcher">Step 2 - Create a Role</a>
+                                          </li>
+                                      </ul>
+                                  </li>
+                                  <li>
+                                    <a href="#reference-documentation" class="toc-h4 toc-link" data-title="The Backand Lambda Launcher">Reference documentation</a>
+                                    <!-- Nest 5 levels -->
+                                  </li>
+                              </ul>
+                          </li>
+                          <li>
+                            <a href="#connect-the-iam-user-to-backand" class="toc-h3 toc-link" data-title="The Backand Lambda Launcher">Connect the IAM User to Backand</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                      </ul>
+                  </li>
+              </ul>
+          </li>
+      </div>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='the-backand-lambda-launcher'>The Backand Lambda Launcher</h1>
+<p>The Backand Lambda Launcher is a tool we developed to ease the process of executing your AWS Lambda functions. Through use of the Lambda Launcher, you can easily execute any AWS Lambda function in your AWS account. This provides a number of benefits over traditional Lambda execution:</p>
+
+<ul>
+<li>You can provide users with a simple interface to your Lambda function library, allowing for execution of a function with a single click</li>
+<li>You can use non-AWS security systems to control user access to your AWS Lambda functions, allowing you to expose these functions without also needing to grant a user access to the AWS Console</li>
+<li>You can dynamically show and hide functions in the interface based upon user authentication and authorization, giving you full control over access to your Lambda functions</li>
+<li>You can integrate this functionality within a Backand application to give you ready-made devops, allowing you to perform reporting and maintenance tags from anywhere you have an internet connection</li>
+</ul>
+<h2 id='configuration'>Configuration</h2>
+<p>In order to work with your Lambda functions in Backand, you&#39;ll first need to connect Backand to your AWS account. Below, we walk through the process of creating a security policy to govern your integration of AWS Lambda with Backand, creating a user with the security access necessary to connect to your Lambda functions from Backand, and finally configuring Backand to communicate with your AWS Lambda functions.</p>
+
+<p>These next sections focus on configuring the Lambda Launcher tool from a number of different locations. In all cases, the process will have three primary steps:</p>
+
+<ol>
+<li>Create an IAM Policy to control access to your account&#39;s Lambda functions</li>
+<li>Create an IAM User that you can use to connect Backand to your AWS account</li>
+<li>Connect AWS to Backand using the IAM User&#39;s access keys</li>
+</ol>
+
+<p>In all cases, step 3 - pasting the credentials into Backand - is the same, and as such we present the instructions for that step in a section after the AWS-specific configuration instructions. To create the AWS IAM Policy and User, choose the section most appropriate to your organizational practices from the options below.</p>
+<h2 id='setting-up-iam-access-for-the-lambda-launcher'>Setting up IAM Access for the Lambda Launcher</h2>
+<p>The Backand Lambda Launcher requires the following IAM policies in order to work with your lambda functions:</p>
+
+<ul>
+<li>lambda:GetFunction - this is used to retrieve a specific function&#39;s details from your account</li>
+<li>lambda:InvokeAsync - this is used to asynchronously run your lambda functions</li>
+<li>lambda:InvokeFunction - this is used to run your lambda functions synchronously</li>
+<li>lambda:ListFunctions - this is used to populate the list of Lambda functions available in your AWS account.</li>
+</ul>
+
+<p>Backand takes security very seriously - all credentials entered are encrypted, and never used for any purpose other than executing your Lambda functions. If you would like further assistance in setting up the security policy, please <a href="https://www.backand.com/contact">contact us</a>.</p>
+<h3 id='iam-policy-json'>IAM Policy JSON</h3>
+<blockquote>
+<p>The following JSON is to be used when creating the IAM security policy, to manage Backand&#39;s access to your AWS Lambda functions</p>
+</blockquote>
+<pre class="highlight json tab-json--persistent"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"Version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2012-10-17"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Statement"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"Sid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Stmt1495964947000"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Effect"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Allow"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Action"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="s2">"lambda:GetFunction"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"lambda:InvokeAsync"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"lambda:InvokeFunction"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"lambda:ListFunctions"</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="s2">"Resource"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="s2">"*"</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>The Backand Lambda integration relies on the policy JSON provided to the right. This grants Backand the capability to fetch a list of functions, fetch an individual functions, and invoke a function both synchronously and asynchronously.</p>
+<h3 id='from-aws-cloudformation'>From AWS CloudFormation</h3>
+<p>If you have admin access to your organization&#39;s AWS account, you can use <strong>AWS CloudFormation</strong> to easily create the appropriate IAM policies and users for Backand&#39;s external function links.</p>
+
+<aside class="success">Please note: if you do not have admin access to your AWS account, we can walk you through a modified version of this process. Contact us at <a href="mailto:support@backand.com">support@backand.com</a> for further assistance.</aside>
+
+<p>Run this command using the AWS CLI, and we create an IAM user that only has the &#39;GetFunction&#39;, &#39;InvokeFunction&#39; and &#39;ListFunctions&#39; policies:</p>
+
+<p><code>aws cloudformation create-stack --template-url https://s3.amazonaws.com/cdn.backand.net/cf/1/backand-rc --stack-name createbackanduser --capabilities CAPABILITY_IAM</code></p>
+
+<p>Once the IAM user has been created, use this command to obtain the user&#39;s access and secret keys, then copy these values into the <strong>Connection Details</strong> dialog in the Backand dashboard, under <strong>Functions &amp; Integrations -&gt; Functions -&gt; External Functions</strong>:</p>
+
+<p><code>aws cloudformation describe-stacks --stack-name createbackanduser</code></p>
+
+<aside class="notice">IAM user creation can take up to a minute. Check the StackStatus parameter for the new stack - it will report "CREATE_IN_PROGRESS" while the creation is still underway. Once creation is completed, you will receive the IAM credentials for the user after calling describe-stacks</aside>
+<h3 id='from-the-aws-console'>From the AWS Console</h3>
+<p>If you&#39;re already logged into the AWS Console for your region, use the following steps to connect your AWS Lambda functions to Backand:</p>
+<h4 id='create-the-iam-security-policy'>Create the IAM Security Policy</h4>
+<ol>
+<li>Open the IAM service panel</li>
+<li>In the navigation menu on the left, select <code>Policies</code></li>
+<li>Click the <code>Create Policy</code> button
+<img src="../images/aws_console/aws-IAM-Policy-add.png" alt="image" /></li>
+<li>For &quot;Step 1 : Create Policy,&quot; select <code>Create Your Own Policy</code></li>
+<li>Set the policy name to <code>BackandLambdaReadExecuteAccess</code></li>
+<li>Paste the <a href="#iam-policy-json">policy JSON</a> into the area provided for the Policy Document
+<img src="../images/aws_console/aws-IAM-Policy-add-3.png" alt="image" /></li>
+<li>Once the JSON is ready, click <code>Create Policy</code></li>
+</ol>
+<h4 id='create-the-iam-user'>Create the IAM User</h4>
+<ol>
+<li>On the navigation menu on the left, select <code>Users</code></li>
+<li>Click <code>Add User</code>
+<img src="../images/aws_console/aws-IAM-users-add.png" alt="image" /></li>
+<li>Enter <code>backand_lambda_user</code> as the user name</li>
+<li>Check the <code>Programmatic access</code> option
+<img src="../images/aws_console/aws-IAM-users-add-1.png" alt="image" /></li>
+<li>Click on <code>Next: Permissions</code></li>
+<li>Click on <code>Attach existing policies directly</code></li>
+<li>Search for <code>BackandLambdaReadExecuteAccess</code>, and select it from the search results using the provided checkbox</li>
+<li>Click <code>Next : Review</code></li>
+<li>click <code>Create User</code></li>
+<li>On the <code>Complete</code> page of the wizard, click the <code>Show</code> link in the table column <code>Secret access key</code></li>
+<li>Copy the &quot;Access key ID&quot; and &quot;Secret access key&quot; values to use with Backand.</li>
+</ol>
+<h3 id='from-the-aws-lambda-service-panel'>From the AWS Lambda Service panel</h3>
+<p>Using AWS Lambda, you can leverage a python script that we created which goes through the process of creating the IAM Policy and User on your behalf.</p>
+<h4 id='lambda-python-script'>Lambda Python Script</h4><pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
+
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">boto3</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">'Loading function'</span><span class="p">)</span>
+
+<span class="n">s3</span> <span class="o">=</span> <span class="n">boto3</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s">'s3'</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">lambda_handler</span><span class="p">(</span><span class="n">event</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
+
+    <span class="n">settings</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s">"name"</span> <span class="p">:</span><span class="s">"backand_lambda_user"</span><span class="p">,</span>
+        <span class="s">"policyName"</span><span class="p">:</span><span class="s">"BackandLambdaReadExecuteAccess"</span><span class="p">,</span>
+        <span class="s">"policy"</span><span class="p">:</span> <span class="s">""</span>
+    <span class="p">}</span>
+    <span class="n">settings</span><span class="p">[</span><span class="s">"policy"</span><span class="p">]</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span>
+          <span class="s">'Version'</span><span class="p">:</span> <span class="s">'2012-10-17'</span><span class="p">,</span>
+          <span class="s">'Statement'</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+              <span class="s">'Sid'</span><span class="p">:</span> <span class="s">'Stmt1494926726830'</span><span class="p">,</span>
+              <span class="s">'Action'</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s">'lambda:GetFunction'</span><span class="p">,</span>
+                <span class="s">'lambda:InvokeAsync'</span><span class="p">,</span>
+                <span class="s">'lambda:InvokeFunction'</span><span class="p">,</span>
+                <span class="s">'lambda:ListFunctions'</span>
+              <span class="p">],</span>
+              <span class="s">'Effect'</span><span class="p">:</span> <span class="s">'Allow'</span><span class="p">,</span>
+              <span class="s">'Resource'</span><span class="p">:</span> <span class="s">'*'</span>
+            <span class="p">}</span>
+          <span class="p">]</span>
+        <span class="p">})</span>
+    <span class="n">client</span> <span class="o">=</span> <span class="n">boto3</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s">'iam'</span><span class="p">)</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">create_user</span><span class="p">(</span>
+        <span class="n">UserName</span><span class="o">=</span><span class="n">settings</span><span class="p">[</span><span class="s">"name"</span><span class="p">]</span>
+    <span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="p">);</span>
+    <span class="n">accessReponse</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">create_access_key</span><span class="p">(</span>
+        <span class="n">UserName</span><span class="o">=</span><span class="n">settings</span><span class="p">[</span><span class="s">"name"</span><span class="p">]</span>
+    <span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">accessReponse</span><span class="p">)</span>
+    <span class="n">policy</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">create_policy</span><span class="p">(</span>
+        <span class="n">PolicyName</span><span class="o">=</span> <span class="n">settings</span><span class="p">[</span><span class="s">"policyName"</span><span class="p">],</span>
+        <span class="n">PolicyDocument</span><span class="o">=</span><span class="n">settings</span><span class="p">[</span><span class="s">"policy"</span><span class="p">]</span>
+    <span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">policy</span><span class="p">)</span>
+    <span class="n">user_policy</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">attach_user_policy</span><span class="p">(</span>
+        <span class="n">UserName</span><span class="o">=</span><span class="n">settings</span><span class="p">[</span><span class="s">"name"</span><span class="p">],</span>
+        <span class="n">PolicyArn</span><span class="o">=</span><span class="n">policy</span><span class="p">[</span><span class="s">"Policy"</span><span class="p">][</span><span class="s">"Arn"</span><span class="p">]</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s">'AccessKey'</span><span class="p">:</span> <span class="n">accessReponse</span><span class="p">[</span><span class="s">"AccessKey"</span><span class="p">][</span><span class="s">"AccessKeyId"</span><span class="p">],</span>
+        <span class="s">"SecretKey"</span><span class="p">:</span><span class="n">accessReponse</span><span class="p">[</span><span class="s">"AccessKey"</span><span class="p">][</span><span class="s">"SecretAccessKey"</span><span class="p">]</span>
+
+    <span class="p">}</span>
+</code></pre>
+<p>This approach uses a python script to create the appropriate IAM resources. This script is provided in the right-hand panel, and should be used as the body of the Lambda action that will perform the required resource allocation in IAM.</p>
+<h4 id='create-the-lambda-function'>Create the Lambda Function</h4>
+<ol>
+<li>go to Lambda service panel</li>
+<li>Select the &quot;Blank Function and click &quot;Next&quot;</li>
+<li>name your function &quot;createBackandLambdaUser&quot;</li>
+<li>Select the &quot;Python 3.6&quot; runtime</li>
+<li>paste the <a href="#lambda-python-script">lambda python code</a> into the provided area.
+<img src="../images/aws_lambda/aws-lambda-config-1.png" alt="image" /></li>
+<li>in the Role dropdown select &quot;Create Custome Role&quot;</li>
+<li>in the &quot;AWS Lambda requires access to your resources&quot; window, select &quot;Create new Role Policy&quot;</li>
+<li>click &quot;View Policy Document&quot; and click the Edit button on the right
+<img src="../images/aws_lambda/aws-lambda-role.png" alt="image" /></li>
+<li>approve the &quot;Edit Policy&quot; pop-up
+<img src="../images/aws_lambda/aws-lambda-role-1.png" alt="image" /></li>
+<li>Paste the <a href="#iam-policy-json">policy JSON</a> into the area provided for the Policy Document and click &quot;Allow&quot;
+<img src="../images/aws_lambda/aws-lambda-role-2.png" alt="image" /></li>
+<li>click &quot;Next&quot;</li>
+<li>click &quot;Create  Function&quot;</li>
+<li>after the function was created , click &quot;Test&quot;,
+<img src="../images/aws_lambda/aws-lambda-config-2.png" alt="image" /></li>
+<li>Copy the &quot;Access key ID&quot; and &quot;Secret access key&quot; values to use with Backand.</li>
+</ol>
+<h3 id='from-the-aws-cli'>From the AWS CLI</h3>
+<p>If you primarily use the AWS CLI to interact with AWS, you can easily connect Backand to your AWS account using the following steps:</p>
+<h4 id='create-the-iam-policy-and-user'>Create the IAM Policy and User</h4>
+<p>First, ensure that all files involved are saved in an ASCII-encoded format. Before starting, you&#39;ll need to create a new file in the current directroy - <code>createBackandLambdaUser.json</code> - and populate it with the <a href="#iam-policy-json">policy JSON</a> before starting. Then, run the following series of commands to create the IAM Policy and User in your account:</p>
+
+<aside class="notice">Be sure to replace &lt;&lt;ACCOUNT_NUMBER&gt;&gt; with your AWS Account Number.</aside>
+
+<ol>
+<li>aws iam create-policy --policy-name BackandLambdaReadExecuteAccess --policy-document file://createBackandLambdaUser.json ( and copy the policy arn for step 4)arn:aws:iam::&lt;<ACCOUNT_NUMBER>&gt;:policy/BackandLambdaReadExecuteAccess</li>
+<li>aws iam create-user --user-name backand_lambda_user</li>
+<li>aws iam attach-user-policy --user-name backand_lambda_user --policy-arn arn:aws:iam::&lt;<ACCOUNT_NUMBER>&gt;:policy/BackandLambdaReadExecuteAccess</li>
+<li>aws iam create-access-key --user-name backand_lambda_user</li>
+<li>Copy the &quot;Access key ID&quot; and &quot;Secret access key&quot; values to use with Backand.</li>
+</ol>
+<h3 id='creating-cross-account-access-for-aws-lambda'>Creating Cross-Account Access for AWS Lambda</h3>
+<p>You can create an IAM role and user that span multiple AWS accounts, allowing you to bring your lambda functions from multiple AWS accounts into a single interface. This method creates a restricted linkage between your AWS account and Backand, allowing you to import your personal Lambda functions into your Backand application.</p>
+<h4 id='obtaining-the-aws-account-id'>Obtaining the AWS Account ID</h4>
+<p>This approach relies upon obtaining your AWS Account ID. To do this:</p>
+
+<ul>
+<li>Navigate to the AWS Console for your region.</li>
+<li>In the top navigation bar, select <strong>Support</strong>, then <strong>Support Center</strong>.</li>
+<li>Your AWS Account ID is located in the upper-right-hand corner, immediately below the <strong>Support</strong> menu. It is a 12-digit number.</li>
+</ul>
+
+<p>Save this ID for use in later configuration steps.</p>
+<h4 id='aws-cli'>AWS CLI</h4>
+<p>Using CloudFormation, we&#39;ll create a stack that we&#39;ll use to drive cross-account integration with Backand. Use the following AWS CLI command to get started:</p>
+
+<aside class="notice">You'll need to replace the value <code>{{appMasterToken}}</code> in this command with your application's <a href="#social-amp-keys">master token</a>.</aside>
+
+<p><code>aws cloudformation create-stack --template-url https://s3.amazonaws.com/cdn.backand.net/cf/1/backand-cc --parameters  ParameterKey=ExternalId,ParameterValue=bknd_{{appMasterToken}} --stack-name createBkndCrossAccess --capabilities CAPABILITY_NAMED_IAM</code></p>
+<h4 id='aws-management-console'>AWS Management Console</h4>
+<p>Instead of achieving the above via CLI, you can perform the same actions in the AWS Management console. To get started, open the AWS Management Console as an account administrator, and pull up the IAM console. Before you create the role, you&#39;ll need to create a managed policy that defines the permissions required by the IAM role to be created. You will attach this policy to the new role in a later step.</p>
+
+<p>In the navigation pane, on the left side of the screen, select <strong>Policies</strong>, and then select <strong>Create Policy</strong></p>
+<h5 id='step-1-create-policy'>Step 1 - Create Policy</h5><pre class="highlight json tab-json--persistent"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"Version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2012-10-17"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Statement"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"Sid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Stmt1500562449000"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Effect"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Allow"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Action"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="s2">"lambda:CreateFunction"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"lambda:GetFunction"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"lambda:InvokeFunction"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"lambda:InvokeAsync"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"lambda:ListFunctions"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"lambda:ListVersionsByFunction"</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="s2">"Resource"</span><span class="p">:</span><span class="w"> </span><span class="s2">"*"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>For <strong>Step 1: Create Policy</strong>, select <strong>Create Your own Policy</strong>. Name the policy <code>BackandCrossAccountPolicy</code>.</p>
+
+<p>Next, set the Policy Document to the JSON on the right. Once this is done, the policy should appear in your list of managed policies.</p>
+
+<p>When you&#39;ve completed your changes, the screen should look like the following:</p>
+
+<p><img src="../images/images/AWS-CAA-CreatePolicy.png" alt="image" /></p>
+<h5 id='step-2-create-a-role'>Step 2 - Create a Role</h5>
+<p>The next step is to create an IAM Role.</p>
+
+<ol>
+<li>Open the IAM Console for this account</li>
+<li>Click <strong>Roles</strong></li>
+<li>For <strong>Step 1: Select Role Type</strong>, select and expand the &quot;Role for cross-account access&quot; option.</li>
+<li>Select <strong>Provide access between your AWS account and a third party AWS account</strong>
+​<img src="../images/images/AWS-CAA-roleType.png" alt="image" /></li>
+<li>On the next page, set Backand&#39;s account ID and external ID to the following values:
+
+<ul>
+<li><strong>Account ID</strong>: <code>328923390206</code></li>
+<li><strong>External ID</strong>: <code>bknd_{{appsMasterToken}}</code>
+<aside class="notice">You&#39;ll need to replace the value <code>{{appsMasterToken}}</code> in this command with your application&#39;s <a href="#social-amp-keys">master token</a>.</aside>
+<img src="../images/images/AWS-CAA-AccountID.png" alt="image" />
+<aside class="success"> Note that for now, you do not need to require users to have Multi-Factor Authentication enabled in order to assume the cross-account role</aside></li>
+</ul></li>
+<li>Click <strong>Next Step</strong></li>
+<li>Attach the policy created above by selecting it from the provided list</li>
+<li>Click <strong>Next Step</strong></li>
+<li>Set the role name to <code>BackandCrossAccountRole</code>
+<img src="../images/images/AWS-CAA-Createe.png" alt="image" /></li>
+<li>Click <strong>Create Role</strong></li>
+</ol>
+
+<aside class="notice">You'll need to replace the value <code>{{appsMasterToken}}</code> in this command with your application's <a href="#social-amp-keys">master token</a>.</aside>
+<h4 id='reference-documentation'>Reference documentation</h4>
+<ul>
+<li>http://docs.aws.amazon.com/IAM/latest/UserGuide/tutorial_cross-account-with-roles.html</li>
+<li>https://aws.amazon.com/blogs/security/enable-a-new-feature-in-the-aws-management-console-cross-account-access/</li>
+<li>http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_common-scenarios_third-party.html</li>
+</ul>
+<h3 id='connect-the-iam-user-to-backand'>Connect the IAM User to Backand</h3>
+<p>If you are configuring your Lambda Launcher access for the first time, via the modal dialog, you can simply paste your Access Key ID and Secret Access Key into the provided fields. If you have an existing app, you can update those from the External Functions page:</p>
+
+<ol>
+<li>Open the Backand App Dashboard</li>
+<li>Select the <code>Functions &amp; Integrations</code> tab, if it is not already selected</li>
+<li>Select <code>External Functions</code>, under <code>Functions</code> in the left-hand navigation menu</li>
+<li>Provide the Access Key, Secret Key, and Region in the provided fields</li>
+<li>Press <code>Link</code></li>
+</ol>
+
+<p>At this point, your AWS Lambda functions should be listed in the Backand interface.</p>
+
+      </div>
+      <div class="dark-box">
+      </div>
+    </div>
+  </body>
+</html>

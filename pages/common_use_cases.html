@@ -1,0 +1,2000 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>API Documentation</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="../stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="../stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="../javascripts/all_nosearch.js"></script>
+  </head>
+
+  <body class="pages pages_common_use_cases" data-languages="[]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="../images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="../images/logo.png" class="logo" alt="Logo" />
+      <div id="toc" class="toc-list-h1">
+          <li>
+            <a href="#common-use-cases" class="toc-h1 toc-link" data-title="Common Use cases">Common Use cases</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#convert-an-older-app-to-our-serverless-sdk" class="toc-h2 toc-link" data-title="Common Use cases">Convert an older app to our serverless SDK</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#step-1-adding-the-new-sdk-to-your-package-manager" class="toc-h3 toc-link" data-title="Common Use cases">Step 1: Adding the new SDK to your package manager</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#step-2-include-the-sdk-in-your-project" class="toc-h3 toc-link" data-title="Common Use cases">Step 2: Include the SDK in your project</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#step-3-authentication" class="toc-h3 toc-link" data-title="Common Use cases">Step 3: Authentication</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#step-4-update-unauthorized-user-detection" class="toc-h3 toc-link" data-title="Common Use cases">Step 4: Update unauthorized user detection</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#step-5-use-the-new-sdk-methods-in-place-of-http-calls" class="toc-h3 toc-link" data-title="Common Use cases">Step 5: Use the new SDK methods in place of $http calls</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#step-6-update-handling-of-the-response-object" class="toc-h3 toc-link" data-title="Common Use cases">Step 6: Update handling of the response object</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#conclusion" class="toc-h3 toc-link" data-title="Common Use cases">Conclusion</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                    <a href="#setting-up-and-configuring-a-database" class="toc-h2 toc-link" data-title="Common Use cases">Setting up and Configuring a database</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#bringing-your-own-database" class="toc-h3 toc-link" data-title="Common Use cases">Bringing Your Own Database</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#importing-a-database" class="toc-h3 toc-link" data-title="Common Use cases">Importing a Database</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#staying-in-sync" class="toc-h3 toc-link" data-title="Common Use cases">Staying In Sync</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#summary" class="toc-h3 toc-link" data-title="Common Use cases">Summary</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                    <a href="#using-the-back-amp-rest-api" class="toc-h2 toc-link" data-title="Common Use cases">Using the Back&amp; REST API</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#what-is-rest" class="toc-h3 toc-link" data-title="Common Use cases">What is REST?</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#automatically-building-an-api" class="toc-h3 toc-link" data-title="Common Use cases">Automatically Building an API</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#the-rest-api-playground" class="toc-h3 toc-link" data-title="Common Use cases">The REST API Playground</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#actions-and-queries" class="toc-h3 toc-link" data-title="Common Use cases">Actions and Queries</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#summary-2" class="toc-h3 toc-link" data-title="Common Use cases">Summary</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                    <a href="#configuring-role-based-security" class="toc-h2 toc-link" data-title="Common Use cases">Configuring Role-based Security</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#user-registration" class="toc-h3 toc-link" data-title="Common Use cases">User Registration</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#role-based-security" class="toc-h3 toc-link" data-title="Common Use cases">Role-based Security</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#security-templates" class="toc-h3 toc-link" data-title="Common Use cases">Security Templates</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#anonymous-access" class="toc-h3 toc-link" data-title="Common Use cases">Anonymous Access</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#summary-3" class="toc-h3 toc-link" data-title="Common Use cases">Summary</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                    <a href="#integrating-with-third-party-apis" class="toc-h2 toc-link" data-title="Common Use cases">Integrating with Third Party APIs</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#guidelines-on-integrations" class="toc-h3 toc-link" data-title="Common Use cases">Guidelines on Integrations</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#client-side-integrations" class="toc-h3 toc-link" data-title="Common Use cases">Client-side Integrations</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#server-side-integrations" class="toc-h3 toc-link" data-title="Common Use cases">Server-side Integrations</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                    <a href="#working-with-geographic-data" class="toc-h2 toc-link" data-title="Common Use cases">Working with Geographic Data</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#add-a-point" class="toc-h3 toc-link" data-title="Common Use cases">Add a Point</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#query-point" class="toc-h3 toc-link" data-title="Common Use cases">Query Point</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#query-point-with-parameters" class="toc-h3 toc-link" data-title="Common Use cases">Query Point with Parameters</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#filter-point" class="toc-h3 toc-link" data-title="Common Use cases">Filter Point</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                    <a href="#bulk-operations" class="toc-h2 toc-link" data-title="Common Use cases">Bulk Operations</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#constructing-bulk-requests" class="toc-h3 toc-link" data-title="Common Use cases">Constructing Bulk Requests</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#authenticating-the-request" class="toc-h3 toc-link" data-title="Common Use cases">Authenticating the Request</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#bulk-request-examples" class="toc-h3 toc-link" data-title="Common Use cases">Bulk Request Examples</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#example-1-adding-multiple-rows" class="toc-h3 toc-link" data-title="Common Use cases">Example 1: Adding multiple rows</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#example-2-deleting-multiple-rows" class="toc-h3 toc-link" data-title="Common Use cases">Example 2: Deleting multiple rows</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#example-3-multiple-commands" class="toc-h3 toc-link" data-title="Common Use cases">Example 3: Multiple commands</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                    <a href="#retrieving-data" class="toc-h2 toc-link" data-title="Common Use cases">Retrieving Data</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#filter-and-predefined-filter" class="toc-h3 toc-link" data-title="Common Use cases">Filter and Predefined Filter</a>
+                            <!-- Nest 4 levels -->
+                              <ul class="toc-list-h4">
+                                  <li>
+                                    <a href="#predefined-filter" class="toc-h4 toc-link" data-title="Common Use cases">Predefined Filter</a>
+                                    <!-- Nest 5 levels -->
+                                  </li>
+                              </ul>
+                          </li>
+                          <li>
+                            <a href="#queries-and-on-demand-actions" class="toc-h3 toc-link" data-title="Common Use cases">Queries and On Demand Actions</a>
+                            <!-- Nest 4 levels -->
+                              <ul class="toc-list-h4">
+                                  <li>
+                                    <a href="#pagination" class="toc-h4 toc-link" data-title="Common Use cases">Pagination</a>
+                                    <!-- Nest 5 levels -->
+                                  </li>
+                              </ul>
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                    <a href="#continuous-deployment-and-versioning" class="toc-h2 toc-link" data-title="Common Use cases">Continuous Deployment and Versioning</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#deployment-steps" class="toc-h3 toc-link" data-title="Common Use cases">Deployment Steps</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#versions" class="toc-h3 toc-link" data-title="Common Use cases">Versions</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                    <a href="#internationalization" class="toc-h2 toc-link" data-title="Common Use cases">Internationalization</a>
+                  </li>
+                  <li>
+                    <a href="#integrating-with-ionic-creator" class="toc-h2 toc-link" data-title="Common Use cases">Integrating with Ionic Creator</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#configuring-the-connection-to-backand" class="toc-h3 toc-link" data-title="Common Use cases">Configuring the connection to Backand</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#code-settings" class="toc-h3 toc-link" data-title="Common Use cases">Code Settings</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#working-with-the-backand-provider" class="toc-h3 toc-link" data-title="Common Use cases">Working with the Backand provider</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#updating-the-page-controller" class="toc-h3 toc-link" data-title="Common Use cases">Updating the Page Controller</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#learning-more" class="toc-h3 toc-link" data-title="Common Use cases">Learning more</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                    <a href="#working-with-custom-actions" class="toc-h2 toc-link" data-title="Common Use cases">Working with Custom Actions</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#server-side-activity-in-a-front-end-app" class="toc-h3 toc-link" data-title="Common Use cases">Server-Side Activity in a Front-End App</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#triggers" class="toc-h3 toc-link" data-title="Common Use cases">Triggers</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#types-of-actions" class="toc-h3 toc-link" data-title="Common Use cases">Types of Actions</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#summary-4" class="toc-h3 toc-link" data-title="Common Use cases">Summary</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                    <a href="#connecting-to-your-app-39-s-database" class="toc-h2 toc-link" data-title="Common Use cases">Connecting to Your App's Database</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#connecting-to-your-database" class="toc-h3 toc-link" data-title="Common Use cases">Connecting to Your Database</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#synchronizing-changes" class="toc-h3 toc-link" data-title="Common Use cases">Synchronizing Changes</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#moving-forward" class="toc-h3 toc-link" data-title="Common Use cases">Moving Forward</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                    <a href="#working-with-encrypted-passwords" class="toc-h2 toc-link" data-title="Common Use cases">Working with Encrypted passwords</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#encrypting-passwords" class="toc-h3 toc-link" data-title="Common Use cases">Encrypting Passwords</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#comparing-encrypted-passwords" class="toc-h3 toc-link" data-title="Common Use cases">Comparing Encrypted passwords</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                    <a href="#using-uuid-primary-keys" class="toc-h2 toc-link" data-title="Common Use cases">Using UUID Primary Keys</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#setting-up-the-database" class="toc-h3 toc-link" data-title="Common Use cases">Setting up the Database</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#setting-up-the-before-create-action" class="toc-h3 toc-link" data-title="Common Use cases">Setting up the Before Create action</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                    <a href="#integrating-third-party-security" class="toc-h2 toc-link" data-title="Common Use cases">Integrating Third-Party Security</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#a-quick-review-of-user-security" class="toc-h3 toc-link" data-title="Common Use cases">A Quick Review of User Security</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#overriding-backand-authentication" class="toc-h3 toc-link" data-title="Common Use cases">Overriding Backand Authentication</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#overriding-social-media-authentication" class="toc-h3 toc-link" data-title="Common Use cases">Overriding Social Media Authentication</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#overriding-authorization" class="toc-h3 toc-link" data-title="Common Use cases">Overriding Authorization</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#conclusion-2" class="toc-h3 toc-link" data-title="Common Use cases">Conclusion</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                    <a href="#managing-the-application-model-with-json" class="toc-h2 toc-link" data-title="Common Use cases">Managing the Application Model with JSON</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#definitions" class="toc-h3 toc-link" data-title="Common Use cases">Definitions</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#one-to-many-relationship" class="toc-h3 toc-link" data-title="Common Use cases">One-to-Many Relationship</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#many-to-many-relationship" class="toc-h3 toc-link" data-title="Common Use cases">Many-to-Many Relationship</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                    <a href="#enabling-sms-based-authentication" class="toc-h2 toc-link" data-title="Common Use cases">Enabling SMS-based Authentication</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#process-overview" class="toc-h3 toc-link" data-title="Common Use cases">Process overview</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#creating-the-token-object" class="toc-h3 toc-link" data-title="Common Use cases">Creating the Token object</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#adding-the-sendtoken-action" class="toc-h3 toc-link" data-title="Common Use cases">Adding the sendToken action</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#updating-the-security-action-to-allow-for-authentication" class="toc-h3 toc-link" data-title="Common Use cases">Updating the security action to allow for authentication</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#restricting-access-to-the-token-object" class="toc-h3 toc-link" data-title="Common Use cases">Restricting access to the token object</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#disable-token-expiration" class="toc-h3 toc-link" data-title="Common Use cases">Disable token expiration</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#building-from-here" class="toc-h3 toc-link" data-title="Common Use cases">Building from here</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                    <a href="#reducing-backand-compute-usage" class="toc-h2 toc-link" data-title="Common Use cases">Reducing Backand Compute Usage</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#strategy-1-reduce-the-number-of-calls" class="toc-h3 toc-link" data-title="Common Use cases">Strategy 1 - Reduce the number of calls</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#strategy-2-combine-multiple-calls-into-an-action" class="toc-h3 toc-link" data-title="Common Use cases">Strategy 2 - Combine multiple calls into an Action</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#strategy-3-make-use-of-a-plan-included-test-app" class="toc-h3 toc-link" data-title="Common Use cases">Strategy 3 - Make use of a plan-included test app</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#strategy-4-move-database-updates-into-queries" class="toc-h3 toc-link" data-title="Common Use cases">Strategy 4 - Move database updates into queries</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                          <li>
+                            <a href="#keeping-an-eye-to-resource-utilization" class="toc-h3 toc-link" data-title="Common Use cases">Keeping an eye to resource utilization</a>
+                            <!-- Nest 4 levels -->
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                    <a href="#contact-us" class="toc-h2 toc-link" data-title="Common Use cases">Contact us</a>
+                  </li>
+              </ul>
+          </li>
+      </div>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='common-use-cases'>Common Use cases</h1>
+<p>Below are some common use cases for Backand applications</p>
+<h2 id='convert-an-older-app-to-our-serverless-sdk'>Convert an older app to our serverless SDK</h2>
+<p>Follow the steps below to convert your existing Angular 1 Back&amp; application to our new <a href="https://github.com/backand/vanilla-sdk">Serverless SDK</a>, and the associated <a href="https://github.com/backand/angular1-sdk">Angular 1 SDK</a>.</p>
+<h3 id='step-1-adding-the-new-sdk-to-your-package-manager'>Step 1: Adding the new SDK to your package manager</h3>
+<p>To install the Angular 1 SDK, use the correct command for your dependency management platform:</p>
+
+<table><thead>
+<tr>
+<th>Provider</th>
+<th>Command</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>npm</td>
+<td>$ npm i -S @backand/angular1-sdk</td>
+</tr>
+<tr>
+<td>yarn</td>
+<td>$ yarn add @backand/angular1-sdk</td>
+</tr>
+<tr>
+<td>bower</td>
+<td>$ bower install backand-angular1-sdk</td>
+</tr>
+<tr>
+<td>clone/download via Git</td>
+<td>$ git clone $ git clone https://github.com/backand/angular1-sdk.git</td>
+</tr>
+</tbody></table>
+
+<p>As a part of this, you&#39;ll also want to remove any of the previous SDK includes from the <em>vendor</em> directory (or wherever your package manager stores JavaScript dependencies). Keeping these older versions around can pose problems when sending HTTP requests.</p>
+<h3 id='step-2-include-the-sdk-in-your-project'>Step 2: Include the SDK in your project</h3>
+<blockquote>
+<p>Start by deleting any existing Backand includes.</p>
+</blockquote>
+<pre class="highlight html tab-html"><code>     <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"lib/angularbknd-sdk/dist/backand.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre>
+<blockquote>
+<p>Then, include the new SDK links</p>
+</blockquote>
+<pre class="highlight html tab-html"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"lib/backand-vanilla-sdk/dist/backand.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"lib/backand-angular1-sdk/dist/backand.provider.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre>
+<blockquote>
+<p>You can also use our SDK directly via our Content Distribution Network (CDN). Include the CDN links as follows, instead of the local <em>\lib</em> links specified above:</p>
+</blockquote>
+<pre class="highlight html tab-html"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"//cdn.backand.net/vanilla-sdk/1.2.9/backand.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"//cdn.backand.net/angular1-sdk/2.0.10/backand.provider.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre>
+<p>The Serverless SDK requires two includes for Angular 1 apps. The first is our Vanilla SDK, and contains all of our core SDK functionality. The second is our Angular 1 SDK, which wraps the Vanilla SDK and provides setup and access to its functionality. Start with removing the old SDK by commenting out - or deleting - any prior includes of older Backand SDKs. Once the older includes have been deleted, replace the dependencies with the new SDK links.</p>
+<h3 id='step-3-authentication'>Step 3: Authentication</h3>
+<p>The authentication functionality in the SDK has not changed considerably with the new release. Here are a few notes on authentication elements that may be important to your application:</p>
+
+<ul>
+<li>If you have previously disabled anonymous auth in your app, you can re-enable it using <code>Backand.useAnonymousAuth()</code>. This value defaults to true, so if you do not modify the default value you do not need to make any changes.</li>
+<li>If you have previously disabled basic auth in your app, and have entered a user token and master token in the arguments to <code>backand.init()</code>, you can re-enable basic auth using <code>Backand.useBasicAuth()</code>. This value defaults to true, so if you do not modify the default value you do not need to make any changes.</li>
+<li>We’ve added new social media authentication functions:  <code>socialSignin</code>, and <code>socialSignup</code>. Please note that while some of the examples in our github repos - and some of our documentation - used <code>socialSignUp</code>  to refer to the specified function in the Backand SDK, this is no longer valid - the &quot;up&quot; will not be capitalized in the new SDK.</li>
+</ul>
+<h3 id='step-4-update-unauthorized-user-detection'>Step 4: Update unauthorized user detection</h3>
+<p>The <code>getToken()</code> method has been expanded, to use a promise. Originally this method would return undefined when a user was unauthorized, but this functionality can now be managed via the promise method. In the new SDK, the <code>getToken()</code> method is not as prominent as it was in previous versions, and you are likely to not need it as you work on your app.</p>
+<h3 id='step-5-use-the-new-sdk-methods-in-place-of-http-calls'>Step 5: Use the new SDK methods in place of $http calls</h3>
+<p>The Serverless SDK features wrapper methods that can be used in place of the direct HTTP calls used in the previous method. Here&#39;s a quick comparison of the old SDK&#39;s HTTP communications, as compared to the new function-based Serverless SDK:</p>
+
+<table><thead>
+<tr>
+<th><strong>Old Method</strong></th>
+<th><strong>New Method</strong></th>
+</tr>
+</thead><tbody>
+<tr>
+<td>$http.get(getUrl());</td>
+<td>Backand.object.getList(objectName);</td>
+</tr>
+<tr>
+<td>$http.get(getUrlForId(id));</td>
+<td>Backand.object.getOne(objectName, id);</td>
+</tr>
+<tr>
+<td>$http.post(getUrl(), object);</td>
+<td>Backand.object.create(objectName, object);</td>
+</tr>
+<tr>
+<td>$http.put(getUrlForId(id), object);</td>
+<td>Backand.object.update(objectName, object);</td>
+</tr>
+<tr>
+<td>$http.delete(getUrlForId(id));</td>
+<td>Backand.object.remove(objectName, id);</td>
+</tr>
+<tr>
+<td>URL built with Backand.getApiUrl()</td>
+<td>No URL necessary</td>
+</tr>
+</tbody></table>
+<h3 id='step-6-update-handling-of-the-response-object'>Step 6: Update handling of the response object</h3>
+<blockquote>
+<p>Fetching data, old method:</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript--persistent"><code><span class="kd">function</span> <span class="nx">getAll</span><span class="p">()</span> <span class="p">{</span>
+ <span class="nx">ItemsModel</span><span class="p">.</span><span class="nx">all</span><span class="p">()</span>
+   <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+     <span class="nx">vm</span><span class="p">.</span><span class="nx">data</span> <span class="o">=</span> <span class="nx">result</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">data</span><span class="p">;</span>
+   <span class="p">});</span>
+<span class="p">}</span>
+</code></pre>
+<blockquote>
+<p>New method of obtaining result data</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript--persistent"><code>     <span class="nx">vm</span><span class="p">.</span><span class="nx">data</span> <span class="o">=</span> <span class="nx">result</span><span class="p">.</span><span class="nx">data</span><span class="p">;</span>
+</code></pre>
+<p>The new sdk does not store the results in a nested data member, but rather in a root data element. The old SDK stored the response contents in a root property, meaning that the actual data was a subset of this <em>data</em> property - hence the use of <em>result.data.data</em> in the old SDK. With the new SDK, you no longer need the extra level of disambiguation, and can store the data in your application&#39;s object with the code on the right.</p>
+<h3 id='conclusion'>Conclusion</h3>
+<p>In this section, we covered the new SDK. We touched briefly on the features the new SDK has to offer, and walked through the process necessary to convert an existing Backand-powered app to the new API. Most importantly, though, is that we built this SDK based on your feedback, and we want more! Connect with us via social media, or on StackOverflow, or even directly via comments on our Git repos and contacting customer support - we’d love to incorporate your thoughts and suggestions into the next version.</p>
+<h2 id='setting-up-and-configuring-a-database'>Setting up and Configuring a database</h2>
+<p>Backand users typically fall into one of two categories. The first category works with the underlying data system as a series of objects, and doesn&#39;t spend a lot of time focused on the database underpinning the application. The second category, though, work with databases as a matter of course. Often they have existing databases that they want to build an interface on top of, with complex existing relationships that need to be modeled accurately by any framework put in front of it. Below we&#39;ll cover the database connectivity functionality offered by Backand, and how it can fit even the most complex of database needs.</p>
+<h3 id='bringing-your-own-database'>Bringing Your Own Database</h3>
+<p>Most back-end-as-a-service providers want you to work within their clearly-defined data roles. They often require you to port your data to their format, or provide only highly static interfaces to interact with and consume existing data. At Backand, we realize that the database is often the core of your business, and you need to be able to work with your data with minimal effort possible. That&#39;s why we have built a large suite of functionality around importing – and managing your existing SQL database. Backand can analyze your database structure and build a scaffold around your existing data quickly, allowing your application developers to very rapidly begin working with your existing database structure.</p>
+<h3 id='importing-a-database'>Importing a Database</h3>
+<p>While you can create a new database from scratch using our JSON object modeling interface, the true power of Backand is shown when we integrate seamlessly with your existing database. When you connect your Backand application to an existing database on an external server, Backand quickly analyzes your database structure and constructs a meaningful interface on top of your data. This covers everything from basic table structure all the way up to complex foreign-key relationships and many-to-many mapping tables. Backand then uses this data to construct an API on top of your database, allowing you to interact with your data in a RESTful manner very quickly and easily.</p>
+<h3 id='staying-in-sync'>Staying In Sync</h3>
+<p>While an import process is beneficial, it quickly loses its ease if it does not accurately track changes. Many vendors expect your database schema to remain static, and want to work only with your data – requiring a re-sync whenever the database structure changes. With Backand, the need to re-synchronize is completely removed from the process. Backand automatically detects changes to your underlying database and updates its representation of your data, removing a needless tertiary step in the process to ensure that your application remains synchronized with your database&#39;s structure. Furthermore, data changes are synced back to the database server nearly instantaneously, ensuring that no matter how you fetch your data it will always be up-to-date.</p>
+<h3 id='summary'>Summary</h3>
+<p>If you already have a database that you&#39;re looking to build into an application, your options for outsourcing the related back end can be limited. With Backand, however, you can bring your own database and import its structure directly. When you link your Backand application with your existing database you always have up-to-date access on both your database&#39;s schema and the data itself. By not having to perform awkward data transformations, or re-synchronize every time you make a change to the schema, Backand allows you to focus on the core of your application, keeping your database up-to-date no matter what.</p>
+<h2 id='using-the-back-amp-rest-api'>Using the Back&amp; REST API</h2>
+<p>Once your web application&#39;s data has been imported and configured, the next step is working with your data. Backand, using your underlying database structure as a key, builds a RESTful API in front of your database, allowing for full programmatic access to each of the HTTP verbs that you would want to use to interact with your server objects. Below we&#39;ll cover the concepts behind REST, and how Backand makes creating and testing a RESTful interface simple.</p>
+<h3 id='what-is-rest'>What is REST?</h3>
+<p>REST stands for Representational (RE) State (S) Transfer (T). It is a software architectural style that is designed for the creation of (and interaction with) scalable web services. Most RESTful web services – including Backand&#39;s implementation – use HTTP verbs such as GET, POST, PUT, and DELETE, to perform specific actions on the server. The end result is a stateless representation of object interaction, providing a clearly-defined interface to an underlying set of objects in an application. This allows for communication with the server to occur as a series of object changes, reducing the complex server logic needed with other, more stateful architectures.</p>
+<h3 id='automatically-building-an-api'>Automatically Building an API</h3>
+<p>When you import your database into your application, Backand analyzes your database&#39;s underlying schema. It uses the database schema itself, along with metadata associated with each of your database&#39;s tables and columns, to build a RESTful API that accurately represents the underlying data structure. Not only does it give you API endpoints for each of the common object actions (such as CREATE, RETRIEVE, UPDATE, and DELETE), but it also uses your database&#39;s metadata to fully represent the potential ranges of your application&#39;s objects, from representing foreign key relationships all the way down to allowing minimum and maximum values on a specific column in a table. It also keeps track of the nullability of each column, marking non-null fields as required parameters in all related API endpoints.</p>
+
+<p>By automatically providing these endpoints for your database, Backand provides a scalable and understandable API based on web communication standards that would normally take months to develop, and does so within moments of attaching your database. The endpoints follow all defined security roles, and respond with well-formed JSON that pulls in as much – or as little – of your object as you need.</p>
+<h3 id='the-rest-api-playground'>The REST API Playground</h3>
+<p>While a RESTful API is useful, it can also be opaque while the application is being built around it. To get past this nebulous initial state, Backand offers the REST API Playground. The REST API Playground is a dynamic web page built using <a href="http://swagger.io/">Swagger 2.0</a>, an automated front-end for well-defined JSON web APIs. It provides information on each of the endpoints defined in your application, and gives you complete access to test these endpoints in an easy-to-use web-based interface. Through this interface you can see every parameter involved in each API endpoint in your application, and quickly test the endpoints using the supplied parameter prompts and descriptions. This tool can greatly increase development speed, as interested parties can simply use the REST API Playground to build out their JSON web requests prior to incorporating them into the application logic.</p>
+<h3 id='actions-and-queries'>Actions and Queries</h3>
+<p>Each API endpoint created by Backand also fully integrates with the Action system. You can associate actions with each of the API calls, which simply map to the underlying database actions. POST calls trigger database CREATE actions, PUT calls trigger UPDATE actions, DELETE calls trigger DELETE actions, and so on. Furthermore, the endpoints of each of your custom actions are provided in a helpful &quot;Actions&quot; section, allowing you to test each custom action independently, and with the same useful interface. Finally, endpoints for custom queries that you define in your application are also delineated in the API Playground, allowing for quick iteration on the underlying queries and greatly easing the troubleshooting process.</p>
+<h3 id='summary-2'>Summary</h3>
+<p>Interacting with the data in your application is something that is crucial to the success of your product. Through Backand&#39;s automatic REST scaffolding, you can quickly and easily get up and running with a scalable web service that can provide developers with access to all of the potential modifications they might need to make to your data. With access to both custom actions and queries, as well as the predefined database triggers you create in the dashboard, Backand&#39;s RESTful API offers you the full functionality of a scalable web service – all with the click of a button.</p>
+<h2 id='configuring-role-based-security'>Configuring Role-based Security</h2>
+<p>One of the core concerns of any application that deals with sensitive user and business data is security. In this section we&#39;ll cover how Backand handles security for your application, covering the entire stack – from user registration to security templates. We&#39;ll also discuss anonymous access to your application, which can greatly enhance your application&#39;s adoption by the world at large. Backand takes your application&#39;s security seriously, and with the following we&#39;ll show you how we protect your data effectively.</p>
+<h3 id='user-registration'>User Registration</h3>
+<p>The security process starts with user registration. Backand uses two-factor authentication by default – requiring you to first invite users to your application, then directing them to a registration page that you configure. Backand takes care of the communication, handling the verification (configurable) and registration processes from your customizable sign-up page. This entire process is known as &quot;private&quot; mode, which is the default for all new applications – it requires that users are invited to join the app.</p>
+
+<p>Once your app is stable and your security is fully configured (or even before if you&#39;re confident in your data), you can open your application up to the public. This allows users to sign up to your application directly, without having to be invited. Once they register, Backand sends the user a verification email to ensure that the sign-up is legitimate, if the sign-up email verification setting is enabled.. Once the new user confirms the registration, Backand redirects them to a custom verified email link, representing their successful registration with the system. The user is assigned a default role (see below), and is free to use your app within the permissions framework that you constructed.</p>
+<h3 id='role-based-security'>Role-based Security</h3>
+<p>Backand uses role-based security to secure access to your application data. This is accomplished by assigning each user in your application a role. Roles have varying permission levels throughout your app, from object-specific restrictions on record modification all the way up to full access to your application&#39;s configuration. Each role&#39;s permission set is configurable at a macro level as well as at an object level, allowing you true flexibility in securing your application.</p>
+
+<p>New users created from the admin dashboard are created in the <code>admin</code> role. One of your first steps should be adding an additional security role for new users – whether invited in private mode or registering organically in public mode – that will serve as the default for user sign-ups. Once this default role is set, all new users are assigned the new role automatically. You can then make any permission or access changes you need to from the administrative dashboard.</p>
+<h3 id='security-templates'>Security Templates</h3>
+<p>Setting a security level for every single object and user class in your database has the potential to be a tedious, error-prone process. Luckily Backand provides a solution through Security Templates. Security Templates define a default set of security permissions for all of the roles in your application that can then be applied to each of the Create, Read, Update, and Delete actions in your database. Templates can be assigned at both the object and query level, allowing you flexibility in configuring user access to your data.</p>
+
+<p>Sometimes, though, a blanket approach isn&#39;t sufficient for the final functionality of your application. In those cases, Backand allows you to override security templates at a per-role level. This ability gives you more granular control over your application&#39;s data, allowing you to grant or revoke access to sensitive components as necessary. Through use of Security Templates and Roles, you will be able to fully secure your application and ensure only authorized users can perform actions against your data.</p>
+<h3 id='anonymous-access'>Anonymous Access</h3>
+<p>In many cases, particularly when working with your application as an API, it is beneficial to grant anonymous access to a specific user. This user can be someone arriving at your site organically, or can be another web service hitting your application&#39;s RESTful endpoints. To accommodate these cases, Backand provides anonymous access. This uses token-based authentication to ensure that the anonymous use case is valid and that the user in question is allowed to interact with your app. Furthermore, you can restrict anonymous access to your application based on any of the underlying user roles, ensuring that anonymous uses can only access the elements that you want them to.</p>
+<h3 id='summary-3'>Summary</h3>
+<p>Securing your application is a priority task, and crucial to ensuring your application&#39;s success. Through Backand&#39;s use of two-factor authentication to drive registration, you can be sure that the users coming into your application are a low fraud risk, and that both their experience – and your data – are protected. Additionally, you can secure your app through the use of user roles and security templates, which allow you to quickly and easily manage the permissions in your application. Finally, you can grant some use cases anonymous access to your application, easing integration with third parties and handling organic traffic with ease. With Backand&#39;s security offerings, you can rest assured that your application is safe and protected.</p>
+<h2 id='integrating-with-third-party-apis'>Integrating with Third Party APIs</h2>
+<p>In a post originally on Google Plus, Steve Yegge detailed how it was <a href="https://gist.github.com/chitchcock/1281611">platform development</a> that provided the basis for success of a lot of the major technology companies, using Amazon, Microsoft, and Facebook as examples. However, True platform-based development isn&#39;t possible without a mechanism to integrate with those platforms. Below we&#39;ll look at the options available to you when developing a Backand-backed web app, detailing which APIs work best at each stage of the application.</p>
+<h3 id='guidelines-on-integrations'>Guidelines on Integrations</h3>
+<p>As a general rule, you&#39;ll see two overall ideas put forth in this article:</p>
+
+<ol>
+<li>The client side of your application can integrate with any library that is available on the client side. Most commonly, this will consist of JavaScript libraries.</li>
+<li>The server side of your application can integrate with any web service that bases its communication off of HTTP web requests.</li>
+</ol>
+
+<p>Most modern libraries you are likely to consume will fit into one of these two categories, so integration usually shouldn&#39;t be a concern. However, some functionality will not be available to you if it relies upon complex server libraries or non-HTTP integrations, such as SOAP web services. As such, it is critically important that you plan your library usage thoroughly, and understand the requirements and auxiliary dependencies of each vendor you choose to integrate with. You can see a few examples of this in action on Backand&#39;s GitHub account:</p>
+
+<ul>
+<li><a href="https://github.com/backand/stripe-example">This project</a> shows how to use Backand perform a basic integration with Stripe.</li>
+<li>Backand&#39;s <a href="https://github.com/backand/simple-noterious-app">Noterious app</a>, a note board application backed by Backand&#39;s SDK, demonstrates using Backand to integrate with Amazon Web Services within a larger application.</li>
+</ul>
+<h3 id='client-side-integrations'>Client-side Integrations</h3>
+<p>As mentioned above, any library available to a client-side web app should be available to your AngularJS app&#39;s client-side code. Simply include the required library along with your other dependencies, and you should be able to use the library just as you would in any other application. One potential issue to be faced, though, is that of callbacks. Due to Backand providing the server-side integration for your web app, you will want to create On-Demand Custom Actions to respond to any callbacks sent from the third party you are consuming. Simply create the endpoint, specify the expected parameters, and implement the processing for the delayed notification within the JavaScript action, then provide the URL for that action as your application&#39;s callback URL. This approach allows your app to scale more quickly, as the processing load is handled primarily by Backand as opposed to your own servers.</p>
+<h3 id='server-side-integrations'>Server-side Integrations</h3>
+<p>Server-side integrations of third party libraries are restricted to those libraries that communicate via HTTP requests. This can mean a RESTful API, or just a series of simple HTTP web services that accept JSON parameters. Any library that can integrate natively with JavaScript code can be implemented in this manner. Take, for example, an integration with <a href="https://stripe.com/docs/api">Stripe&#39;s REST API</a>. While Stripe helpfully provides encapsulating libraries in a number of languages, all of their functionality is available via simple web requests which can be accessed via CURL. These endpoints are ideal for server-side actions, which can use JavaScript&#39;s built in AJAX communication functionality to hit the same endpoints. Simply wrap each endpoint in a custom server-side action, then modify your client-side code to call your action wrappers. In this way, you can integrate with any HTTP API.</p>
+
+<p>While many of these libraries have code that can exist in either the client or the server, the approach above is ideal when security is a consideration. If you&#39;re dealing with a customer&#39;s sensitive personal info, a client side-based implementation may expose your users to unnecessary risk. By moving these calls to server-side custom actions, you can protect your users&#39; information by encrypting the communications with HTTPS web requests (already provided by Backand), and put the sensitive code behind your application&#39;s administrative dashboard.</p>
+<h2 id='working-with-geographic-data'>Working with Geographic Data</h2>
+<p>Backand lets you store geography points as fields as part of any object. A geography point is an array two floats, representing the latitude and longitude of a position on a map.</p>
+
+<p>With Backand&#39;s geography query you can easily find distances between points or objects, within a range from a specific location that you specify.</p>
+<h3 id='add-a-point'>Add a Point</h3>
+<blockquote>
+<p>To POST a new data point for latitude 10 and longitude 20 in column <code>geo</code>, you can use the following JSON:</p>
+</blockquote>
+<pre class="highlight json tab-json--persistent"><code><span class="w">  </span><span class="s2">"geo"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>To add new point field, open Backand&#39;s Model UI (<strong>Database --&gt; Model</strong>). Find an object to which you wish to add the geometry data, and select <code>Add Field</code>, giving the new field the <code>point</code> data type.</p>
+<h3 id='query-point'>Query Point</h3>
+<blockquote>
+<p>To get all the restaurants within 25 Miles of San Francisco&#39;s Marina District [37.8019859, -122.4414805]:</p>
+</blockquote>
+<pre class="highlight json tab-json--persistent"><code><span class="w">  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"restaurants"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"q"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"location"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"$withinMiles"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[[</span><span class="mf">37.8019859</span><span class="p">,</span><span class="w"> </span><span class="mf">-122.4414805</span><span class="p">],</span><span class="w"> </span><span class="mi">25</span><span class="p">]</span><span class="w"> </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>The above NoSQL is translated into MySQL syntax using the new ST_Distance() function:</p>
+</blockquote>
+<pre class="highlight plaintext"><code>  SELECT * FROM `restaurants` WHERE (ST_Distance ( `restaurants`.`location`, ST_GeomFromText('POINT( 37.8019859 -122.4414805 )') ) &lt;= 25 /(69))
+</code></pre>
+<p>To query a distance within a geography point you can use any of the follow commands:
+<code>$withinMiles</code>
+<code>$withinFeet</code>
+<code>$withinKilometers</code>
+<code>$within (in meters)</code></p>
+<h3 id='query-point-with-parameters'>Query Point with Parameters</h3>
+<p>In order to query get geography points dynamically, use <a href="http://docs.backand.com/#queries">Queries</a> with parameters:</p>
+
+<ol>
+<li>Add the following <em>Input Parameters</em>: lan, lon, dist</li>
+<li>In the Query use tokens (&quot;{{lan}}&quot;, &quot;{{lon}}&quot; and &quot;{{dist}}&quot;) to represent the input parameters:
+3.</li>
+</ol>
+
+<p>{
+    &quot;object&quot;: &quot;restaurants&quot;,
+    &quot;q&quot;: {
+      &quot;location&quot; : { &quot;$withinMiles&quot; : [[&quot;{{lan}}&quot;, &quot;{{lon}}&quot;], &quot;{{dist}}&quot;] }
+    }
+  }</p>
+<h3 id='filter-point'>Filter Point</h3>
+<blockquote>
+<p>Filter all the restaurants within 25 Miles of San Francisco&#39;s Marina District [37.8019859, -122.4414805]:</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript--persistent"><code>  <span class="k">return</span> <span class="nx">$http</span> <span class="p">({</span>
+    <span class="na">method</span><span class="p">:</span> <span class="s1">'GET'</span><span class="p">,</span>
+    <span class="na">url</span><span class="p">:</span> <span class="nx">Backand</span><span class="p">.</span><span class="nx">getApiUrl</span><span class="p">()</span> <span class="o">+</span> <span class="s1">'/1/objects/restaurants'</span><span class="p">,</span>
+    <span class="na">params</span><span class="p">:</span> <span class="p">{</span>
+      <span class="na">filter</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"q"</span><span class="p">:</span> <span class="p">{</span>
+          <span class="s2">"location"</span> <span class="p">:</span> <span class="p">{</span> <span class="s2">"$withinMiles"</span> <span class="p">:</span> <span class="p">[[</span><span class="mf">37.8019859</span><span class="p">,</span> <span class="o">-</span><span class="mf">122.4414805</span><span class="p">],</span> <span class="mi">25</span><span class="p">]}</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">});</span>
+</code></pre>
+<p>Using a Backand NoSQL filter, you can filter objects based on a distance to a specific point (using the appropriate <code>$within</code> command).</p>
+<h2 id='bulk-operations'>Bulk Operations</h2><pre class="highlight shell tab-shell"><code>curl -X POST -d <span class="s2">"JSON String of bulk operations"</span> https://api.backand.com/1/bulk
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="nx">backand</span><span class="p">.</span><span class="nx">bulk</span><span class="p">.</span><span class="nx">general</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+  <span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>Data is an array of operation objects, which are constructed with the general format below:</p>
+</blockquote>
+<pre class="highlight json tab-json--persistent"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"POST"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="err">object_path</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"fieldname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"value"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"parameters"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"param1"</span><span class="p">:</span><span class="w"> </span><span class="s2">"value 1"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"headers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"Authorization"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Auth header..."</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>The key element of this operation is the &quot;headers&quot; parameter. This represents the HTTP headers used to perform the request, and are used to uniquely identify your application as each request as made.</p>
+</blockquote>
+<pre class="highlight json tab-json--persistent"><code><span class="w">  </span><span class="err">headers</span><span class="p">:{</span><span class="w">
+    </span><span class="s2">"Authorization"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bearer **YOUR_ACCESS_TOKEN**"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"AppName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"**YOUR_APP_NAME**"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>The value for <code>YOUR_ACCESS_TOKEN</code> is obtained via a call to <code>https://api.backand.com/token</code> - simply replace <code>YOUR_ACCESS_TOKEN</code> with the bearer token returned by this endpoint, and <code>YOUR_APP_NAME</code> with your application&#39;s name that was specified during app creation. Each action hash can accept a different header parameter, allowing multiple operations to be undertaken by multiple users as a part of the same bulk request. If the &#39;headers&#39; parameter is not included, the headers used for the call to the bulk operations endpoint are used for the relevant action instead.</p>
+</blockquote>
+
+<p>Backand&#39;s bulk operations endpoint can be used to operate on multiple items in a single request. The request has the general form provided in the right-hand pane. This an array of parameter hashes. Each parameter hash represents a different action to be performed as a part of the bulk operaation. The parameter hashes are broken down as follows:</p>
+
+<table><thead>
+<tr>
+<th>Field name</th>
+<th>Possible Values</th>
+<th>Required?</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>method</td>
+<td>POST/ PUT/ DELETE</td>
+<td>yes</td>
+<td>The HTTP verb to be used</td>
+</tr>
+<tr>
+<td>url</td>
+<td>url for the object</td>
+<td>yes</td>
+<td>This is the URL used to access the object being modified in bulk</td>
+</tr>
+<tr>
+<td>data</td>
+<td>JSON</td>
+<td>yes (POST and PUT only)</td>
+<td>This only applies to POST and PUT actions. It represents the data to be created (for POST requests), or the updates to existing data (for PUT requests). Provided as a series of key-value pairs</td>
+</tr>
+<tr>
+<td>parameters</td>
+<td>JSON</td>
+<td>no</td>
+<td>additional parameters, and values for those parameters, to send with the request</td>
+</tr>
+<tr>
+<td>headers</td>
+<td>JSON</td>
+<td>no</td>
+<td>This is used to set custom HTTP headers. You can use it to dynamically set the Authorization header for each REST call. If no value is provided, the generic bulk call authorization headers are used.</td>
+</tr>
+</tbody></table>
+
+<p>Requests to perform bulk actions are sent as HTTP POST requests to the bulk operations URL: <code>Bulk operations URL: https://api.backand.com/1/bulk</code>. You can also use <a href="#bulk">the SDK</a> to send your operations list to your app.</p>
+
+<aside class="notice">Backand's Bulk Endpoint accommodates up to 1,000 operations in a single request. Operations in excess of 1,000 will need to be sent in a separate request</aside>
+<h3 id='constructing-bulk-requests'>Constructing Bulk Requests</h3>
+<blockquote>
+<p>Performing each of the standard non-retrieval CRUD operations in bulk is as simple as specifying the appropriate actions to take with each request. We start by constructing the URL we need in order to manipulate each object. This is done with the Backand SDK using the following code:</p>
+</blockquote>
+<pre class="highlight javascript tab-javascript--persistent"><code><span class="c1">// Backand is the Backand service from the SDK</span>
+<span class="kd">var</span> <span class="nx">object_path</span> <span class="o">=</span> <span class="nx">Backand</span><span class="p">.</span><span class="nx">defaults</span><span class="p">.</span><span class="nx">apiUrl</span>
+                  <span class="o">+</span> <span class="nx">Backand</span><span class="p">.</span><span class="nx">constants</span><span class="p">.</span><span class="nx">URLS</span><span class="p">.</span><span class="nx">objects</span>
+                  <span class="o">+</span> <span class="s2">"/"</span> <span class="o">+</span> <span class="s2">"YOUR_OBJECT_NAME"</span><span class="p">;</span>
+</code></pre>
+<blockquote>
+<p>Simply replace &quot;YOUR_OBJECT_NAME&quot; with the name of the object you wish to manipulate. Once you have the object URL, you simply need to provide the appropriate command. To create a new record, for example, use the following hash as a starting point:</p>
+</blockquote>
+<pre class="highlight json tab-json--persistent"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"POST"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="err">object_path</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"fieldname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"value"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>If you wanted to update two records in the same request (using the PUT method), you would send the following:</p>
+</blockquote>
+<pre class="highlight json tab-json--persistent"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PUT"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="err">object_url</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"heading"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Breaking news"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PUT"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="err">object_url</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"complete"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>The following request will create two new records (one news article, one author), update an author record, then delete a news record:</p>
+</blockquote>
+<pre class="highlight json tab-json--persistent"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"POST"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.backand.com/1/objects/news"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"heading"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Breaking news"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"author"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"complete"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"POST"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.backand.com/1/objects/authors"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ann@backand.com"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"firstname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ann"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PUT"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.backand.com/1/objects/authors/1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"firstname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Brian"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DELETE"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.backand.com/1/objects/news/3"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>Bulk requests are implemented as arrays of request object hashes.In this hash, we specify the HTTP verb to be used - POST, in this case, which will create a new record. We set the <code>url</code> parameter to the calculated URL from above, and then provide the new record&#39;s data as a JSON hash in the <code>data</code> parameter. Simply provide the list of key and value pairs that represent your object&#39;s data, and you&#39;re set.</p>
+
+<p>Once you have a single request hash, you can add others by simply appending them to the request.</p>
+
+<p>You can also mix and match operations, varying the objects updated, the authorization headers used, even the type of request for each record to be updated. There are no restrictions on types of operations that can be performed in a single bulk request, so feel free to mix and match to suit your application&#39;s needs.</p>
+<h3 id='authenticating-the-request'>Authenticating the Request</h3>
+<blockquote>
+<p>You can authenticate each request as a different user. Simply supply the following elements in the Authorization header:
+YOUR_ACCESS_TOKEN - an access token, obtained via a call to https://api.backand.com/token
+YOUR_APP_NAME - the app name to operate on</p>
+</blockquote>
+<pre class="highlight json tab-json--persistent"><code><span class="w">  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DELETE"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.backand.com/1/objects/news/3"</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"Authorization"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bearer &lt;YOUR_ACCESS_TOKEN&gt;"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"AppName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;YOUR_APP_NAME&gt;"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Each request hash can authenticate as a different user within your application. Any valid token to connect to your application can be provided along with each bulk item being manipulated. You can also dynamically specify the app name for each bulk item. To do so, simply use the <code>headers</code> element of the bulk operations structure as seen on the right.</p>
+
+<p>Refer to our documentation on user security (http://docs.backand.com/#the-user-object-and-security) for more information on how to construct the authentication headers.</p>
+<h3 id='bulk-request-examples'>Bulk Request Examples</h3>
+<p>Below are several examples of the types of bulk actions that can be performed using this functionality.</p>
+<h3 id='example-1-adding-multiple-rows'>Example 1: Adding multiple rows</h3>
+<blockquote>
+<p>This adds multiple rows in a single request.</p>
+</blockquote>
+<pre class="highlight json tab-json--persistent"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"POST"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.backand.com/1/objects/YOUR_OBJECT_NAME"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"fieldname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"value"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"POST"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.backand.com/1/objects/YOUR_OBJECT_NAME"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"fieldname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"value"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>You simply change the URL and data hashes for each record. Here&#39;s a sample request that adds two new news items to an application:</p>
+</blockquote>
+<pre class="highlight json tab-json--persistent"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"POST"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.backand.com/1/objects/news"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"heading"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Breaking news"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"author"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"complete"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"POST"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.backand.com/1/objects/news"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"heading"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Politics"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"author"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"complete"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+
+</span></code></pre>
+<blockquote>
+<p>As you can see above, this bulk operation will add two new objects of type &#39;news&#39; to your application. The first will have the heading of &quot;Breaking News&quot;, while the second will have the heading of &quot;Politics&quot;.</p>
+</blockquote>
+
+<p>To add multiple objects to your application, simply provide multiple POST action hashes in your request&#39;s data array. The general form of the request is in the pane on the right. Simply change the &#39;url&#39; parameter of each action hash to match your object&#39;s endpoint in your application.</p>
+<h3 id='example-2-deleting-multiple-rows'>Example 2: Deleting multiple rows</h3>
+<blockquote>
+<p>The general form of the delete request will be:</p>
+</blockquote>
+<pre class="highlight json tab-json--persistent"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DELETE"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.backand.com/1/objects/YOUR_OBJECT_NAME/OBJECT_ID1"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DELETE"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.backand.com/1/objects/YOUR_OBJECT_NAME/OBJECT_ID2"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>For example, if you wanted to delete &#39;news&#39; objects with IDs of 2 and 3, you would use the following set of action hashes:</p>
+</blockquote>
+<pre class="highlight json tab-json--persistent"><code><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"method"</span><span class="p">:</span><span class="s2">"DELETE"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"url"</span><span class="p">:</span><span class="s2">"https://api.backand.com/1/objects/news/2"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"method"</span><span class="p">:</span><span class="s2">"DELETE"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"url"</span><span class="p">:</span><span class="s2">"https://api.backand.com/1/objects/news/3"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>To delete multiple objects from your application, simply provide multiple DELETE action hashes in your request&#39;s data array.
+By changing the <code>YOUR_OBJECT_NAME</code> and <code>OBJECT_ID</code> parameters, you can select which specific IDs will be deleted in your application.</p>
+<h3 id='example-3-multiple-commands'>Example 3: Multiple commands</h3><pre class="highlight json tab-json--persistent"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"POST"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.backand.com/1/objects/news"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"heading"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Breaking news"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"author"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"complete"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"POST"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.backand.com/1/objects/authors"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ann@backand.com"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"firstname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ann"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PUT"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.backand.com/1/objects/authors/1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"firstname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Brian"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DELETE"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.backand.com/1/objects/news/3"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+
+</span></code></pre>
+<p>You can mix and match operations to be performed to match whatever actions you need to take. For example, the action hashes on the right will create a new <code>news</code> object, create a new <code>authors</code> object, update an existing <code>authors</code> object with an ID of 1, and delete a <code>news</code> object with an ID of 3.</p>
+<h2 id='retrieving-data'>Retrieving Data</h2>
+<blockquote>
+<p>Seeing as most objects in a Backand application tend to  be complex objects, we added an easy way to enable deep
+loading of objects. Simply append &#39;?deep=true&#39; to the object fetch URL, like so.</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl https://api.backand.com/1/objects/users/5?deep<span class="o">=</span><span class="nb">true</span>
+</code></pre>
+<blockquote>
+<p>An example of another complex object would be &#39;email&#39;. Requesting a user using the <code>deep</code> parameter would result in JSON resembling the following:</p>
+</blockquote>
+<pre class="highlight json tab-json--persistent"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"email"</span><span class="p">:</span><span class="s2">"...."</span><span class="p">,</span><span class="w">
+  </span><span class="err">//</span><span class="w"> </span><span class="err">other</span><span class="w"> </span><span class="err">users</span><span class="w"> </span><span class="err">fields...</span><span class="w">
+  </span><span class="s2">"items"</span><span class="p">:[{</span><span class="s2">"title"</span><span class="p">:</span><span class="s2">"...."</span><span class="p">,</span><span class="err">...</span><span class="p">},</span><span class="err">...</span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>It takes two requests to perform a Lazy Load. The first request is a shallow request for users or a specific user.</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl https://api.backand.com/1/objects/users
+<span class="c">#or</span>
+curl https://api.backand.com/1/objects/users/5
+</code></pre>
+<blockquote>
+<p>The second request is for all the items of a specific user.</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl https://api.backand.com/1/objects/users/5/items
+</code></pre>
+<blockquote>
+<p>This request is similar to fetching the entire list of items, which would be done as follows:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl https://api.backand.com/1/objects/items
+</code></pre>
+<blockquote>
+<p>You can also supply other query string parameters (such as paging, filtering, and sorting). See <a href="#getlist">the getList function</a> for more details.</p>
+</blockquote>
+
+<p>A Complex object is an object that has relationships to other objects in the database. For example, the default model provided when you create a new Backand application has two objects: <code>users</code> and <code>items</code>. There is a one-to-many relationship between <code>users</code> and <code>items</code>, meaning that a specific <code>user</code> may have many different related <code>items</code>. In this example, both <code>users</code> and <code>items</code> are complex objects. The relationship between the two tables, represented as the <code>User</code> object having a collection of <code>Item</code> objects, can be retrieved from the database by loading them through the object&#39;s API.</p>
+
+<p>There are two ways in which you can load complex objects: Deep Loading, or Lazy Loading. Deep loading pulls back both the object and all of its related objects. In the Users/Items example, this would pull back both the user, and all items related to that user. Lazy loading, by comparison, only pulls back the parent object, allowing you to more closely control when you pull in the rest of the data. This is important when the number of related objects is large, meaning a significant load time would be necessary.</p>
+
+<p>Regarding which approach to use - lazy or deep loading - there is no clear answer. It will be dependent upon the individual programming situation. If you need to present all of the relevant data at once, then deep loading is the right approach. However, if the object has a large number of relations to pull down, it might make more sense to do a lazy load, then selectively load related objects as needed.</p>
+<h3 id='filter-and-predefined-filter'>Filter and Predefined Filter</h3>
+<blockquote>
+<p>This JSON provides a fieldName, an operator, and a value to define a filter. Apply multiple fields by appending to the JSON array.</p>
+</blockquote>
+<pre class="highlight json tab-json--persistent"><code><span class="p">[{</span><span class="s2">"fieldName"</span><span class="p">:</span><span class="s2">"firstName"</span><span class="p">,</span><span class="s2">"operator"</span><span class="p">:</span><span class="s2">"contains"</span><span class="p">,</span><span class="s2">"value"</span><span class="p">:</span><span class="s2">"oh"</span><span class="p">}]</span><span class="w">
+</span></code></pre>
+<p>You can supply a query string parameter named &#39;filter&#39; to filter your objects during fetch. This could be useful in
+development and debugging situations, or as a part of a UI with search functionality that allowing your users to see configurable results. You can either create a filter with NoSQL syntax (see <a href="#nosql-query-language">NoSQL Query Language</a> for syntax), or with JSON containing a field name, an operator, and a value. See <a href="#getlist">the getList function</a> for full details on filters.</p>
+<h4 id='predefined-filter'>Predefined Filter</h4>
+<p>For security reasons, you may sometimes want to enforce partial reading of object data - usually based upon the current user or their role. This can be accomplished on the server-side using a Predefined Filter. Predefined Filters can be found in the Security tab of each object. They act as a SQL <code>where</code> condition. The option to force it from the server side is called Predefined Filter and you can find it at the Security tab of each object. If you add any additional filters, such as those described above, then they will be combined using a boolean <code>AND</code> operation. You can write the predefined filter either as a SQL statement or as a <a href="#nosql-query-language">NoSQL Query Language</a> statement.</p>
+<h3 id='queries-and-on-demand-actions'>Queries and On Demand Actions</h3>
+<p>So far we have discussed how to read objects that were defined in the database model. To create custom data structures, we can use Queries and On Demand Actions. Queries are identical to SQL database queries but you can write them using NoSQL syntax (see <a href="#nosql-query-language">NoSQL Query Language</a> for more details). With On Demand Actions, you can orchestrate any structure that you want using javascript on the server side. You can request model objects, queries, or other on demand actions. See <a href="#custom-actions">On Demand Actions - Server-Side Javascript Code</a> for more information.</p>
+<h4 id='pagination'>Pagination</h4><pre class="highlight plaintext"><code>            SET @records := 20;
+            PREPARE stmt FROM
+            " SELECT    *
+              FROM      Users
+              LIMIT     ?, ?";
+            -- {{ "{{pageNum" }}}} is the client side parameter representing the requested page number
+            SET @offset := @records * ({{ "{{pageNum" }}}} -1 );
+            EXECUTE stmt USING @offset,@records;
+</code></pre>
+<p>The LIMIT clause can be used to constrain the number of rows returned by the SELECT statement. LIMIT takes one or two numeric arguments (number of records and offset), which must both be nonnegative integer constants. We can compute the constants either on <a href="#custom-actions">JavaScript action</a> or by using a prepared statement like that on the right</p>
+<h2 id='continuous-deployment-and-versioning'>Continuous Deployment and Versioning</h2>
+<p>A common use case is separate development and production environments, often with several stages in between (testing, qa, staging), which allows phased deployment (rollout) and rollback in case of problems.The goal of Continuous Deployment is to enable a constant flow of changes from development to production.</p>
+
+<p>The following explains the flow of deploying server-side and databases changes from one environment to the other.</p>
+<h3 id='deployment-steps'>Deployment Steps</h3>
+<ol>
+<li>First, you need to sync model changes
+
+<ol>
+<li>Go to your dev app and copy the JSON model ( <strong>Database --&gt; Model --&gt; Model JSON</strong> ) to the clipboard</li>
+<li>Go to your QA app and paste the JSON model in the Edit Model pane of the <strong>Database --&gt; Model --&gt; Model JSON</strong> tab.</li>
+<li>Click &#39;Validate &amp; Update&#39;</li>
+</ol></li>
+</ol>
+
+<p>Now the schemas are synced.</p>
+
+<p>(If you get errors when applying the schema to the QA app, you&#39;ll need to fix them before you can upload the dev configuration)</p>
+
+<ol>
+<li>Next, you need to load the dev app configuration into the QA environment
+
+<ol>
+<li>Go to <strong>Admin --&gt; App Configuration</strong></li>
+<li>Click the &#39;Export Settings&#39; button, which will download the app configuration zip file to your file system.</li>
+<li>In the QA app, go to <strong>Admin --&gt; App Configuration</strong> and click the &#39;Import Settings&#39; button to upload the configuration zip file you just downloaded from the dev app.</li>
+<li>In <strong>Admin --&gt; General</strong>,x click the &#39;Clear Cache&#39; icon in the upper-right corner (swirly arrow refresh icon near the trashcan icon - see the image below), and approve the popup message.
+<img src="../images/clear_cache_button.png" alt="image" /></li>
+</ol></li>
+</ol>
+
+<p>The QA app is now deployed with all the changes you made in the dev app.</p>
+
+<p>Apply this process again when deploying QA to Production.</p>
+<h3 id='versions'>Versions</h3>
+<p>With every change you make to your app, Backand saves a copy (version) of the app before the change.
+You can use this feature to rollback your configuration changes, if needed.</p>
+
+<p>To rollback to a previous version:</p>
+
+<ol>
+<li>Go to <strong>Admin --&gt; App Configuration</strong></li>
+<li>Click the <code>Set</code> link corresponding to the version to which you wish to roll back.</li>
+</ol>
+
+<p>To save a backup of a version just click the <code>Export</code> link. This will save a backup of the app configuration to your file system.</p>
+<h2 id='internationalization'>Internationalization</h2>
+<blockquote>
+<p>For the following scripts you&#39;ll need your schema_name  you can find it here : https://www.backand.com/#/app/<YOUR_APP_NAME>/database</p>
+</blockquote>
+<pre class="highlight sql tab-sql"><code><span class="k">ALTER</span> <span class="k">SCHEMA</span> <span class="nv">`&lt;YOUR_SCHEMA_NAME&gt;`</span>  <span class="k">DEFAULT</span> <span class="n">CHARACTER</span> <span class="k">SET</span> <span class="n">utf8</span><span class="p">;</span>
+</code></pre>
+<blockquote>
+<p>On the table where you want to use multi-byte languages run:</p>
+</blockquote>
+<pre class="highlight sql tab-sql"><code><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="nv">`&lt;YOUR_SCHEMA_NAME&gt;`</span><span class="p">.</span><span class="nv">`&lt;YOUR_TABLE_NAME&gt;`</span> <span class="k">CONVERT</span> <span class="k">TO</span> <span class="n">CHARACTER</span> <span class="k">SET</span> <span class="n">utf8</span><span class="p">;</span>
+</code></pre>
+<blockquote>
+<p>On each VARCHAR column on that table run:</p>
+</blockquote>
+<pre class="highlight sql tab-sql"><code><span class="k">ALTER</span> <span class="k">TABLE</span> <span class="nv">`&lt;YOUR_SCHEMA_NAME&gt;`</span><span class="p">.</span><span class="nv">`&lt;YOUR_TABLE_NAME&gt;`</span> <span class="k">MODIFY</span> <span class="k">COLUMN</span> <span class="n">col</span> <span class="n">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span> <span class="n">CHARACTER</span> <span class="k">SET</span> <span class="n">utf8</span> <span class="k">COLLATE</span> <span class="n">utf8_general_ci</span><span class="p">;</span>
+</code></pre>
+<p>Supporting multiple languages often requires supporting multi-byte character sets. In order to allow for wider international character sets, you will need to run the MySQL command to the right against your database.</p>
+
+<p>Once you&#39;ve done this, the final step is to edit the connection details:</p>
+
+<ol>
+<li>Go to <strong>Database --&gt; Database Settings</strong></li>
+<li>Click <code>Get Password</code> and save it to the clipboard</li>
+<li>If you don&#39;t see the <code>Edit Connection</code> button then add &quot;/edit&quot; to the browser url</li>
+<li>On the username text box,  add <code>;CharSet=utf8;</code></li>
+<li>Paste the password from the clipboard</li>
+<li>Click <code>Save</code></li>
+</ol>
+<h2 id='integrating-with-ionic-creator'>Integrating with Ionic Creator</h2>
+<p><a href="https://creator.ionic.io">Ionic Creator</a> is an online IDE for Ionic apps that can greatly speed the development of your cross-platform mobile and web application. However, like any IDE, it can pose problems when integrating with some external service providers like Backand. Below, we’ll look at the steps needed to get your Ionic Creator app up and running with the Backand SDK, allowing you to implement serverless apps in the Ionic framework with ease.</p>
+<h3 id='configuring-the-connection-to-backand'>Configuring the connection to Backand</h3><pre class="highlight javascript tab-javascript--persistent"><code><span class="nx">angular</span><span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s1">'app.config'</span><span class="p">,</span> <span class="p">[])</span>
+<span class="c1">// remember to add 'app.config' to your angular modules in Code Settings</span>
+
+<span class="p">.</span><span class="nx">config</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">BackandProvider</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="nx">BackandProvider</span><span class="p">.</span><span class="nx">setAppName</span><span class="p">(</span><span class="s1">'BACKAND_APP_NAME'</span><span class="p">);</span>
+    <span class="nx">BackandProvider</span><span class="p">.</span><span class="nx">setSignUpToken</span><span class="p">(</span><span class="s1">'BACKAND_API_SIGNUP_TOKEN'</span><span class="p">);</span>
+    <span class="nx">BackandProvider</span><span class="p">.</span><span class="nx">setAnonymousToken</span><span class="p">(</span><span class="s1">'BACKAND_ANONYMOUS_ACCESS_TOKEN'</span><span class="p">);</span>
+
+<span class="p">})</span>
+</code></pre>
+<p>To Enable Back with Ionic Creator, you’ll need to update your Ionic Creator app’s <strong>Other JS</strong> section to include a new file name - <code>bkndconfig.js</code>. In this file, replace the entire contents with the javascript code to the right.</p>
+
+<p>Once the code has been modified, replace the placeholder values in the code with the appropriate values from your Backand application as follows:</p>
+
+<ul>
+<li><code>BACKAND_APP_NAME</code> - This is your app&#39;s name in Backand</li>
+<li><code>BACKAND_API_SIGNUP_TOKEN</code> - This is your app&#39;s signup token. It is available in the <strong>Security --&gt; Social and Keys</strong> section.</li>
+<li><code>BACKAND_ANONYMOUS_ACCESS_TOKEN</code> - This is your app&#39;s anonymous access token. It is available in <strong>Security --&gt; Configuration</strong>.</li>
+</ul>
+
+<p>Once these changes have been made, you&#39;ll then need to update your Ionic application&#39;s code settings.</p>
+<h3 id='code-settings'>Code Settings</h3><pre class="highlight html tab-html"><code>https://cdn.backand.net/vanilla-sdk/1.2.9/backand.js
+https://cdn.backand.net/angular1-sdk/2.0.10/backand.provider.js
+</code></pre>
+<blockquote>
+<p>Once you&#39;ve finished, the  External JS tab will have the following content:</p>
+</blockquote>
+<pre class="highlight html tab-html"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">'https://cdn.backand.net/vanilla-sdk/1.2.9/backand.js'</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">'https://cdn.backand.net/angular1-sdk/2.0.10/backand.provider.js'</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">'js/directives.js'</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">'js/services.js'</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">'js/bkndconfig.js'</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre>
+<blockquote>
+<p>Then, update <strong>Angular Modules</strong></p>
+</blockquote>
+<pre class="highlight javascript tab-javascript--persistent"><code><span class="nx">angular</span><span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s1">'app'</span><span class="p">,</span> <span class="p">[</span>
+<span class="s1">'ionic'</span><span class="p">,</span>
+<span class="s1">'app.controllers'</span><span class="p">,</span>
+<span class="s1">'ionicUIRouter'</span><span class="p">,</span>
+<span class="s1">'backand'</span><span class="p">,</span>
+<span class="s1">'app.config'</span><span class="p">,</span>
+<span class="s1">'app.services'</span><span class="p">,</span>
+<span class="s1">'app.directives'</span>
+<span class="p">])</span>
+</code></pre>
+<p>Now, we need to update your Ionic app&#39;s <strong>Code Settings</strong> so that we can import the Backand SDK. In <strong>Code Settings</strong>, under the <strong>External JS</strong> tab, add the script URLs to the right.</p>
+
+<p>Then, under <strong>Angular Modules</strong>, add <code>backand</code> and <code>app.config</code>. The end result is visible in the right-hand pane.</p>
+<h3 id='working-with-the-backand-provider'>Working with the Backand provider</h3><pre class="highlight javascript tab-javascript--persistent"><code><span class="p">.</span><span class="nx">service</span><span class="p">(</span><span class="s1">'ItemsModel'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">Backand</span><span class="p">){</span>
+
+    <span class="kd">var</span> <span class="nx">service</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">objectName</span> <span class="o">=</span> <span class="s1">'items'</span><span class="p">;</span>
+
+    <span class="nx">service</span><span class="p">.</span><span class="nx">all</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">Backand</span><span class="p">.</span><span class="nx">object</span><span class="p">.</span><span class="nx">getList</span><span class="p">(</span><span class="nx">objectName</span><span class="p">);</span>
+    <span class="p">};</span>
+
+<span class="p">});</span>
+</code></pre>
+<p>Now that the external code has been configured, you can start working with the Backand provider in your service class. For example, you can use the code on the right to pull rows from an <code>items</code> object in a Backand application. Next, we&#39;ll add this function call into a page for display.</p>
+<h3 id='updating-the-page-controller'>Updating the Page Controller</h3><pre class="highlight javascript tab-javascript--persistent"><code><span class="nx">$scope</span><span class="p">.</span><span class="nx">getAll</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">ItemsModel</span><span class="p">.</span><span class="nx">all</span><span class="p">()</span>
+        <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+            <span class="nx">$scope</span><span class="p">.</span><span class="nx">data</span> <span class="o">=</span> <span class="nx">result</span><span class="p">.</span><span class="nx">data</span><span class="p">;</span>
+        <span class="p">});</span>
+<span class="p">}</span>
+
+<span class="nx">$scope</span><span class="p">.</span><span class="nx">getAll</span><span class="p">();</span>
+</code></pre>
+<p>To access this data, we&#39;ll update the page controller to call our <code>ItemsModel</code> and return the relevant rows. To do so, use the JavaScript to the right to define a <code>getAll()</code> function and store the results in <code>$scope</code>.</p>
+
+<p>Now, we&#39;ll need to update the page&#39;s design to display the new information. To show a list of all the items you&#39;ve obtained:</p>
+
+<ul>
+<li>Drag a <strong>List Item</strong> element onto your UI</li>
+<li>In the page list pane (upper left hand corner), click on <strong>List</strong></li>
+<li><p>On the right side of the pane, click on <strong>Angular Directives</strong> and add a new directive with the following details:</p>
+
+<ul>
+<li>Directive: ng-repeat</li>
+<li>Value: object in data</li>
+</ul></li>
+<li><p>Finally, click on the <strong>list-item</strong> element and change the content to <code>{{object.name}}</code></p></li>
+</ul>
+
+<p>And with that, your Ionic Creator app is now connected to Backand!</p>
+<h3 id='learning-more'>Learning more</h3>
+<p>At this point, you have the full power of the <a href="#vanilla-sdk">Backand SDK</a> available in your Ionic Creator app. You can use the SDK to add more services to your app, providing CRUD functionality, real-time communications, server-side code execution, and more! Simply head over to <a href="http://docs.backand.com">our documentation</a> to get started.</p>
+<h2 id='working-with-custom-actions'>Working with Custom Actions</h2>
+<p>Actions are a powerful tool that allow you to perform customized tasks when a number of different types of events occur within your application. They provide a great alternative to server-side custom code, and can add a lot of flexibility to how your application interacts with outside services. Below we&#39;re going to look at the types of actions that Backand offers application developers, and how they can easily be used.</p>
+<h3 id='server-side-activity-in-a-front-end-app'>Server-Side Activity in a Front-End App</h3>
+<p>One of the challenges facing Angular developers focused on front-end development is what you need to do when you hit the limits of what the front-end has to offer. Many calls that you might like to make from your JavaScript might expose security issues, such as specific formats for requests to external vendors like PayPal, that leave you vulnerable to hackers who are looking for any way to hijack your application. The traditional solution to this has been to move the calls themselves server-side, which is a lot harder to gain access to than the JavaScript code running your website. However, having custom server actions requires building up the surrounding infrastructure to handle web requests, trigger the actions, handle the responses, and perform authentication – among a number of other actions you need to control for – all just to send a single server-side call.</p>
+
+<p>With Backand&#39;s server-side actions, you completely sidestep the need for all of the setup, implementation, and deployment headaches you would have with a custom server-side framework like Rails or Django. It allows you to do things that would typically demand custom server code – such as authenticating with a third party vendor, or sending sensitive payment data – without having to build the server infrastructure. By providing simple hooks into Backand&#39;s API for your back end, you can quickly add new actions that can do anything from sending a simple email all the way up to running custom JavaScript that can perform any arbitrary action you like – all behind the server-side call to Backand!</p>
+<h3 id='triggers'>Triggers</h3>
+<p>Actions are activated via triggers in your application. Generally speaking, there are two types of action triggers in Backand – database-related triggers, and &quot;On Demand&quot; triggers. Database triggers fire under certain conditions when your application interacts with your database. You can add custom triggers to each of the standard database actions that update the database – record creation (<code>Create</code>), record updating (<code>Update</code>), and record deletion (<code>Delete</code>). Furthermore, you can assign your actions to occur either before the action takes place (such as <code>Before Update</code>), while the action is taking place as part of the same transaction (such as <code>During Create</code>), or after the action has completed (such as <code>After Deletion</code>). Through clever use of these actions, you can create a very complex database experience with a deceptively simple front-end.</p>
+
+<p>On Demand triggers, on the other hand, happen whenever you like. These are associated with a specific object, and are performed in the context of a row via a simple call to an associated URL. These actions operate within the context of the provided row, allowing you to perform any custom actions you need to on that specific object. This allows you to build out a true API, providing the hooks for many custom server actions that would often need a framework surrounding them.</p>
+<h3 id='types-of-actions'>Types of Actions</h3>
+<p>Once you&#39;ve selected an appropriate trigger, you need to select a type of action to perform. Backand currently offers three types of actions – Send an Email, Execute Custom JavaScript, and Execute Custom SQL. Send an Email, as the name implies, simply sends an email whenever the trigger in question occurs. You can use the subject of the trigger as a local variable, inserting details into the message as you desire. Execute Custom JavaScript allows you to write a custom JavaScript function that will execute during the trigger, all within a server context. This allows you to perform sensitive communication without exposing vital details to potential attackers. Finally, Execute Custom SQL allows you to run a custom SQL script when the trigger is encountered, performing additional bookkeeping or updating related objects based upon the action performed.  With these three action types, you should be able to perform many highly complex interactions without needing to worry about maintaining a back-end server to manage them.</p>
+<h3 id='summary-4'>Summary</h3>
+<p>One of the common concerns with outsourcing the back end of an application is &quot;What happens when I need something more from the server?&quot; With Backand&#39;s actions, you have the opportunity to perform a number of different types of actions at several highly-configurable trigger points, and all in the context of your application&#39;s server! This can allow you to implement sensitive web calls to third parties, maintain complex analytics back-ends, and protect your sensitive data from attackers – all with a few clicks in Backand&#39;s application dashboard. While actions are not ideal for all situations, they should suffice for the vast majority of server-side activity that web apps most commonly need.</p>
+<h2 id='connecting-to-your-app-39-s-database'>Connecting to Your App&#39;s Database</h2>
+<p>While the schema editor offered by Backand&#39;s app dashboard can be a powerful tool for managing your application&#39;s data schema, sometimes there are ideas that the schema editor can&#39;t express. For these situations, it&#39;s often best to revert to a SQL interface, either using command-line SQL or a dedicated database administration tool like MySQL Workbench. In this post, we&#39;ll look at how you can access your Backand application&#39;s database using any third-party MySQL compatible database tool you desire, and how you can sync the changes with your Backand application once you&#39;ve made your changes.</p>
+<h3 id='connecting-to-your-database'>Connecting to Your Database</h3>
+<p>Backand hosts all application databases as schemas in Amazon RDS. The benefit of this approach is that it easily allows us to make your database available to any third-party tool you like. In the Backand App Dashboard, you can find your application&#39;s database server information in the <strong>Database -&gt; Database Settings</strong> panel. This contains the host URL, username, password, and schema name for your application. Simply input these connection values into your database administration tool of choice, and you are free to make changes to your database schema.</p>
+<h3 id='synchronizing-changes'>Synchronizing Changes</h3>
+<p>Once you&#39;ve made the necessary changes in your schema, you&#39;ll need to synchronize the changes with your Backand application. This is accomplished in the Backand Application Dashboard as follows:</p>
+
+<ul>
+<li>Navigate to the <strong>Model</strong> panel, under <strong>Database</strong></li>
+<li>Select the <strong>Model Database</strong> tab</li>
+<li>After reviewing the text, click on the <strong>Sync with Database</strong> button</li>
+</ul>
+
+<p>Once you&#39;ve pressed the Sync button, Backand will use reflection to determine your database&#39;s structure, and rebuild your app&#39;s REST API according to the changes it sees.</p>
+<h3 id='moving-forward'>Moving Forward</h3>
+<p>With this approach, you can greatly increase your data model&#39;s flexibility.  By working with standard SQL queries, you can bypass the need for making complex changes to your application&#39;s data structure using only the provided editors. Anything that can be expressed in SQL is permitted, and Backand will automatically adapt to your database structure modifications.</p>
+<h2 id='working-with-encrypted-passwords'>Working with Encrypted passwords</h2>
+<p>One common case encountered when storing passwords is in how to manage password encryption - particularly for working with third parties. In this section, we&#39;ll explore encrypting a user&#39;s password, and comparing encrypted passwords with their plaintext equivalents to check for authorization.</p>
+<h3 id='encrypting-passwords'>Encrypting Passwords</h3>
+<p>To work with encrypted passwords in Backand, follow these steps:</p>
+
+<ol>
+<li>Create a <code>password</code> field in your <code>users</code> object, of type <code>text</code></li>
+<li>Modify or create a &quot;before create&quot; action for the <code>users</code> object, and set the type to Custom Server-Side JavaScript.</li>
+<li>Add <code>userInput.password = security.hash(userInput.password);</code> to encrypt the password</li>
+</ol>
+
+<p>With that, your encrypted password is now stored along with your <code>users</code> object.</p>
+<h3 id='comparing-encrypted-passwords'>Comparing Encrypted passwords</h3>
+<p>Once you&#39;ve encrypted your password, you&#39;ll want to use it for password validation. To do so, you can use the <code>security.compare</code> function: <code>return security,compare(password, hashedPassword);</code>.</p>
+
+<p>This method returns <code>true</code> if the provided password is valid. It utilizes one-way encryption, so that it is not possible to decrypt the password hash</p>
+<h2 id='using-uuid-primary-keys'>Using UUID Primary Keys</h2>
+<p>While integer IDs can provide a quick and easy way to get up and running with a primary key, they face a number of different challenges when it comes to both scaling and security:</p>
+
+<ul>
+<li>They&#39;re limited in scope, meaning you&#39;re only given the maximum range of the integer object as unique IDs</li>
+<li>They&#39;re easy to understand, meaning they&#39;re also easy to hack (in other words, &quot;What happens if I change this ID of 77 to 78?&quot;)</li>
+<li>In general, they&#39;re hard to make thread-safe. This is an issue when a data source is operating at internet scale, or when working with multiple concurrent databases.</li>
+</ul>
+
+<p>Universally-Unique IDentifiers, or UUIDs, solve many of these problems. They obfuscate the ID so that it is not brute-force guessable, they have an extremely wide range of potential values, and the <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier#Collisions">risk of collisions in UUIDs</a> is miniscule. In this section, we&#39;ll look at configuring a Backand object to use a UUID as its primary key.</p>
+<h3 id='setting-up-the-database'>Setting up the Database</h3>
+<p>To create a UUID primary key column, you&#39;ll need to operate within your database directly. Download a tool to connect to your database (like <a href="https://www.mysql.com/products/workbench/">MySQL Workbench</a>), and configure it with the connection settings from <a href="#connecting-to-your-apps-database">your application&#39;s dashboard</a>. Once you&#39;ve connected your database, you&#39;ll next want to create a new field in the object you are changing, using the datatype <code>char(36)</code>. Once this is done, sync the changes back to your application using the Object -&gt; Model -&gt; Model Database tab in the app dashboard.</p>
+
+<aside class="notice">Backand uses auto-incrementing integers as the default for IDs in your objects, meaning in the default case values provided in the ID field will be overwritten with the next sequential ID. You'll need to remove this constraint in order to successfully populate the ID field with other data. You can also use an alternative field in the object as the primary key - simply make the designation in SQL, and Backand will update once you sync the database changes.</aside>
+<h3 id='setting-up-the-before-create-action'>Setting up the Before Create action</h3><pre class="highlight javascript tab-javascript--persistent"><code><span class="cm">/* globals
+  $http - Service for AJAX calls
+  CONSTS - CONSTS.apiUrl for Backands API URL
+  Config - Global Configuration
+  socket - Send realtime database communication
+  files - file handler, performs upload and delete of files
+  request - the current http request
+*/</span>
+<span class="s1">'use strict'</span><span class="p">;</span>
+<span class="kd">function</span> <span class="nx">backandCallback</span><span class="p">(</span><span class="nx">userInput</span><span class="p">,</span> <span class="nx">dbRow</span><span class="p">,</span> <span class="nx">parameters</span><span class="p">,</span> <span class="nx">userProfile</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// write your code here</span>
+  <span class="nx">userInput</span><span class="p">.</span><span class="nx">id</span> <span class="o">=</span> <span class="s1">'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/</span><span class="se">[</span><span class="sr">xy</span><span class="se">]</span><span class="sr">/g</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">c</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kd">var</span> <span class="nx">r</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span><span class="o">*</span><span class="mi">16</span><span class="o">|</span><span class="mi">0</span><span class="p">,</span> <span class="nx">v</span> <span class="o">=</span> <span class="nx">c</span> <span class="o">==</span> <span class="s1">'x'</span> <span class="p">?</span> <span class="nx">r</span> <span class="p">:</span> <span class="p">(</span><span class="nx">r</span><span class="o">&amp;</span><span class="mh">0x3</span><span class="o">|</span><span class="mh">0x8</span><span class="p">);</span>
+      <span class="k">return</span> <span class="nx">v</span><span class="p">.</span><span class="nx">toString</span><span class="p">(</span><span class="mi">16</span><span class="p">);</span>
+  <span class="p">});</span>
+  <span class="k">return</span> <span class="p">{};</span>
+<span class="p">}</span>
+</code></pre>
+<p>We&#39;ll override the default integer-based behavior in a Custom Server-Side JavaScript action that we will create expressly for this purpose. The code to the right uses <code>Math.random()</code> to generate a UUID Version 4-compliant value. This value is then stored in userInput.id, which in turn populates the column in the database.</p>
+
+<aside class="warning">It is important to note that this value is not truly random, and should not be used in situations where security is paramount - in those cases, we recommend you either implement your own algorithm or integrate with a third party library that can do so on your behalf.</aside>
+<h2 id='integrating-third-party-security'>Integrating Third-Party Security</h2>
+<p>While Backand provides a set of robust and dependable authentication and user management tools, sometimes you need a deeper integration with a provider that is not directly supported via integration with the Backand platform. In this post, we&#39;ll look at three mechanisms you can use to implement robust user security integrations with arbitrary third-party platforms. By using the <code>backandAuthOverride</code>, <code>sociaAuthOverride</code>, and <code>accessFilter</code> security actions, you&#39;ll be able to achieve all of your user security goals.</p>
+<h3 id='a-quick-review-of-user-security'>A Quick Review of User Security</h3>
+<p>There are two questions that need to be resolved in any conversation - user authentication, in which we determine whether or not the user is who they claim to be, and user authorization, in which we determine whether or not the authenticated user has access to the resources they are requesting. Backand uses OAuth2 to manage user authentication for plain username/password logins, and social media providers to manage user authentication when configured. To manage authorization, Backand provides a flexible and powerful set of security templates and security roles, which can be used to control the access a user has to any given field in a Backand application.</p>
+<h3 id='overriding-backand-authentication'>Overriding Backand Authentication</h3>
+<p>While we offer a number of ways to integrate with third-party security providers, some applications need to work within systems that we either do not offer integrations with, or whose integrations are not feature-rich enough to support all of the needed functionality. To work around this, we provide the <code>backandAuthOverride</code> security action. By modifying this action, you can use it to authenticate the user with any third party authentication platform you desire. You&#39;re given the user&#39;s email address and password, and can respond with one of three statuses:</p>
+
+<ul>
+<li><strong>allow</strong> - Allow the user access to your application</li>
+<li><strong>deny</strong> - Deny the user access to your application</li>
+<li><strong>ignore</strong> - Ignore this override, and use Backand User Authentication (default)</li>
+</ul>
+
+<p>If this method returns &quot;ignore&quot;, the standard Backand user authentication is used. Otherwise, the results of this function are adopted by Backand. If you wish, you can use the provided <code>additionalTokenInfo</code> object to pass back supplementary information for the authentication result, such as system user ID, system role, authentication lifetime, and so on - these will be available with the return value from the <code>signin</code> method, or via the SDK method <code>getUserDetails</code>.</p>
+<h3 id='overriding-social-media-authentication'>Overriding Social Media Authentication</h3>
+<p>While you can use <code>backandAuthOverride</code> to integrate with most third-party authentication providers, if you&#39;re working with our social media authentication you&#39;ll need to use a different function - <code>socialAuthOverride</code>. This function, similar to <code>backandAuthOverride</code>, overrides the social media authentication experience, returning one of the following three values:</p>
+
+<ul>
+<li><strong>allow</strong> - Allow the user access to your application</li>
+<li><strong>deny</strong> - Deny the user access to your application</li>
+<li><strong>ignore</strong> - Ignore this override, and use Backand Social Media Authentication (default)</li>
+</ul>
+
+<p>Once again, if this method returns <code>ignore</code>, the default built-in social media authentication provided by Backand is used. Otherwise, the return value of this function - either <code>allow</code> or <code>deny</code> - coupled with the contents of <code>additionalTokenInfo</code> are returned to the caller, and the user is either authenticated or prevented access appropriately. You can use this pattern to, for example, obtain a user&#39;s Facebook profile picture upon completion of authentication, and pass the results back to the application for display or manipulation.</p>
+
+<aside class="notice">
+While this function works similarly to backandAuthOverride, there are a couple minor differences that are important to note.
+  <ol>
+    <li> With socialAuthOverride, the only things you can do are deny access, or provide additional information. The backandAuthOverride function gives you more power over the result. </li>
+    <li> The socialAuthOverride function is called for both user authentication <strong>and</strong> for social media registration. The backandAuthOverride function is only called during authentication.</li>
+  </ol>
+</aside>
+<h3 id='overriding-authorization'>Overriding Authorization</h3>
+<p>Once you&#39;ve authenticated the user, you&#39;ll need to determine whether they are authorized to access the specified resource. While our security roles and templates can cover a lot of functionality, they are by nature restricted to a single app. If you organization&#39;s security policy restricts app access to users with a specific flag in your authentication mechanism, you&#39;ll want to override basic Backand authorization to instead leverage your external solution. To do this, you can use the <code>accessFilter</code> method to dynamically approve or deny any users that authenticate with your system using an Oauth2 token.</p>
+
+<p>This method works like any other custom JavaScript action, allowing you to easily contact third party services for additional user information. Once you&#39;ve used this feature to determine whether or not a user is authorized, you simply return <code>allow</code> or <code>deny</code> to permit or restrict access appropriately. You can also provide an additional message explaining the denial, or providing additional information on the approval.</p>
+<h3 id='conclusion-2'>Conclusion</h3>
+<p>The security landscape for internet apps is wide and varied. While we&#39;d love to be able to support every possible method of authentication available to developers, after a while it is far more beneficial and flexible to provide the developer with tools to manage their own authentication integrations. Using our provided override functions - <code>backandAuthOverride</code>, <code>socialAuthOverride</code>, and <code>accessFilter</code> - you can integrate with any authentication or authorization provider that can communicate over the web.</p>
+<h2 id='managing-the-application-model-with-json'>Managing the Application Model with JSON</h2>
+<blockquote>
+<p>Below is an example model</p>
+</blockquote>
+<pre class="highlight json tab-json--persistent"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"items"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"fields"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"text"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"users"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"users"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"fields"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"firstName"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"lastName"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"collection"</span><span class="p">:</span><span class="w"> </span><span class="s2">"items"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"via"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>The Model JSON tab in the <strong>Database --&gt; Model</strong> menu allows you to modify the JSON schema of your database&#39;s model structure, adding new objects and establishing the relationship between them. Below is a brief overview of how to use this interface.</p>
+
+<aside class="notice"> In addition to the fields supplied by the user, Backand defines an 'id' field, of type integer, which will be used as a primary key for the table.</aside>
+
+<aside class="warning"> Renaming fields can only be done from the Fields tab in the application dashboard. Renaming a field or an object in a model will delete the data associated with that field or object.</aside>
+<h3 id='definitions'>Definitions</h3>
+<blockquote>
+<p>The model represents a database schema that is defined as a JSON array of one or more object (Table) definitions.</p>
+</blockquote>
+<pre class="highlight json tab-json--persistent"><code><span class="err">&lt;model&gt;</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="p">[</span><span class="w">  </span><span class="err">&lt;object&gt;</span><span class="p">,</span><span class="w"> </span><span class="err">&lt;object&gt;</span><span class="p">,</span><span class="w"> </span><span class="err">...</span><span class="w"> </span><span class="p">]</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>An object definition is a JSON object with a name entry and a fields entry:</p>
+</blockquote>
+<pre class="highlight json tab-json--persistent"><code><span class="err">&lt;object&gt;</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"name"</span><span class="p">:</span><span class="w">  </span><span class="err">&lt;string&gt;</span><span class="p">,</span><span class="w"> </span><span class="s2">"fields"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">&lt;fields&gt;</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>The fields definition is a JSON list of field attributes:</p>
+</blockquote>
+<pre class="highlight json tab-json--persistent"><code><span class="err">&lt;fields&gt;</span><span class="w"> </span><span class="err">=</span><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="s2">"field1"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">&lt;field&gt;</span><span class="p">,</span><span class="w"> </span><span class="s2">"field2"</span><span class="p">:</span><span class="w"> </span><span class="err">&lt;field&gt;</span><span class="p">,</span><span class="w"> </span><span class="err">...</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>A field is defined by its type and a set of optional properties. The field definition is a JSON object:</p>
+</blockquote>
+<pre class="highlight json tab-json--persistent"><code><span class="err">&lt;field&gt;</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="err">&lt;type&gt;</span><span class="p">,</span><span class="w"> </span><span class="err">&lt;optional</span><span class="w"> </span><span class="err">properties&gt;</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>A JSON schema consist of three types of objects:</p>
+
+<ul>
+<li>model - This is the overall definition for your database schema. It consists of a list of <code>objects</code></li>
+<li>object - This represents a single object type in your application. It is converted into a database table.</li>
+<li>fields - This represents an array of field entries, representing the possible attributes of your object. These become columns in the database table.</li>
+</ul>
+
+<p>A field may have one of the following types:</p>
+
+<ul>
+<li><strong>string</strong> - string column with length up to 255 characters</li>
+<li><strong>text</strong> - text column with length up to 21,844 characters</li>
+<li><strong>float</strong></li>
+<li><strong>datetime</strong></li>
+<li><strong>boolean</strong></li>
+</ul>
+<h3 id='one-to-many-relationship'>One-to-Many Relationship</h3>
+<blockquote>
+<p>As an example, consider a model describing pet ownership. It has two objects, &#39;users&#39; and &#39;pets&#39;. Each user can own
+several pets, but a pet has a single owner (user). Thus, the users-pets relationship is a one to many relationship between users and pets, The &#39;users&#39; object will have a &#39;pets&#39; relationship field, which establishes the &#39;many&#39; side of the relationship by
+creating a collection of pets objects for each user in the model.
+In &#39;users&#39;, add this field:</p>
+</blockquote>
+<pre class="highlight json tab-json--persistent"><code><span class="s2">"pets"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"collection"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pets"</span><span class="p">,</span><span class="w"> </span><span class="s2">"via"</span><span class="p">:</span><span class="w"> </span><span class="s2">"owner"</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>The &#39;pets&#39; object will have an &#39;owner&#39; relationship field, which establishes the &#39;one&#39; side of the relationship by
+linking each pet back to an individual owner.
+In &#39;pets&#39;, add the following new field to complete the linkage:</p>
+</blockquote>
+<pre class="highlight json tab-json--persistent"><code><span class="s2">"owner"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"users"</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Here is the full sample model for this relationship:</p>
+</blockquote>
+<pre class="highlight json tab-json--persistent"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pets"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"fields"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"owner"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"users"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"users"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"fields"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"firstName"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"lastName"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"pets"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"collection"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pets"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"via"</span><span class="p">:</span><span class="w"> </span><span class="s2">"owner"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>Many databases rely on one-to-many relationships between objects. These happen when an object can exert &quot;ownership&quot; over another, and is typically represented as a foreign key constraint in the &quot;owned&quot; object. The sidebar demonstrates how to create a one-to-many relationship in the database using the JSON Schema.</p>
+
+<p>Say, for example, that we have a one to many relationship between objects R and S. This means that for each row in R, there are many potentially corresponding rows in S. In the &#39;many&#39; side of the relationship (object S), we specify that each row relates to one row in the other object R by providing an object field link:</p>
+
+<p><code>&quot;myR&quot; : { &quot;object&quot; : &quot;R&quot; }</code></p>
+
+<p>In the &#39;one&#39; side of the relationship (object R), we specify that each row relates to several rows in S by providing a collection field link, using a &#39;via&#39; attribute to denote which field on the &#39;many&#39; side (object S) fulfills the relationship:</p>
+
+<p><code>&quot;Rs&quot; : { &quot;collection&quot;: &quot;S&quot;, &quot;via&quot; : &quot;myR&quot; }</code></p>
+
+<p>In the database, a foreign-key constraint will be added between tables S and R (pointing in the direction of R), represented by a foreign key field &#39;myR&#39; being created in the object S&#39;s data table. This field will hold the primary key of the corresponding row in R for each row in S. One-to-many relationship between objects are specified using relationship fields. A relationship field will generate the appropriate foreign-key relationship fields in the corresponding relation objects.</p>
+<h3 id='many-to-many-relationship'>Many-to-Many Relationship</h3>
+<blockquote>
+<p>As an example, consider a different model describing pet ownership. It has two objects, &#39;users&#39; and &#39;pets&#39;. Each user
+ can own several pets, and each pet can have several owners. Thus, the users-pets relationship is many to many relationship between users and pets:
+First we need to add a new object - &#39;users-pets&#39; - with one-to-many relationships to both &#39;pets&#39; and &#39;users&#39; objects.
+In &#39;users-pets&#39;:</p>
+</blockquote>
+<pre class="highlight json tab-json--persistent"><code><span class="s2">"pet"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pets"</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span><span class="s2">"owner"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"users"</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>In the corresponding objects &#39;users&#39; and &#39;pets&#39;, we need to add a reference to &#39;users-pets&#39; to complete the
+one-to-many relationship:
+In &#39;pets&#39;:</p>
+</blockquote>
+<pre class="highlight json tab-json--persistent"><code><span class="s2">"owners"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="s2">"collection"</span><span class="p">:</span><span class="w"> </span><span class="s2">"users-pets"</span><span class="p">,</span><span class="w"> </span><span class="s2">"via"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pet"</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>In &#39;users&#39;:</p>
+</blockquote>
+<pre class="highlight json tab-json--persistent"><code><span class="s2">"pets"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="s2">"collection"</span><span class="p">:</span><span class="w"> </span><span class="s2">"users-pets"</span><span class="p">,</span><span class="w"> </span><span class="s2">"via"</span><span class="p">:</span><span class="w"> </span><span class="s2">"owner"</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Stated another way: To build a many-to-many model of many-to-many Model:
+* Start with a Model that contains 2 objects that have no relations between them:</p>
+</blockquote>
+<pre class="highlight json tab-json--persistent"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pets"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"fields"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"users"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"fields"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"firstName"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"lastName"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Add the new object and the relationship fields:</p>
+</blockquote>
+<pre class="highlight json tab-json--persistent"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pets"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"fields"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"owners"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"collection"</span><span class="p">:</span><span class="w"> </span><span class="s2">"users-pets"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"via"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pet"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"users-pets"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"fields"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"pet"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pets"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"owner"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"object"</span><span class="p">:</span><span class="w"> </span><span class="s2">"users"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"users"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"fields"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"firstName"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"lastName"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"pets"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"collection"</span><span class="p">:</span><span class="w"> </span><span class="s2">"users-pets"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"via"</span><span class="p">:</span><span class="w"> </span><span class="s2">"owner"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>Many-to-Many relationships between objects are added by adding a new object that has a one-to-many relationship with each object participating in the many-to-many relation. Please review <a href="one-to-many-relationship">One-to-many relationships</a> before continuing with this section.</p>
+
+<p>Say, for example, that we have a many to many relationship between objects R and S. This means that for many rows in R, there are many potentially corresponding rows in S. Where we could handle a one-to-many relationship between R and S using a single column in the underlying database, we can&#39;t do so to represent a many-to-many relationship. If we simply add another foreign key to the other side of the relation, we are stuck having to duplicate items that are shared among multiple owners. Instead, we use a mapping table to link the two objects together.</p>
+
+<p><code>{&quot;name&quot;: &quot;R_TO_S_MAPPING&quot;, &quot;fields&quot;: { &quot;r&quot;: {&quot;object&quot;:&quot;R&quot;}}, &quot;s&quot;: {&quot;object&quot;:&quot;S&quot;} }</code></p>
+
+<p>The mapping table will have two columns - r_id, and s_id - that are then linked to by the source tables via separate one-to-many relationships between the objects themselves and the mapping table. More specifically: S will have a one-to-many relationship with R_TO_S_MAPPING:</p>
+
+<p><code>{&quot;name&quot;: &quot;R&quot;, &quot;fields&quot;: {...., &quot;S&quot;: { &quot;collection&quot;: &quot;R_TO_S_MAPPING&quot;, &quot;via&quot;:&quot;r&quot;}}}</code></p>
+
+<p>... and R will also have a one-to-many relationship with R_TO_S_MAPPING</p>
+
+<p><code>{&quot;name&quot;: &quot;S&quot;, &quot;fields&quot;: {...., &quot;R&quot;: { &quot;collection&quot;: &quot;R_TO_S_MAPPING&quot;, &quot;via&quot;:&quot;s&quot;}}}</code></p>
+
+<p>...  resulting in a many-to-many relationship between R and S with the relationship managed via table R_TO_S_MAPPING.</p>
+<h2 id='enabling-sms-based-authentication'>Enabling SMS-based Authentication</h2>
+<p>Using Backand&#39;s security actions and a service like Twilio, you can implement a token-based authentication system that uses SMS as the delivery method, giving your users the capability to authenticate with a code received via a SMS message on a mobile device.</p>
+<h3 id='process-overview'>Process overview</h3>
+<p>The process we&#39;ll follow to authenticate the user in our SMS-based system is as follows:</p>
+
+<ol>
+<li>Call an on-demand action that creates a Token object. The Token object contains a token number, and a session ID. The token number is sent to the provided phone number via SMS, while the session ID is sent back to the caller.</li>
+<li>Call backand&#39;s <code>/token</code> API with a username (any username is acceptable), the SMS code, and the session ID sent back as a result of step 1. WE&#39;ll use a security action to verify the provided token data, and flag the token as &quot;used&quot; to remove it from active status.</li>
+<li>Restrict the token object to only be accessible by Admin users, to prevent malicious third-party intrusions.</li>
+</ol>
+
+<p>For multiple device authentication, you can use the same process - even keeping the same username. See an example of the code at work in CodePen: <a href="http://codepen.io/backand/pen/GZdYgy">http://codepen.io/backand/pen/GZdYgy</a></p>
+<h3 id='creating-the-token-object'>Creating the Token object</h3><pre class="highlight json tab-json--persistent"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tokens"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"fields"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"sessionId"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"required"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"unique"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"used"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"boolean"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"defaultValue"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>The JSON to create a token object is provided to the right. This consists of three columns:</p>
+
+<ul>
+<li><code>token</code> - the token value sent to the user via SMS</li>
+<li><code>sessionId</code> - the session ID to be used by the client in authenticating the token</li>
+<li><code>used</code> - a boolean flag indicating whether or not the token has been used</li>
+</ul>
+<h3 id='adding-the-sendtoken-action'>Adding the sendToken action</h3><pre class="highlight plaintext"><code>//sendToken action
+// Required parameters (to be stored in the 'parameters' object): phone
+'use strict';
+function backandCallback(userInput, dbRow, parameters, userProfile) {
+    // When in debug mode, don't send SMS messages
+    var debug = false;
+
+    // Creates a random number to serve as the Token value
+    var randomNums = function(length) {
+        return Math.random().toString().slice(2,length+2);
+    }
+    // Creates a random string to serve as the session ID.
+    // Replace with a GUID function if you wish to avoid collisions.
+    var randomText = function (length) {
+        if (!length) length = 10;
+        return Math.random().toString(36).slice(2,length);
+      }
+
+    // These are used to construct basic authentication. The first value is
+    // the master token for your app. The second value is a user's user token.
+    // See the docs at http://docs.backand.com/#basic-authentication for more
+    // information on this method of authentication
+    var master_key = 'f8929838-2a2e-4818-a47e-2080ad62fc00';
+    var user_key = 'f9d89228-0336-11e6-b112-0ed7053426cb';
+
+    // Get a session ID and a token
+    var sessionId = randomText(32);
+    var token = randomNums(6);
+
+    // Store the new token in the database using an API call
+    var response = $http({
+        method: "POST",
+        url:CONSTS.apiUrl + "/1/objects/tokens",
+        data: {
+            token: token,
+            sessionId: sesstionId
+        },
+        headers:{'Authorization':'basic ' + btoa (master_key + ':'+ user_key) }
+    });
+
+    // From this point onward, we construct and send an SMS message to the user
+    var ACCOUNT_SID = 'YOUR TWILIO ACCOUNT SID';
+    var AUTH_TOKEN = 'YOUR TWILIO AUTH TOKEN';
+
+    var FROM_PHONE_NUM = 'YOUR TWILIO NUMBER';
+
+    // Construct the endpoint in Twilio's API
+    var basicUrl = 'https://api.twilio.com/2010-04-01/Accounts/' + ACCOUNT_SID + '/';
+    var action = 'Messages.json' // twilio have many services
+
+    // Only send SMS messages when we are not debugging
+    if(!debug){
+        // Send the request to Twilio for processing.
+        var t1 = $http({
+            method: "POST",
+            url: basicUrl + action,
+            data:
+                'Body=' + 'Your verification code is: ' + token +
+                '&amp;To='  + '%2B' + parameters.phone +
+                '&amp;From='+ FROM_PHONE_NUM,
+            headers: {
+                "Accept":"Accept:application/json",
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Authorization": 'basic ' + btoa(ACCOUNT_SID + ':' + AUTH_TOKEN)
+            }
+        });
+    }
+
+    //Return the Guid
+      return {"sessionId": sessionId};
+}
+</code></pre>
+<p>To generate the token data for each authentication attempt, we&#39;ll use an on-demand server side JavaScript action. As all actions require an owning object, we&#39;ll attach this action to the <code>items</code> object in the database. While it would make more sense to link this action to the <code>token</code> object, the <code>token</code> object will have other security restrictions that will interfere with calling this action prior to authentication. So while we have chosen the <code>items</code> object, it can apply to any object in your system accessible to anonymous users.</p>
+
+<p>Use the JavaScript to the right as the body of the action code.</p>
+
+<aside class="warning">Ensure that you update the values stored in master_key and user_key for your application. More information is in the documentation at <a href="#basic-authentication">/#basic-authentication</a>. You'll also need to create a Twilio account by following the instructions provided <a href="#setup-a-free-account-in-twilio">here</a> - update the ACCOUNT_SID, AUTH_TOKEN, and FROM_PHONE_NUM with the correct values for your account.</aside>
+<h3 id='updating-the-security-action-to-allow-for-authentication'>Updating the security action to allow for authentication</h3><pre class="highlight plaintext"><code>// backandAuthOverride action
+// Required parameters (in the parameters object): token, sessionId
+'use strict';
+function backandCallback(userInput, dbRow, parameters, userProfile) {
+
+    //Example for SSO in OAuth 2.0 standard
+    // Get the token and session ID from the parameters
+    var token = parameters.token;
+    var sessionId = parameters.sessionId;
+
+    // If you're debugging this on the command line, you'll want to throw a new
+    // Error with the session ID
+    //throw new Error(sessionId);
+
+    //Check if token exists and not in use
+    var master_key = 'f8929838-2a2e-4818-a47e-2080ad62fc00';
+    var user_key = 'f9d89228-0336-11e6-b112-0ed7053426cb';
+
+    var res = $http({
+        method: "GET",
+        url: CONSTS.apiUrl + "/1/objects/tokens",
+        params: {
+            filter: [
+            {
+                fieldName: "sessionId",
+                operator: "equals",
+                value: sessionId
+            },
+            {
+                fieldName: "token",
+                operator: "equals",
+                value: token
+            },
+            {
+                fieldName: "used",
+                operator: "equals",
+                value: false
+            },
+            ]
+        },
+        headers:{'Authorization':'basic ' + btoa (master_key + ':'+ user_key) }
+    });
+
+    //Generate a temporary password and username to serve as user input.
+    var result = "deny";
+    if(res.data.length == 1){
+
+      result = "allow";
+
+      //set the username and password
+      var randomText = function (length) {
+        if (!length) length = 10;
+        return Math.random().toString(36).slice(2,length);
+        }
+        userInput.username = randomText(10) + '@domain.com';
+        userInput.passsword = randomText(18);
+
+        //Update the token to mark it used.
+      var response = $http({
+        method: "PUT",
+        url: CONSTS.apiUrl + "/1/objects/tokens/" + res.data[0].id,
+        data: {
+            used: true
+        },
+        headers:{'Authorization':'basic ' + btoa (master_key + ':'+ user_key) }
+      });
+    }
+   //Return results of "allow" or "deny" to override the Backand auth and provide a denied message
+   //Return ignore to ignore this function and use Backand default authentication
+   //Return values in additionalTokenInfo that will be added to Backand auth result.
+   //You may access this later by using the getUserDetails function of the Backand SDK.
+   return {"result": result, "message":"Incorrect information", "additionalTokenInfo":{}};
+}
+</code></pre>
+<p>Next, we need to use the <code>backandAuthOverride</code> security action to override the standard Backand authentication process. See more info on how this works in the documentation on <a href="#integrating-third-party-security">using third-party security</a>.</p>
+
+<p>Replace the code of the action <code>backandAuthOverride</code> with the JavaScript on the right.</p>
+
+<aside class="warning">Once again, ensure that you update the values stored in master_key and user_key for your application. More information is in the documentation at <a href="#basic-authentication">/#basic-authentication</a>.</aside>
+<h3 id='restricting-access-to-the-token-object'>Restricting access to the token object</h3>
+<p>As the token object gives users a lot of power within your application, it is important that you restrict access to the <code>token</code> object in your app&#39;s API. Follow these steps to update the <code>token</code> object&#39;s security, restricting access to administrators only:</p>
+
+<ol>
+<li><p>Open the Security tab of the <code>token</code> object</p></li>
+<li><p>Click on &#39;Override the Security Template&#39; and set it to <code>true</code></p></li>
+<li><p>Uncheck all boxes until only the checkboxes for the Admin role remain checked.</p></li>
+</ol>
+<h3 id='disable-token-expiration'>Disable token expiration</h3>
+<p>Finally, you&#39;ll want to update your authentication tokens to never expire. This allows your SMS-based authentication to be persistent, meaning the user won&#39;t need to periodically respond to a new text message requesting re-authorization unless you explicitly choose so. To modify the token expiration length:</p>
+
+<p>a. Open the <strong>Security --&gt; Social &amp; Keys</strong> menu
+    b. Change Session Length to <code>Never - use refresh token</code></p>
+<h3 id='building-from-here'>Building from here</h3>
+<p>This approach opens a number of options for authentication, supporting use cases more complex than &quot;user is sitting at a computer with a web browser open&quot;. You can easily use this approach to implement a two-factor authentication model, for example - by requiring the session token in addition to the user&#39;s username and password, you can get more granular control over the user&#39;s access to your data. You can also use this to implement persistent authentication in a more private application environment, such as when running an app on a user&#39;s mobile device.</p>
+<h2 id='reducing-backand-compute-usage'>Reducing Backand Compute Usage</h2>
+<p>One common cost center for developers using the Backand platform is the Backand Compute Unit. These Units accrue as a result of API calls and other requests to the Backand platform, and reflect the computing effort expended by Backand to perform the requested operations. Below, we&#39;ll look at some strategies you can use to mitigate the accrual of Backand Compute Units, letting you more easily mitigate costs and resource usage within your Backand application.</p>
+<h3 id='strategy-1-reduce-the-number-of-calls'>Strategy 1 - Reduce the number of calls</h3>
+<p>Backand Compute Units are directly proportional to the number of API calls you make. As such, the most obvious strategy is to reduce the number of calls you make to the API. Some of this can be managed via standard caching and code optimization techniques, simply storing data that changes less frequently instead of fetching it from the server every time it is called. But you can also make use of Backand to reduce the amount of API calls necessary to perform common tasks. The Bulk endpoint, for example, allows you to combine up to 1,000 API requests into a single API call, reducing the cost of executing these API requests by that same 1,000 factor. See more information on making bulk requests <a href="#bulk-operations">here</a>.</p>
+<h3 id='strategy-2-combine-multiple-calls-into-an-action'>Strategy 2 - Combine multiple calls into an Action</h3>
+<p>A unique quirk of the Backand platform is that performing complex code in a custom on-demand action only counts as a single Backand compute unit. So if you are able, consolidate related Backand API requests into calls that take place within a custom action. There&#39;s no limit on the number of calls you can make, and through the use of parameters you can achieve most of the tasks you&#39;d need separate API requests to accomplish.</p>
+<h3 id='strategy-3-make-use-of-a-plan-included-test-app'>Strategy 3 - Make use of a plan-included test app</h3>
+<p>If your plan allows for it, you may receive a test app allowance with your Backand subscription. These test apps are not billed, and are ideal for a development platform. Once you&#39;ve finished developing your application, you can port the changes to your production instance, to ensure you are ready to serve your content to your users. Review our <a href="http://backand.com/pricing">pricing page</a> to see what types of options are included with your current package, and whether it makes sense to upgrade your subscription plan.</p>
+<h3 id='strategy-4-move-database-updates-into-queries'>Strategy 4 - Move database updates into queries</h3>
+<p>Similar to moving multiple API requests into a single action, you can also consolidate multiple table updates into a single Query. Simply modify the query to perform multiple reads or updates, and return the results you want back to your calling code. Like custom actions, you&#39;ll only incur a usage charge for a single call, even if the query is making dozens of updates each time it is called.</p>
+<h3 id='keeping-an-eye-to-resource-utilization'>Keeping an eye to resource utilization</h3>
+<p>Backand Compute Units can be troublesome to manage, but if you treat them like any other computing resource they are capable of being optimized along a number of vectors. If none of the strategies above help your specific use case, <a href="#contact-us">contact us</a> to discuss other alternative solutions - we are always willing to help, and want to help you get the most out of your usage of the Backand platform.</p>
+<h2 id='contact-us'>Contact us</h2>
+<p>We&#39;d love to hear how you use Backand, and if you have any development or usage patterns that you have found useful! Send us a message with feedback, bug reports, or anything else at <a href="mailto:support@backand.com">support@backand.com</a> for more info.</p>
+
+      </div>
+      <div class="dark-box">
+      </div>
+    </div>
+  </body>
+</html>
