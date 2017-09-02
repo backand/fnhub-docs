@@ -9,10 +9,10 @@ toc_footers:
   - <a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a>
 
 includes:
-  - reference_guides
-  - cli
-  - submission_guidelines
-  - report
+  #- reference_guides
+  #- cli
+  #- submission_guidelines
+  #- report
 
 search: true
 ---
