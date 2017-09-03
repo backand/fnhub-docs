@@ -1,3 +1,5 @@
+## For Function publishers
+
 Publishing a function on FnHub.io is quick and easy! Just follow these three steps to release your package to the world:
 
 1. Initialize your function package using fnhub init:
